@@ -15,9 +15,14 @@ body {
     height: 100vh;
 }
 
-.h-screen{
-    height: 100vh;
-    color: #fff;
+.main-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    color: red;
 }
 
 @media (min-width: 768px) {
