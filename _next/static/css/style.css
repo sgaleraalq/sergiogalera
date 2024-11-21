@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 18px;
+    gap: 30px;
     height: 48px;
     justify-content: center;
     overflow: visible;
@@ -46,8 +46,25 @@ body {
     width: min-content;
 }
 
-.framer .social-media img{
-    width: 25px;
+.social-media.navigation .social-media{
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+}
+
+.social-media img{
+    width: 30px;
 }
 
 
