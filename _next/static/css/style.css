@@ -20,7 +20,7 @@ body {
     width: 100vw;
 }
 
-.framer .social-media-container{
+.framer.social-media-container {
     flex: none;
     height: auto;
     left: 50%;
@@ -31,25 +31,23 @@ body {
     z-index: 10;
 }
 
-.framer .social-media img{
-    width: 25px;
-}
-
-.framer-H1wuf.framer-x3e66 {
+.social-media.navigation{
     align-content: center;
     align-items: center;
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 10px;
-    height: 30px;
+    gap: 18px;
+    height: 48px;
     justify-content: center;
     overflow: visible;
-    padding: 0;
+    padding: 0 20px;
     position: relative;
-    text-decoration: none;
-    width: 30px;
+    width: min-content;
+}
+
+.framer .social-media img{
+    width: 25px;
 }
 
 
