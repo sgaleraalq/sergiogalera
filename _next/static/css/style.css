@@ -18,6 +18,8 @@ body {
 .main-intro{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .framer.social-media-container {
@@ -79,6 +81,18 @@ body {
 .social-media.navigation .social-media.container:hover h1 {
     opacity: 1; 
     transform: translateY(0); 
+}
+
+.framer.intro-containers{
+    display: flex;
+    width: 100%;
+}
+
+.intro-left{
+}
+
+.intro-right{
+
 }
 
 
