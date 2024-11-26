@@ -31,7 +31,7 @@ body {
     z-index: 10;
 }
 
-.social-media.navigation{
+.social-media.navigation {
     align-content: center;
     align-items: center;
     display: flex;
@@ -46,25 +46,36 @@ body {
     width: min-content;
 }
 
-.social-media.navigation .social-media{
+.social-media.navigation .social-media.container{
     align-content: center;
     align-items: center;
     cursor: pointer;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
     justify-content: center;
     overflow: visible;
-    padding: 0;
+    padding: 10px;
     position: relative;
     text-decoration: none;
-    width: 30px;
-    height: 30px;
 }
 
-.social-media img{
+.social-media img {
+    display: block;
     width: 30px;
+    height: auto;
+}
+
+.social-media h1 {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
 }
 
 
