@@ -53,10 +53,8 @@ body {
     display: inline-flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 10px;
     justify-content: center;
     overflow: visible;
-    padding: 10px;
     position: relative;
     text-decoration: none;
 }
@@ -68,14 +66,19 @@ body {
 }
 
 .social-media h1 {
-    position: absolute;
+    position: relative;
     color: white;
-    font-size: 14px;
-    padding: 2px 5px;
+    font-size: 12px;
     border-radius: 3px;
-    margin: 0;
     text-align: center;
-    opacity: 0;
+    opacity: 0; 
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-media.navigation .social-media.container:hover h1 {
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 
