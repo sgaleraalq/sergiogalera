@@ -30,23 +30,74 @@ body {
 
 /* *********************** */
 /* WEBSITE NAVIGATION CONTAINER */
-.website-navigation-container{
+.website-navigation-container {
     position: fixed;
+    top: 20px;
     right: 0;
-    margin-right: 2%;
-}
-
-.website-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: "Consolas, serif", sans-serif;
+    padding: 10px 20px;
+    padding-right: 2%;
+    z-index: 100;
+  }
+  
+  /* Lista de navegación */
+  .website-list {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  /* Elementos de la lista */
+  .website-list-element a {
     text-decoration: none;
-}
+    color: #8f9093;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+  }
+  
+  .website-list-element a:hover {
+    color: #42c9b3;
+    transform: scale(1.1);
+  }
+  
+  /* Numeración */
+  .website-list-element a::before {
+    content: attr(data-number);
+    color: #42c9b3;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Botón de "Resume" */
+  .website-navigation-resume {
+    border: 1px solid #42c9b3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .website-navigation-resume:hover {
+    background-color: #10293b;
+  }
+  
+  .website-navigation-resume p {
+    margin: 0;
+    font-size: 16px;
+    color: #42c9b3;
+    text-align: center;
+    font-weight: 500;
+  }
+
 /* END WEBSITE NAVIGATION CONTAINER */
 /* *********************** */
-
-
-
 
 /* *********************** */
 /* SOCIAL MEDIA CONTAINER */
@@ -85,15 +136,15 @@ body {
 }
 
 .social-media h1 {
-    position: absolute;
-    right: 55px; 
-    white-space: nowrap;
-    color: white;
-    font-size: 14px;
-    opacity: 0;
-    transform: translateX(15px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+  position: absolute;
+  right: 55px;
+  white-space: nowrap;
+  color: white;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 
 .line-separator {
@@ -105,13 +156,11 @@ body {
 }
 
 .social-media.container:hover h1 {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 /* END SOCIAL MEDIA CONTAINER */
 /* *********************** */
-
-
 
 .framer.intro-containers {
   display: flex;
@@ -119,6 +168,7 @@ body {
 }
 
 .intro-left {
+    opacity: 0;
   background-color: red;
 }
 
