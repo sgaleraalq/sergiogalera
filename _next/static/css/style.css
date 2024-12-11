@@ -21,25 +21,22 @@ body {
 }
 
 .framer.social-media-container {
-    align-items: center;
     justify-content: center;
     padding: 16px;
     background-color: blueviolet;
+    display: flex;
 }
 
 .social-media.navigation {
+    background-color: red;
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 30px;
-    height: 48px;
-    left: 50%;
     align-items: center;
-    background-color: red;
     justify-content: center;
-    overflow: visible;
     position: relative;
     width: min-content;
 }
