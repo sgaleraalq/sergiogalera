@@ -1,155 +1,158 @@
-
 body {
-    margin: 0;
-    line-height: inherit;
-    overflow-x: hidden;
+  margin: 0;
+  line-height: inherit;
+  overflow-x: hidden;
 }
 
 .fixed {
-    position: fixed
+  position: fixed;
 }
 
 body {
-    background-color: #030712;
-    width: 100vw;
-    height: 100vh;
-}
-.logo {
-    top: 3%;
-    left: 4%;
-    position: fixed;
-    width: 40px;
-    height: auto;
-    z-index: 100;
+  background-color: #030712;
+  width: 100vw;
+  height: 100vh;
 }
 
-.main-intro{
-    height: 100vh;
-    width: 100vw;
+.logo {
+  top: 3%;
+  left: 4%;
+  position: fixed;
+  width: 40px;
+  height: auto;
+  z-index: 100;
+}
+
+.main-intro {
+  height: 100vh;
+  width: 100vw;
 }
 
 .framer.social-media-container {
-    justify-content: center;
-    padding-top: 24px;
-    display: flex;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+  padding-right: 2%;
 }
 
 .social-media.navigation {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: min-content;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: min-content;
 }
 
-.social-media.navigation .social-media.container{
-    width: 40px;
-    height: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
+.social-media.container {
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .social-media img {
-    display: block;
-    width: 30px;
+  width: 30px;
 }
 
 .social-media h1 {
-    position: relative;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    opacity: 0; 
-    transform: translateY(-10px); 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  position: relative;
+  color: white;
+  font-size: 0px;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(15px);
+  transition: opacity 0.3s ease, transform 0.5s ease, font-size 0.5s ease;
+}
+
+.line-separator {
+  height: 100px;
+  width: 1px;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .social-media.navigation .social-media.container:hover h1 {
-    opacity: 1; 
-    transform: translateY(0); 
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.framer.intro-containers{
-    display: flex;
-    width: 100%;
-    background-color: blue;
+.framer.intro-containers {
+  display: flex;
+  width: 100%;
+  background-color: blue;
 }
 
-.intro-left{
-    background-color: red;
+.intro-left {
+  background-color: red;
 }
 
-.intro-right{
-    background-color: gold;
+.intro-right {
+  background-color: gold;
 }
 
-
-.main-description{
-    height: 100vh;
-    width: 100vw;
+.main-description {
+  height: 100vh;
+  width: 100vw;
 }
-
-
 
 @media (min-width: 768px) {
-    .md\:text-4xl {
-        font-size:2.25rem;
-        line-height: 2.5rem
-    }
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 
-    .md\:text-lg {
-        font-size: 1.125rem;
-        line-height: 1.75rem
-    }
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
-    .lg\:bottom-auto {
-        bottom:auto
-    }
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
 
-    .lg\:left-auto {
-        left: auto
-    }
+  .lg\:left-auto {
+    left: auto;
+  }
 
-    .lg\:right-0 {
-        right: 0
-    }
+  .lg\:right-0 {
+    right: 0;
+  }
 
-    .lg\:top-\[-40\%\] {
-        top: -40%
-    }
+  .lg\:top-\[-40\%\] {
+    top: -40%;
+  }
 
-    .lg\:block {
-        display: block
-    }
+  .lg\:block {
+    display: block;
+  }
 
-    .lg\:hidden {
-        display: none
-    }
+  .lg\:hidden {
+    display: none;
+  }
 
-    .lg\:h-\[180\%\] {
-        height: 180%
-    }
+  .lg\:h-\[180\%\] {
+    height: 180%;
+  }
 
-    .lg\:w-\[80rem\] {
-        width: 80rem
-    }
+  .lg\:w-\[80rem\] {
+    width: 80rem;
+  }
 
-    .lg\:gap-14 {
-        gap: 3.5rem
-    }
+  .lg\:gap-14 {
+    gap: 3.5rem;
+  }
 }
-
 
 /* FONTS */
 /* @font-face {
