@@ -22,19 +22,16 @@ body {
 
 .framer.social-media-container {
     justify-content: center;
-    padding: 16px;
-    background-color: blueviolet;
+    padding-top: 24px;
     display: flex;
 }
 
 .social-media.navigation {
-    background-color: red;
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 30px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -42,29 +39,26 @@ body {
 }
 
 .social-media.navigation .social-media.container{
-    align-content: center;
+    width: 40px;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     align-items: center;
-    cursor: pointer;
     display: inline-flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow: visible;
-    position: relative;
-    text-decoration: none;
 }
 
 .social-media img {
     display: block;
     width: 30px;
-    height: auto;
 }
 
 .social-media h1 {
     position: relative;
     color: white;
     font-size: 12px;
-    border-radius: 3px;
     text-align: center;
     opacity: 0; 
     transform: translateY(-10px); 
