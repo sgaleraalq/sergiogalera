@@ -43,7 +43,7 @@ body {
     justify-content: end;
     align-items: center;
     gap: 30px;
-    font-family: "Consolas, serif", sans-serif;
+    font-family: "SF Mono", monospace;
     padding: 10px 20px;
     padding-right: 2%;
   }
@@ -61,7 +61,7 @@ body {
   /* Elementos de la lista */
   .website-list-element a {
     text-decoration: none;
-    color: #8f9093;
+    color: rgb(194, 186, 186);
     font-size: 14px;
     transition: color 0.3s ease-in-out, transform 0.3s ease;
   }
