@@ -1,5 +1,7 @@
 :root{
-  --main-purple: #8138f8;
+  --main-purple: #b285fa;
+  --secondary-purple: #c39eff;
+  --main-gray: #889294;
 }
 
 body {
@@ -177,7 +179,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  grid-template-columns: minmax(1rem, auto) min(140ch, 100%) minmax(1rem, auto); 
+  grid-template-columns: minmax(1rem, 10%) minmax(20%, 75%) minmax(1rem, 10%);
 }
 
 .main-content-inner {
@@ -186,33 +188,49 @@ body {
   grid-column: 2;
 }
 
+.main-content-inner *{
+  margin: 0;
+}
+
 .introduction-container{
-  background-color: blue;
+  padding: 0px 3%;
 }
 
 .introduction{
-  left: 0%;
+  margin-top: 8%;
   display: inline-block;
   color: white;
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
-  padding: 8px 16px;
-  background-color: red;
+  padding: 0px 16px;
+  font-weight: 200;
 }
 
 .intro-title{
-  color: white;
-  font-size: 2.5rem;
+  color: var(--main-purple);
+  padding: 0px 16px;
+  padding-top: 16px;
+  font-size: 52px;
   font-family: 'JetBrains Mono', monospace;
-
 }
 
 .intro-subtitle{
-  color: white;
-  font-size: 1.5rem;
+  color: rgb(228, 212, 212);
+  padding: 0px 16px;
+  font-size: 42px;
   font-family: 'JetBrains Mono', monospace;
 }
 
+.intro-description-container{
+  margin-top: 3%;
+  margin-right: 30%;
+}
+
+.intro-description{
+  font-size: 16px;
+  color: var(--main-gray);
+  padding: 12px 16px;
+}
 
 @media (min-width: 768px) {
   .md\:text-4xl {
