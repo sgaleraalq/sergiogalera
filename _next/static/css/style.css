@@ -227,25 +227,20 @@ body {
 }
 
 .intro-description{
-  font-size: 16px;
   color: var(--main-gray);
+  font-size: 16px;
+  font-family: 'JetBrains Mono', monospace;
   padding: 12px 16px;
 }
 
-.button-contact-container{
-  margin-top: 5%;
-  padding: 0px 20px;
-  display: flex;
-}
-
 .button-contact {
-  margin-right: 20%;
+  margin-top: 5%;
+  margin-left: 16px;
   background-color: transparent;
   border: 1px solid #3df7d2;
   color: #19eec3;
   font-family: 'JetBrains Mono', monospace;
   padding: 20px 26px;
-  font-size: 14px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
