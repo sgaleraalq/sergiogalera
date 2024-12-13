@@ -173,14 +173,17 @@ body {
 /* END SOCIAL MEDIA CONTAINER */
 /* *********************** */
 
-.framer.intro-containers {
+.main-content {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  grid-template-columns: minmax(1rem, auto) min(140ch, 100%) minmax(1rem, auto); 
+}
+
+.main-content-inner {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  text-align: center;
-  padding: 10px 200px;
+  min-height: 100vh;
+  grid-column: 2;
 }
 
 .introduction-container{
@@ -188,6 +191,8 @@ body {
 }
 
 .introduction{
+  left: 0%;
+  display: inline-block;
   color: white;
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
@@ -208,10 +213,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-.main-description {
-  height: 100vh;
-  width: 100vw;
-}
 
 @media (min-width: 768px) {
   .md\:text-4xl {
