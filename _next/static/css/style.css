@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-purple: #b285fa;
   --secondary-purple: #c39eff;
   --main-gray: #889294;
@@ -9,7 +9,6 @@ body {
   line-height: inherit;
   overflow-x: hidden;
 }
-
 
 .fixed {
   position: fixed;
@@ -30,7 +29,7 @@ body {
 
 /* *********************** */
 /* WEBSITE NAVIGATION CONTAINER */
-.header-container{
+.header-container {
   position: sticky;
   padding: 10px 2%;
   padding-left: 5%;
@@ -190,49 +189,49 @@ body {
   flex-direction: column;
 }
 
-.main-content-inner *{
+.main-content-inner * {
   margin: 0;
 }
 
-.introduction-container{
+.introduction-container {
   padding: 0px 3%;
   height: 90vh;
 }
 
-.introduction{
+.introduction {
   margin-top: 8%;
   display: inline-block;
   color: white;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 18px;
   padding: 0px 16px;
   font-weight: 200;
 }
 
-.intro-title{
+.intro-title {
   color: var(--main-purple);
   padding: 0px 16px;
   padding-top: 16px;
   font-size: 52px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
-.intro-subtitle{
+.intro-subtitle {
   color: rgb(228, 212, 212);
   padding: 0px 16px;
   font-size: 42px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
-.intro-description-container{
+.intro-description-container {
   margin-top: 3%;
   margin-right: 30%;
 }
 
-.intro-description{
+.intro-description {
   color: var(--main-gray);
   font-size: 16px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   padding: 12px 16px;
 }
 
@@ -242,7 +241,7 @@ body {
   background-color: transparent;
   border: 1px solid #3df7d2;
   color: #19eec3;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   padding: 20px 26px;
   text-align: center;
   cursor: pointer;
@@ -256,12 +255,12 @@ body {
 }
 
 /* ABOUT ME CONTAINER */
-.about-me-main-container{
+.about-me-main-container {
   height: 100vh;
   display: flex;
 }
 
-.about-me-container{
+.about-me-container {
   margin: 5%;
   display: flex;
   width: 100%;
@@ -279,20 +278,21 @@ body {
   box-sizing: border-box;
 }
 
-.about-me-white-space{
+.about-me-white-space {
   width: 45%;
   height: 100%;
 }
 
-.about-me-title-number{
+.about-me-title-number {
   color: #42c9b3;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 24px;
+  margin-right: 24px;
 }
 
-.about-me-title{
+.about-me-title {
   color: white;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 24px;
 }
 
@@ -303,13 +303,13 @@ body {
   margin-left: 20px;
 }
 
-.about-me-description-container{
+.about-me-description-container {
   height: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.about-me-imgs-container{
+.about-me-imgs-container {
   width: 45%;
   height: 100%;
   justify-content: center;
@@ -317,37 +317,48 @@ body {
   display: flex;
 }
 
-.about-me-images{
-  width: 65%;
+.about-me-images {
+  width: 55%;
   margin-bottom: 25%;
 }
 
-.about-me-description{
+.about-me-description {
   width: 45%;
   padding-left: 8px;
 }
 
-.about-me-text{
+.about-me-text {
   padding-bottom: 16px;
   color: var(--main-gray);
   font-size: 16px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.university-link {
+  color: #42c9b3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover solo sobre los enlaces */
+.university-link:hover {
+  color: #b285fa;
+  text-decoration: underline;
 }
 
 /* EXPERIENCE CONTAINER */
-.experience-container{
+.experience-container {
   height: 100vh;
 }
-
 
 /* PROJECTS CONTAINER */
-.projects-container{
+.projects-container {
   height: 100vh;
 }
 
-
 /* CONTACT CONTAINER */
-.contact-container{
+.contact-container {
   height: 100vh;
 }
 
@@ -400,23 +411,3 @@ body {
     gap: 3.5rem;
   }
 }
-
-/* FONTS */
-/* @font-face {
-    font-family: __Raleway_904c5e;
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(/_next/static/media/200388358b398524-s.woff2) format("woff2");
-    unicode-range: U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f
-}
-
-
-.__className_904c5e {
-    font-family: __Raleway_904c5e,__Raleway_Fallback_904c5e;
-    font-style: normal
-}
-
-.__variable_904c5e {
-    --font-inter: "__Raleway_904c5e","__Raleway_Fallback_904c5e"
-} */
