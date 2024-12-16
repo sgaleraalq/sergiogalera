@@ -153,6 +153,7 @@ body {
   right: 55px;
   white-space: nowrap;
   color: white;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   opacity: 0;
   transform: translateX(15px);
@@ -179,7 +180,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  grid-template-columns: minmax(1rem, 10%) minmax(20%, 75%) minmax(1rem, 10%);
+  grid-template-columns: 1fr minmax(15%, 65%) 1fr;
 }
 
 .main-content-inner {
@@ -203,7 +204,7 @@ body {
   display: inline-block;
   color: white;
   font-family: "JetBrains Mono", monospace;
-  font-size: 18px;
+  font-size: 20px;
   padding: 0px 16px;
   font-weight: 200;
 }
@@ -212,14 +213,14 @@ body {
   color: var(--main-purple);
   padding: 0px 16px;
   padding-top: 16px;
-  font-size: 52px;
+  font-size: 56px;
   font-family: "JetBrains Mono", monospace;
 }
 
 .intro-subtitle {
   color: rgb(228, 212, 212);
   padding: 0px 16px;
-  font-size: 42px;
+  font-size: 44px;
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -230,13 +231,13 @@ body {
 
 .intro-description {
   color: var(--main-gray);
-  font-size: 16px;
+  font-size: 18px;
   font-family: "JetBrains Mono", monospace;
   padding: 12px 16px;
 }
 
 .button-contact {
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 16px;
   background-color: transparent;
   border: 1px solid #3df7d2;
@@ -319,7 +320,9 @@ body {
 
 .about-me-images {
   width: 55%;
+  margin-right: 10%;
   margin-bottom: 25%;
+  border-radius: 5px;
 }
 
 .about-me-description {
