@@ -255,7 +255,71 @@ body {
   color: #0a192f;
 }
 
+/* ABOUT ME CONTAINER */
 .about-me-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me-imgs-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.about-me-images{
+  height: 50%;
+  width: auto;
+}
+
+.about-me-intro-container{
+  width: 100%;
+  padding: 5%;
+}
+
+.about-me-intro{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.about-me-title-container{
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  align-items: center;
+}
+
+.about-me-title-number{
+  color: #42c9b3;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+}
+
+.about-me-title{
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+}
+
+/* EXPERIENCE CONTAINER */
+.experience-container{
+  height: 100vh;
+}
+
+
+/* PROJECTS CONTAINER */
+.projects-container{
+  height: 100vh;
+}
+
+
+/* CONTACT CONTAINER */
+.contact-container{
   height: 100vh;
 }
 
