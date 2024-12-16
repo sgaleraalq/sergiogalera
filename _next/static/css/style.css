@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 100;
 }
 
 .logo {
@@ -186,6 +187,7 @@ body {
   display: flex;
   min-height: 100vh;
   grid-column: 2;
+  flex-direction: column;
 }
 
 .main-content-inner *{
@@ -194,6 +196,7 @@ body {
 
 .introduction-container{
   padding: 0px 3%;
+  height: 90vh;
 }
 
 .introduction{
@@ -250,6 +253,10 @@ body {
 .button-contact:hover {
   background-color: #00ffcc;
   color: #0a192f;
+}
+
+.about-me-container{
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
