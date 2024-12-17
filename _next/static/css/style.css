@@ -4,6 +4,10 @@
   --main-gray: #889294;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   line-height: inherit;
@@ -30,14 +34,14 @@ body {
 /* *********************** */
 /* WEBSITE NAVIGATION CONTAINER */
 .header-container {
-  position: sticky;
-  padding: 10px 2%;
-  padding-left: 5%;
+  padding: 30px 50px;
+  position: fixed;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   z-index: 100;
+  width: 100%;
 }
 
 .logo {
@@ -45,16 +49,13 @@ body {
   height: auto;
 }
 
-.website-navigation-container {
-  top: 20px;
-  right: 0;
+.website-navigation {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
   align-items: center;
   gap: 30px;
   font-family: "SF Mono", monospace;
-  padding: 10px 20px;
-  padding-right: 2%;
+  margin-right: 2%;
 }
 
 /* Lista de navegación */
@@ -92,7 +93,7 @@ body {
 /* Botón de "Resume" */
 .website-navigation-resume {
   border: 1px solid #42c9b3;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -180,7 +181,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  grid-template-columns: 1fr minmax(15%, 65%) 1fr;
+  grid-template-columns: 1fr minmax(15%, 70%) 1fr;
 }
 
 .main-content-inner {
@@ -195,12 +196,16 @@ body {
 }
 
 .introduction-container {
-  padding: 0px 3%;
-  height: 90vh;
+  padding: 150px 0px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .introduction {
-  margin-top: 8%;
   display: inline-block;
   color: white;
   font-family: "JetBrains Mono", monospace;
@@ -225,19 +230,18 @@ body {
 }
 
 .intro-description-container {
-  margin-top: 3%;
+  padding: 5% 0;
   margin-right: 30%;
 }
 
 .intro-description {
   color: var(--main-gray);
-  font-size: 18px;
+  font-size: 16px;
   font-family: "JetBrains Mono", monospace;
   padding: 12px 16px;
 }
 
 .button-contact {
-  margin-top: 10%;
   margin-left: 16px;
   background-color: transparent;
   border: 1px solid #3df7d2;
@@ -365,7 +369,7 @@ body {
   height: 100vh;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -413,4 +417,4 @@ body {
   .lg\:gap-14 {
     gap: 3.5rem;
   }
-}
+} */
