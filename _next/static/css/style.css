@@ -36,6 +36,9 @@ p {
   justify-content: space-between;
   z-index: 100;
   width: 100%;
+  background-color: #0a192f;
+  transform: translateY(0px);
+  transition: 0.25s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .logo {
@@ -249,7 +252,6 @@ p {
 
 .about-me-container {
   margin: 16px;
-  background-color: red;
   display: flex;
   width: 100%;
   flex-direction: column;
