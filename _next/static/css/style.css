@@ -198,9 +198,9 @@ p {
 
 .intro-title {
   margin: 0;
+  margin-top: 5px;
   color: var(--main-purple);
   font-size: 56px;
-  margin-top: 5px;
 }
 
 .intro-subtitle {
@@ -353,8 +353,28 @@ p {
 }
 
 @media (max-width: 768px){
+  .framer.social-media-container {
+    opacity: 0;
+  }
+
+  .introduction {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 0px 20px;
+  }
+  
   .intro-title {
     font-size: 24px;
+  }
+
+  .intro-subtitle {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }
 
