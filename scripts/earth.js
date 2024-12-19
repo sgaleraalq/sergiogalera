@@ -1,4 +1,5 @@
-import * as THREE from "file:///C:/Users/D817238/Documents/other/three/build/three.js";
+import * as THREE from "./three/build/three.module.js";
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 
 console.log('THREE REVISION: %c${THREE.REVISION}', 'color: red');
 window.THREE = THREE;
