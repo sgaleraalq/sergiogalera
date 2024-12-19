@@ -29,7 +29,6 @@ p {
 /* WEBSITE NAVIGATION CONTAINER */
 .header-container {
   padding: 30px 50px;
-  padding-bottom: 20px;
   position: fixed;
   align-items: center;
   display: flex;

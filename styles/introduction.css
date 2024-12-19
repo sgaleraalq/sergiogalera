@@ -62,6 +62,11 @@
 }
 
 @media (max-width: 768px){    
+    .introduction-container {
+      padding-top: 100px;
+      padding-bottom: 20px;
+    }
+
     .introduction {
       font-size: 14px;
     }
