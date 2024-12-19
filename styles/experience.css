@@ -1,0 +1,11 @@
+.experience-container{
+    height: 100vh;
+    width: 100%;
+    padding: 100px;
+}
+
+#earth-globe{
+    width: 300px;
+    height: 300px;
+    border: 1px solid blue;
+}
