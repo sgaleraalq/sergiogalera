@@ -60,3 +60,19 @@
   background-color: #00ffcc;
   color: #0a192f;
 }
+
+@media (max-width: 768px){    
+    .introduction {
+      font-size: 14px;
+    }
+  
+    .intro-title {
+      font-size: 24px;
+      transition-delay: 200ms;
+    }
+  
+    .intro-subtitle {
+      font-size: 20px;
+    }
+  }
+  

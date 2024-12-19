@@ -102,3 +102,20 @@
   flex-grow: 1;
   border: 1px solid #42c9b3;
 }
+
+
+@media (max-width: 768px){
+    /* ABOUT ME */
+    .about-me-description-container{
+      display: block;
+    }
+  
+    .about-me-blank-space{
+      width: 0%;
+    }
+  
+    .about-me-separator {
+      margin-right: 100px;
+    }
+  }
+  

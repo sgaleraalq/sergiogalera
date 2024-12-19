@@ -29,6 +29,7 @@ p {
 /* WEBSITE NAVIGATION CONTAINER */
 .header-container {
   padding: 30px 50px;
+  padding-bottom: 20px;
   position: fixed;
   align-items: center;
   display: flex;
@@ -181,60 +182,17 @@ p {
   min-height: 100vh;
 }
 
-
-/* EXPERIENCE CONTAINER */
-.experience-container {
-  height: 100vh;
-}
-
-/* PROJECTS CONTAINER */
-.projects-container {
-  height: 100vh;
-}
-
-/* CONTACT CONTAINER */
-.contact-container {
-  height: 100vh;
-}
-
 @media (max-width: 768px){
   .framer.social-media-container {
     opacity: 0;
   }
 
-  .introduction {
-    font-size: 14px;
-  }
-
   .main-content {
     padding: 0px 20px;
-  }
-  
-  .intro-title {
-    font-size: 24px;
-    transition-delay: 200ms;
-  }
-
-  .intro-subtitle {
-    font-size: 20px;
   }
 
   p {
     font-size: 12px;
-  }
-
-
-  /* ABOUT ME */
-  .about-me-description-container{
-    display: block;
-  }
-
-  .about-me-blank-space{
-    width: 0%;
-  }
-
-  .about-me-separator {
-    margin-right: 100px;
   }
 }
 
