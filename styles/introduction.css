@@ -63,7 +63,7 @@
 
 @media (max-width: 768px){    
     .introduction-container {
-      padding-top: 100px;
+      padding-top: 150px;
       padding-bottom: 20px;
     }
 
@@ -78,6 +78,10 @@
   
     .intro-subtitle {
       font-size: 20px;
+    }
+
+    .intro-description {
+      text-align: justify;
     }
   }
   

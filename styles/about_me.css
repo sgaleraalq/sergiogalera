@@ -142,8 +142,11 @@
     max-width: 100%;
   }
 
-  .hobbies-container {
-    max-width: 250px;
+  .about-me-images {
+    max-width: 150px;
   }
-  
+
+  .hobbies-container {
+    max-width: 150px;
+  }
 }

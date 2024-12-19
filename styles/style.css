@@ -54,6 +54,10 @@ p {
   font-family: "SF Mono", monospace;
 }
 
+.mob-website-navigation{
+  display: none;
+}
+
 /* Lista de navegación */
 .website-list {
   display: flex;
@@ -182,6 +186,22 @@ p {
 }
 
 @media (max-width: 768px){
+  .website-navigation{
+    display: none;
+  }
+
+  .header-container{
+    padding-right: 15px;
+  }
+
+  TODO
+  .mob-website-navigation {
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+  }
+
+
   .framer.social-media-container {
     opacity: 0;
   }
