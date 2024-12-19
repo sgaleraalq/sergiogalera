@@ -3,21 +3,23 @@ import * as THREE from "https://cdn.skypack.dev/three@0.150.0";
 console.log('THREE REVISION: %c${THREE.REVISION}', 'color: red');
 window.THREE = THREE;
 
-const earthGlobe = document.getElementById("earth-globe");
-const w = earthGlobe.clientWidth;
-const h = earthGlobe.clientHeight;
+// const earthGlobe = document.getElementById("earth-globe");
+const w = window.innerWidth
+const h = window.innerHeight;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
 camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(w, h);
-earthGlobe.appendChild(renderer.domElement);
+document.body.appendChild(renderer.domElement);
+// earthGlobe.appendChild(renderer.domElement);
 
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshStandardMaterial({
     color: 0x00ff00
-})
+});
+
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
@@ -26,9 +28,11 @@ scene.add(hemiLight);
 
 function animate() {
     requestAnimationFrame(animate);
+
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
 
 animate();
+
