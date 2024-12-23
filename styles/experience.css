@@ -1,76 +1,88 @@
-.experience-container{
-    height: 100vh;
-    width: 100%;
-    padding: 70px 100px;
+.experience-container {
+  height: 100vh;
+  width: 100%;
+  padding: 70px 100px;
 }
 
-#earth-globe{
-    width: 300px;
-    height: 300px;
-    border: 1px solid blue;
+#earth-globe {
+  width: 300px;
+  height: 300px;
+  border: 1px solid blue;
 }
 
 .experience-main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .experience-title-container {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 
-.experience-title-number{
-    color: #42c9b3;
+.experience-title-number {
+  color: #42c9b3;
 }
 
-.experience-title{
-    color: white;
+.experience-title {
+  color: white;
 }
 
-.experience-title-separator{
-    height: 1px;
-    flex-grow: 1;
-    background-color: #42c9b3;
+.experience-title-separator {
+  height: 1px;
+  flex-grow: 1;
+  background-color: #42c9b3;
 }
 
-.experience{
-    flex-grow: 1;
-    width: 100%;
-    border: 1px solid white;
+.experience-content-container {
+  display: flex;
+  justify-content: center;
 }
 
-.experience-navigator-container{
-    width: 100%;
-    display: flex;
+.experience-timeline {
+  position: relative;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  min-height: 20px;
+  margin-top: 32px;
 }
 
-.experience-navigator-separator {
-    width: 1px;
-    background-color: white;
+.timeline-bar {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 2px;
+  background-color: white;
+  border-radius: 3px;
 }
 
-.studies-navigator{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+.timeline-item {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-.work-experience-navigator{
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #64ffda;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a192f;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-.experience-navigator-title{
-    font-size: 16px;
-    font-weight: 150;
-    text-align: center;
-    color: white
+.circle:hover {
+  transform: scale(1.2);
 }
