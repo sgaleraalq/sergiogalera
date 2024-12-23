@@ -136,7 +136,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.internship-item:hover .internship-circle::before {
+.internship-item:hover .internship-pointer::before {
   opacity: 1;
 }
 
@@ -153,7 +153,7 @@
   position: relative;
 }
 
-.internship-circle::before {
+.internship-pointer::before {
   content: attr(data-year);
   position: absolute;
   top: -35px;
