@@ -60,14 +60,7 @@
   height: 2px;
   background-color: white;
   border-radius: 3px;
-}
-
-.timeline-bar-background{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  background-color: #ddd;
-  height: 2px;
+  --arrow-color: white;
 }
 
 .timeline-bar::after {
@@ -77,10 +70,18 @@
   top: 50%;
   width: 0;
   height: 0;
-  border-left: 15px solid white;
+  border-left: 15px solid var(--arrow-color);
   border-top: 7.5px solid transparent;
   border-bottom: 7.5px solid transparent;
   transform: translateY(-50%);
+}
+
+.timeline-bar-background{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  background-color: #ddd;
+  height: 2px;
 }
 
 .timeline-item {

@@ -63,13 +63,19 @@ function cleanAllColors() {
   document.querySelectorAll('.timeline-circle').forEach(circle => {
     circle.style.backgroundColor = '#ddd';
   });
+  // Reset color of the timeline arrows
+  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');
 }
 
-function paintTimelineBar(startingYearPerc, finishYearPerc) {
+function paintTimelineBar(startingYearPerc, finishYearPerc, finishYear) {
   const timelineBar = document.getElementById('timeline-bar-background');
+  const timeline    = document.getElementById('timeline-bar');
   timelineBar.style.background = `linear-gradient(to right, #ddd ${startingYearPerc}%, #42c9b3 ${startingYearPerc}%, #42c9b3 ${finishYearPerc}%, #ddd ${finishYearPerc}%)`;
+  
+  // Change the arrow color if finishYear is "now"
   if (finishYearPerc === 100) {
     timelineBar.style.background = `linear-gradient(to right, #ddd ${startingYearPerc}%, #42c9b3 ${startingYearPerc}%)`;
+    timeline.style.setProperty('--arrow-color', '#42c9b3');
   }
 }
 
@@ -90,12 +96,9 @@ document.getElementById('experience-timeline').addEventListener('click', (e) => 
     const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
 
     cleanAllColors();
-    paintTimelineBar(startingYearPerc, finishYearPerc);
+    paintTimelineBar(startingYearPerc, finishYearPerc, finishYear);
     paintCircle(timelineItem.id);
   }
 });
 
 createTimelineItems();
-
-
-
