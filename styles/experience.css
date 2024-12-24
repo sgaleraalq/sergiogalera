@@ -76,12 +76,13 @@
   transform: translateY(-50%);
 }
 
-.timeline-bar-background{
-  width: 100%;
+.timeline-bar-background {
+  width: 0%;
   position: absolute;
   top: 50%;
-  background-color: #ddd;
+  background-color: #42c9b3;  /* Color de la barra */
   height: 2px;
+  transition: width 2.5s ease-in-out;  /* Animación del ancho */
 }
 
 .timeline-item {
@@ -113,7 +114,7 @@
   color: white;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   position: relative;
 }
 
