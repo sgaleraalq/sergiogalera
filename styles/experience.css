@@ -62,6 +62,14 @@
   border-radius: 3px;
 }
 
+.timeline-bar-background{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  background-color: #ddd;
+  height: 2px;
+}
+
 .timeline-bar::after {
   content: "";
   position: absolute;
@@ -144,14 +152,15 @@
 .internship-pointer {
   width: 0;
   height: 0;
-  top: 20%;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent; 
   border-top: 10px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-30%);
 }
 
 .internship-pointer::before {
