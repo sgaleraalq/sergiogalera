@@ -21,16 +21,18 @@ window.addEventListener('scroll', () => {
 function createTimelineItems() {
   const timelineContainer = document.getElementById('experience-timeline');
   const timelineExperiences = [
-    { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true },
-    { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true },
-    { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true },
-    { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false },
-    { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false }
+    { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-biochemistry-degree' },
+    { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
+    { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
+    { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
+    { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
   ];
 
+  // Elimina elementos previos
   const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
   timelineItems.forEach(item => item.remove());
 
+  // Crea nuevos elementos
   timelineExperiences.forEach(item => {
     const startingPerc = calculateStartingPercentage(item.startYear);
 
@@ -38,6 +40,7 @@ function createTimelineItems() {
     timelineItem.classList.add('timeline-item');
     timelineItem.id = item.id;
     timelineItem.style.left = `${startingPerc}%`;
+    timelineItem.setAttribute('data-content-id', item.contentId); // Añade el atributo data-content-id
 
     const timelineCircle = document.createElement('div');
     timelineCircle.classList.add(item.isExperience ? 'timeline-circle' : 'internship-pointer');
@@ -47,6 +50,43 @@ function createTimelineItems() {
     timelineItem.appendChild(timelineCircle);
     timelineContainer.appendChild(timelineItem);
   });
+}
+
+createTimelineItems();
+
+document.getElementById('experience-timeline').addEventListener('click', (e) => {
+  const timelineItem = e.target.closest('.timeline-item');
+  if (!timelineItem) return;
+
+  const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
+  const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+
+  const startingYearPerc = calculateStartingPercentage(year);
+  const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+
+  cleanAllColors();
+  paintTimelineBar(startingYearPerc, finishYearPerc);
+  paintCircle(timelineItem.id);
+
+  // Usa el atributo data-content-id
+  const contentId = timelineItem.getAttribute('data-content-id');
+  displayExperienceContent(contentId);
+});
+
+function displayExperienceContent(contentId) {
+  // Oculta todo el contenido
+  document.querySelectorAll('.experience-content-container > div').forEach(item => {
+    item.style.display = 'none';
+  });
+
+  // Muestra el contenido correspondiente
+  const content = document.getElementById(contentId);
+  console.log("Displaying content:", content);
+  if (content) {
+    content.style.display = 'block';
+  } else {
+    console.warn(`No content found for ID: ${contentId}`);
+  }
 }
 
 function calculateStartingPercentage(year) {
@@ -99,20 +139,3 @@ function paintCircle(itemId) {
     circle.style.backgroundColor = '#42c9b3';
   }
 }
-
-document.getElementById('experience-timeline').addEventListener('click', (e) => {
-  const timelineItem = e.target.closest('.timeline-item');
-  if (timelineItem) {
-    const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
-    const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
-
-    const startingYearPerc = calculateStartingPercentage(year);
-    const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
-
-    cleanAllColors();
-    paintTimelineBar(startingYearPerc, finishYearPerc);
-    paintCircle(timelineItem.id);
-  }
-});
-
-createTimelineItems();
