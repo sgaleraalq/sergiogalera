@@ -63,26 +63,32 @@ function cleanAllColors() {
   document.querySelectorAll('.timeline-circle').forEach(circle => {
     circle.style.backgroundColor = '#ddd';
   });
-  // Reset color of the timeline arrows
-  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');
-}
 
+  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');
+
+  const timelineBar = document.getElementById('timeline-bar-background');
+  
+  timelineBar.style.transition = 'none';
+  timelineBar.style.width = '0%';
+  timelineBar.offsetHeight;
+
+  timelineBar.style.transition = 'width 2.5s ease-in-out';
+}
 
 function paintTimelineBar(startingYearPerc, finishYearPerc) {
   const timelineBar = document.getElementById('timeline-bar-background');
-  const timeline    = document.getElementById('timeline-bar');
+  const timeline = document.getElementById('timeline-bar');
 
-  // Aseguramos que la barra de tiempo comience desde el 0% de ancho
-  timelineBar.style.width = `${startingYearPerc - finishYearPerc}%`;
+  timelineBar.style.transition = 'none';
+  timelineBar.style.left = `${startingYearPerc}%`;
+  timelineBar.offsetHeight;
+  timelineBar.style.transition = 'width 2.5s ease-in-out';
+  timelineBar.style.width = `${finishYearPerc - startingYearPerc}%`;
 
-  // Usamos setTimeout para permitir que el navegador aplique el estilo inicial
-  setTimeout(() => {
-    timelineBar.style.width = `${finishYearPerc}%`;
-  }, 10); 
-
-  // Si el finishYearPerc es 100 (para "now"), cambiamos el color de la flecha
   if (finishYearPerc === 100) {
-    timeline.style.setProperty('--arrow-color', '#42c9b3');
+    setTimeout(() => {
+      timeline.style.setProperty('--arrow-color', '#42c9b3');
+    }, (1.8*1000));
   }
 }
 

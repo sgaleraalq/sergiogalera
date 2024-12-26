@@ -74,15 +74,16 @@
   border-top: 7.5px solid transparent;
   border-bottom: 7.5px solid transparent;
   transform: translateY(-50%);
+  transition: border-left 0.5s ease-in-out;
 }
 
 .timeline-bar-background {
   width: 0%;
   position: absolute;
   top: 50%;
-  background-color: #42c9b3;  /* Color de la barra */
+  background-color: #42c9b3;
   height: 2px;
-  transition: width 2.5s ease-in-out;  /* Animación del ancho */
+  transition: width 2.5s ease-in-out;
 }
 
 .timeline-item {
@@ -114,7 +115,6 @@
   color: white;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s ease-in-out;
   position: relative;
 }
 
