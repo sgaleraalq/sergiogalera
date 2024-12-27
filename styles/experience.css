@@ -243,17 +243,28 @@ ul {
   filter: grayscale(0%);
 }
 
+.title-text-container{
+  margin-top: 24px;
+}
+
 #experience-content-title{
   font-size: 24px;
-  color: var(--main-soft-blue);
-  margin-top: 24px;
+  /* color: var(--main-soft-blue); */
+  margin: 0;
 }
 
 .experience-labour {
   font-family: 'JetBrains Mono', monospace;
   color: white;
-  font-size: 20px;
-  margin-left: 12px;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 12px;;
+  margin-left: 24px;
+}
+
+.experience-date {
+  font-weight: bold;
+  color: var(--main-soft-blue);
 }
 
 .experience-timeline-content {
