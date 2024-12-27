@@ -247,7 +247,7 @@ ul {
   filter: grayscale(0%);
 }
 
-.experience-title{
+#experience-1-title{
   font-size: 24px;
   color: var(--main-soft-blue);
   margin-top: 24px;
