@@ -229,7 +229,19 @@
   display: block;
 }
 
+.experience-title-img {
+  margin-left: 100px;
+  width: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;  
+}
+
+.experience-title-img:hover {
+  filter: grayscale(0%);
+}
+
 .experience-title{
   font-size: 24px;
-  color: var(--main-soft-blue)
+  color: var(--main-soft-blue);
+  margin-top: 24px;
 }
