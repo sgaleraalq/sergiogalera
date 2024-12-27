@@ -1,3 +1,9 @@
+ul {
+  font-family: 'JetBrains Mono', monospace;
+  color: white;
+  list-style-type: none;
+}
+
 .experience-container {
   height: 100vh;
   width: 100%;
@@ -186,7 +192,7 @@
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .experience-2-container {
@@ -226,7 +232,8 @@
 
 .experience-1-container {
   /* background-color: blue; */
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-title-img {
@@ -244,4 +251,36 @@
   font-size: 24px;
   color: var(--main-soft-blue);
   margin-top: 24px;
+}
+
+.experience-timeline-content {
+  flex-grow: 1;
+  padding: 0px 24px;
+}
+
+.experience-timeline-list {
+  list-style: none;
+}
+
+.experience-timeline-list li {
+  position: relative;
+  margin: 18px 0;
+  padding-left: 40px;
+  color: var(--main-gray-whiter);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-timeline-list li.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.experience-timeline-list li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: var(--main-soft-blue);
+  font-size: 16px;
 }

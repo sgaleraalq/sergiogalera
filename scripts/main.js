@@ -139,3 +139,26 @@ function paintCircle(itemId) {
     circle.style.backgroundColor = 'var(--main-soft-blue)';
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".experience-timeline-list li");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        const item = entry.target;
+
+        // Añadimos la clase "visible" de forma secuencial con un retraso
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, index * 300); // Retraso de 300 ms por cada elemento
+
+        // Deja de observar el elemento para evitar que se reanime
+        observer.unobserve(item);
+      }
+    });
+  });
+
+  items.forEach((item) => observer.observe(item));
+});
