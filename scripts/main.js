@@ -149,12 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         const item = entry.target;
 
-        // Añadimos la clase "visible" de forma secuencial con un retraso
         setTimeout(() => {
           item.classList.add("visible");
-        }, index * 300); // Retraso de 300 ms por cada elemento
+        }, index * 750); 
 
-        // Deja de observar el elemento para evitar que se reanime
         observer.unobserve(item);
       }
     });

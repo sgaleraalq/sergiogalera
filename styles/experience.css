@@ -195,10 +195,6 @@ ul {
   /* border: 1px solid white; */
 }
 
-.experience-2-container {
-  background-color: red;
-}
-
 .experience-3-container {
   background-color: green;
 }
@@ -247,10 +243,17 @@ ul {
   filter: grayscale(0%);
 }
 
-#experience-1-title{
+#experience-content-title{
   font-size: 24px;
   color: var(--main-soft-blue);
   margin-top: 24px;
+}
+
+.experience-labour {
+  font-family: 'JetBrains Mono', monospace;
+  color: white;
+  font-size: 20px;
+  margin-left: 12px;
 }
 
 .experience-timeline-content {
@@ -260,6 +263,7 @@ ul {
 
 .experience-timeline-list {
   list-style: none;
+  margin-top: 32px;
 }
 
 .experience-timeline-list li {
@@ -268,8 +272,8 @@ ul {
   padding-left: 40px;
   color: var(--main-gray-whiter);
   opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateX(40px);
+  transition: opacity 0.1s ease, transform 1s ease;
 }
 
 .experience-timeline-list li.visible {
@@ -283,4 +287,8 @@ ul {
   left: 0;
   color: var(--main-soft-blue);
   font-size: 16px;
+}
+
+#experience-img-au{
+  filter: invert(1) brightness(1000%) saturate(0);
 }
