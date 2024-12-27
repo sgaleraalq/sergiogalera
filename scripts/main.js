@@ -127,7 +127,7 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
 
   if (finishYearPerc === 100) {
     setTimeout(() => {
-      timeline.style.setProperty('--arrow-color', '#42c9b3');
+      timeline.style.setProperty('--arrow-color', 'var(--main-soft-blue)');
     }, (1.8*1000));
   }
 }
@@ -136,6 +136,6 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
 function paintCircle(itemId) {
   const circle = document.querySelector(`#${itemId} .timeline-circle`);
   if (circle) {
-    circle.style.backgroundColor = '#42c9b3';
+    circle.style.backgroundColor = 'var(--main-soft-blue)';
   }
 }

@@ -1,4 +1,5 @@
 :root {
+  --main-soft-blue: #42c9b3;
   --main-purple: #b285fa;
   --secondary-purple: #c39eff;
   --main-gray: #889294;
@@ -77,14 +78,14 @@ p {
 }
 
 .website-list-element a:hover {
-  color: #42c9b3;
+  color: var(--main-soft-blue);
   transform: scale(1.1);
 }
 
 /* Numeración */
 .website-list-element a::before {
   content: attr(data-number);
-  color: #42c9b3;
+  color: var(--main-soft-blue);
   margin-right: 10px;
   font-size: 14px;
   font-weight: bold;
@@ -92,7 +93,7 @@ p {
 
 /* Botón de "Resume" */
 .website-navigation-resume {
-  border: 1px solid #42c9b3;
+  border: 1px solid var(--main-soft-blue);
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -105,7 +106,7 @@ p {
 .website-navigation-resume p {
   margin: 0;
   font-size: 14px;
-  color: #42c9b3;
+  color: var(--main-soft-blue);
   text-align: center;
   font-weight: 500;
 }

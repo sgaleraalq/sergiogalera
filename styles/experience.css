@@ -25,7 +25,7 @@
 }
 
 .experience-title-number {
-  color: #42c9b3;
+  color: var(--main-soft-blue);
 }
 
 .experience-title {
@@ -35,7 +35,7 @@
 .experience-title-separator {
   height: 1px;
   flex-grow: 1;
-  background-color: #42c9b3;
+  background-color: var(--main-soft-blue);
 }
 
 .experience-timeline-container {
@@ -81,7 +81,7 @@
   width: 0%;
   position: absolute;
   top: 50%;
-  background-color: #42c9b3;
+  background-color: var(--main-soft-blue);
   height: 2px;
   transition: width 2.5s ease-in-out;
 }
@@ -188,9 +188,6 @@
   margin-top: 40px;
   border: 1px solid white;
 }
-.experience-1-container {
-  background-color: blue;
-}
 
 .experience-2-container {
   background-color: red;
@@ -226,3 +223,13 @@
     margin: 0;
 }
 
+
+.experience-1-container {
+  /* background-color: blue; */
+  display: block;
+}
+
+.experience-title{
+  font-size: 24px;
+  color: var(--main-soft-blue)
+}
