@@ -157,7 +157,6 @@ function displayExperienceContent(contentId) {
   });
 
   const content = document.getElementById(contentId);
-  console.log(content);
 
   if (content) {
     const items = content.querySelectorAll(".experience-timeline-list li");
