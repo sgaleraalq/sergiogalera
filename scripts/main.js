@@ -1,5 +1,14 @@
 const header = document.querySelector('.header-container');
 const headerHeight = header.offsetHeight;
+const timelineExperiences = [
+  { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-biochemistry-degree' },
+  { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
+  { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
+  { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
+  { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
+];
+let isExperienceNotLoaded = true;
+
 
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
@@ -14,19 +23,52 @@ window.addEventListener('scroll', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const experienceDiv = document.getElementById('experience-content-container');
+
+  // Crear el IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting && entry.intersectionRatio === 0) {
+        isExperienceNotLoaded = true;
+      }
+
+      if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
+        isExperienceNotLoaded = false;
+        const startingYearPerc = calculateStartingPercentage(timelineExperiences[0].startYear);
+        const finishYearPerc = calculateStartingPercentage(timelineExperiences[0].finishYear);
+        const timelineItem = document.getElementById(timelineExperiences[0].id);
+        initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
+      }
+    });
+  }, {
+    threshold: [0, 1]
+  });
+
+  // Observar el elemento
+  observer.observe(experienceDiv);
+});
+
+document.getElementById('experience-timeline').addEventListener('click', (e) => {
+  const timelineItem = e.target.closest('.timeline-item');
+  if (!timelineItem) return;
+
+  const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
+  const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+
+  const startingYearPerc = calculateStartingPercentage(year);
+  const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+
+  initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
+});
+
+
 
 /**
  * Timeline
  */
 function createTimelineItems() {
   const timelineContainer = document.getElementById('experience-timeline');
-  const timelineExperiences = [
-    { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-biochemistry-degree' },
-    { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
-    { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
-    { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
-    { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
-  ];
 
   // Elimina elementos previos
   const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
@@ -54,40 +96,16 @@ function createTimelineItems() {
 
 createTimelineItems();
 
-document.getElementById('experience-timeline').addEventListener('click', (e) => {
-  const timelineItem = e.target.closest('.timeline-item');
-  if (!timelineItem) return;
 
-  const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
-  const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
-
-  const startingYearPerc = calculateStartingPercentage(year);
-  const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
+  const contentId = experience.getAttribute('data-content-id');
 
   cleanAllColors();
   paintTimelineBar(startingYearPerc, finishYearPerc);
-  paintCircle(timelineItem.id);
-
-  // Usa el atributo data-content-id
-  const contentId = timelineItem.getAttribute('data-content-id');
+  paintCircle(experience.id);
   displayExperienceContent(contentId);
-});
-
-function displayExperienceContent(contentId) {
-  // Oculta todo el contenido
-  document.querySelectorAll('.experience-content-container > div').forEach(item => {
-    item.style.display = 'none';
-  });
-
-  // Muestra el contenido correspondiente
-  const content = document.getElementById(contentId);
-  console.log("Displaying content:", content);
-  if (content) {
-    content.style.display = 'block';
-  } else {
-    console.warn(`No content found for ID: ${contentId}`);
-  }
 }
+
 
 function calculateStartingPercentage(year) {
   const currentYear = new Date().getFullYear();
@@ -140,23 +158,18 @@ function paintCircle(itemId) {
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".experience-timeline-list li");
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        const item = entry.target;
-
-        setTimeout(() => {
-          item.classList.add("visible");
-        }, index * 750); 
-
-        observer.unobserve(item);
-      }
-    });
+function displayExperienceContent(contentId) {
+  // Oculta todo el contenido
+  document.querySelectorAll('.experience-content-container > div').forEach(item => {
+    item.style.display = 'none';
   });
 
-  items.forEach((item) => observer.observe(item));
-});
+  // Muestra el contenido correspondiente
+  const content = document.getElementById(contentId);
+  console.log(content);
+  if (content) {
+    content.style.display = 'block';
+  } else {
+    console.warn(`No content found for ID: ${contentId}`);
+  }
+}
