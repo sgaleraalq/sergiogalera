@@ -90,9 +90,6 @@ function createTimelineItems() {
   });
 }
 
-createTimelineItems();
-
-
 function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
   const contentId = experience.getAttribute('data-content-id');
 
@@ -189,3 +186,6 @@ function displayExperienceContent(contentId) {
     console.warn(`No content found for ID: ${contentId}`);
   }
 }
+
+
+createTimelineItems();
