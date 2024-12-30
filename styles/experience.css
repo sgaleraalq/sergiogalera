@@ -225,13 +225,6 @@ ul {
     margin: 0;
 }
 
-
-.experience-1-container {
-  /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
-}
-
 .experience-title-img {
   margin-left: 100px;
   width: 40px;
@@ -249,7 +242,6 @@ ul {
 
 #experience-content-title{
   font-size: 24px;
-  /* color: var(--main-soft-blue); */
   margin: 0;
 }
 
