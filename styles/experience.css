@@ -192,12 +192,9 @@ ul {
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
-.experience-3-container {
-  background-color: green;
-}
 
 .internship-1-container {
   background-color: yellow;
@@ -228,21 +225,10 @@ ul {
 .experience-title-img {
   margin-left: 100px;
   width: 40px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;  
-}
-
-.experience-title-img:hover {
-  filter: grayscale(0%);
 }
 
 .title-text-container{
   margin-top: 24px;
-}
-
-#experience-content-title{
-  font-size: 24px;
-  margin: 0;
 }
 
 .experience-labour {
@@ -290,6 +276,15 @@ ul {
   left: 0;
   color: var(--main-soft-blue);
   font-size: 16px;
+}
+
+#experience-content-title{
+  font-size: 24px;
+  margin: 0;
+}
+
+#experience-img-unav{
+  filter: grayscale(100%);
 }
 
 #experience-img-au{
