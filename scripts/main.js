@@ -155,34 +155,36 @@ function paintCircle(itemId) {
 }
 
 function displayExperienceContent(contentId) {
-  // Oculta todo el contenido
   document.querySelectorAll('.experience-content-container > div').forEach(item => {
     item.style.display = 'none';
   });
 
-  // Muestra el contenido correspondiente
   const content = document.getElementById(contentId);
   console.log(content);
+
   if (content) {
+    const items = content.querySelectorAll(".experience-timeline-list li");
+    items.forEach(item => {
+      item.classList.remove("visible");
+    });
+
     content.style.display = 'block';
-    const items = document.querySelectorAll(".experience-timeline-list li");
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           const item = entry.target;
-  
+
           setTimeout(() => {
             item.classList.add("visible");
-          }, index * 750); 
-  
+          }, index * 750);
+
           observer.unobserve(item);
         }
       });
     });
-  
-    items.forEach((item) => observer.observe(item));
-    
+
+    items.forEach(item => observer.observe(item));
   } else {
     console.warn(`No content found for ID: ${contentId}`);
   }
