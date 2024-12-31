@@ -101,7 +101,6 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -111,7 +110,6 @@ ul {
 
 .timeline-item.selected .timeline-circle {
   background-color: white;
-  border: 2px solid red;
 }
 
 .timeline-item.selected .timeline-circle::before {
@@ -131,6 +129,7 @@ ul {
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
+  cursor: pointer;
 }
 
 .timeline-circle::before {
@@ -163,7 +162,6 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -174,15 +172,18 @@ ul {
 .internship-pointer {
   width: 0;
   height: 0;
+  cursor: pointer;
   border-left: 5px solid transparent;
-  border-right: 5px solid transparent; 
+  border-right: 5px solid transparent;
   border-top: 10px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 30%;
   transform: translateY(-30%);
+  z-index: 3;  
+}
+
+.internship-pointer.clicked {
+  border-top-color: var(--main-orange);
 }
 
 .internship-pointer::before {
@@ -202,20 +203,10 @@ ul {
 }
 
 
-
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
   /* border: 1px solid white; */
-}
-
-
-.internship-1-container {
-  background-color: yellow;
-}
-
-.internship-2-container {
-  background-color: purple;
 }
 
 .experience-1-container,
@@ -299,8 +290,9 @@ ul {
 
 
 .experience-sticker{
-  height: 100px;
-  width: 100px;
+  display: none;
+  /* height: 100px; */
+  /* width: 100px; */
 }
 
 

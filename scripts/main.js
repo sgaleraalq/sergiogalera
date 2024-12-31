@@ -53,11 +53,30 @@ document.getElementById('experience-timeline').addEventListener('click', (e) => 
   const timelineItem = e.target.closest('.timeline-item');
   if (!timelineItem) return;
 
-  const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
-  const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+  let year, finishYear, startingYearPerc, finishYearPerc;
 
-  const startingYearPerc = calculateStartingPercentage(year);
-  const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+  // Comprobamos si el clic fue sobre un timeline-circle o internship-item
+  switch (true) {
+    case e.target.closest('.timeline-circle') !== null:
+      document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+      year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
+      finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+      startingYearPerc = calculateStartingPercentage(year);
+      finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+      break;
+
+      case e.target.closest('.internship-pointer') !== null:
+        document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+        const internshipPointer = e.target.closest('.internship-pointer');
+        internshipPointer.classList.add('clicked');   
+        year = timelineItem.querySelector('.internship-pointer').getAttribute('data-year');
+        finishYear = timelineItem.querySelector('.internship-pointer').getAttribute('finish-year');
+        startingYearPerc = calculateStartingPercentage(year);
+        finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+        break;
+    default:
+      return;
+  }
 
   initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
 });
@@ -124,7 +143,7 @@ function cleanAllColors() {
     circle.style.backgroundColor = '#ddd';
   });
 
-  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');
+  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');  
 
   const timelineBar = document.getElementById('timeline-bar-background');
   
@@ -200,7 +219,6 @@ function displayExperienceTitle(contentId) {
     observer.observe(experienceLabour);
   }
 }
-
 
 function displayExperienceContent(contentId) {
   document.querySelectorAll('.experience-content-container > div').forEach(item => {
