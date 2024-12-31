@@ -96,6 +96,12 @@ function createTimelineItems() {
 function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
   const contentId = experience.getAttribute('data-content-id');
 
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    item.classList.remove('selected');
+  });
+
+  experience.classList.add('selected');
+
   cleanAllColors();
   paintTimelineBar(startingYearPerc, finishYearPerc);
   paintCircle(experience.id);

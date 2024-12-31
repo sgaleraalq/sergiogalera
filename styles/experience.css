@@ -109,6 +109,16 @@ ul {
   opacity: 1;
 }
 
+.timeline-item.selected .timeline-circle {
+  background-color: white;
+  border: 2px solid red;
+}
+
+.timeline-item.selected .timeline-circle::before {
+  opacity: 1;
+  color: white;
+}
+
 .timeline-circle {
   width: 15px;
   height: 15px;
@@ -137,6 +147,11 @@ ul {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
+}
+
+.timeline-item.selected .timeline-circle::before {
+  color: white;
+  opacity: 1;
 }
 
 .internship-item {
