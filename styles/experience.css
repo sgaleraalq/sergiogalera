@@ -240,6 +240,12 @@ ul {
   margin-left: 100px;
   margin-right: 24px;
   width: 60px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.experience-title-img.visible {
+  opacity: 1;
 }
 
 .all-title-text-container{

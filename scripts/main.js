@@ -187,6 +187,9 @@ function displayExperienceTitle(contentId) {
     labour.classList.remove('visible');
   });
 
+  document.querySelectorAll('.experience-title-img').forEach(image => {
+    image.classList.remove('visible');
+  });
   const content = document.getElementById(contentId);
   const title = content.querySelector('.experience-title');
   const experienceLabour = content.querySelector('.experience-labour');
@@ -217,6 +220,21 @@ function displayExperienceTitle(contentId) {
     });
 
     observer.observe(experienceLabour);
+  }
+
+  const image = content.querySelector('.experience-title-img');
+
+  if (image) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          image.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(image);
   }
 }
 
