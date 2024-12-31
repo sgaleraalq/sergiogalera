@@ -313,10 +313,3 @@ ul {
 
 
 /* SPECIFIC ITEMS */
-#experience-img-unav{
-  filter: grayscale(100%);
-}
-
-#experience-img-au{
-  filter: invert(1) brightness(1000%) saturate(0);
-}

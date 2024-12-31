@@ -63,7 +63,6 @@ document.getElementById('experience-timeline').addEventListener('click', (e) => 
 });
 
 
-
 /**
  * Timeline
  */
@@ -103,7 +102,6 @@ function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
   displayExperienceTitle(contentId);
   displayExperienceContent(contentId);
 }
-
 
 function calculateStartingPercentage(year) {
   const currentYear = new Date().getFullYear();
@@ -147,7 +145,6 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
     }, (1.8*1000));
   }
 }
-
 
 function paintCircle(itemId) {
   const circle = document.querySelector(`#${itemId} .timeline-circle`);
@@ -237,8 +234,6 @@ function displayExperienceContent(contentId) {
     console.warn(`No content found for ID: ${contentId}`);
   }
 }
-
-
 
 
 createTimelineItems();
