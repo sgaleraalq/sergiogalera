@@ -318,6 +318,8 @@ ul {
 .experience-timeline-content {
   flex-grow: 1;
   padding: 0px 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TIMELINE LIST */
@@ -372,15 +374,17 @@ ul {
   transition: opacity 1s ease;
 }
 
-/* SPECIFIC ITEMS */
-.experience-1-timeline-first-content {
+.experience-timeline-extra-content {
   display: flex;
-  flex-direction: row;
-  gap: 200px;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
-#dna_gif{
+/* SPECIFIC ITEMS */
+#dna-gif{
   width: 150px;
+  transform: rotate(90deg);
 }
 
 #earth-globe {

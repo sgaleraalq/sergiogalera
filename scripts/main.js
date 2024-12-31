@@ -1,7 +1,7 @@
 const header = document.querySelector('.header-container');
 const headerHeight = header.offsetHeight;
 const timelineExperiences = [
-  { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-biochemistry-degree' },
+  { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-unav' },
   { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
   { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
   { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
-        // const lastExperience = timelineExperiences[0];
+        // const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        const lastExperience = timelineExperiences[0];
         
         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
@@ -272,7 +272,8 @@ function displayExperienceContent(contentId) {
       item.classList.remove("visible");
     });
 
-    content.style.display = 'block';
+    content.style.display = 'flex';
+    content.style.flexDirection = 'column';
 
     const initialDelay = 1250; 
     const itemDelay = 750;
