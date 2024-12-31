@@ -10,12 +10,6 @@ ul {
   padding: 70px 100px;
 }
 
-#earth-globe {
-  width: 300px;
-  height: 300px;
-  border: 1px solid blue;
-}
-
 .experience-main-container {
   display: flex;
   flex-direction: column;
@@ -338,3 +332,9 @@ ul {
 }
 
 /* SPECIFIC ITEMS */
+
+#earth-globe {
+  width: 300px;
+  height: 300px;
+  border: 1px solid blue;
+}
