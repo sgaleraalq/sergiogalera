@@ -251,6 +251,14 @@ ul {
   width: 60px;
 }
 
+.all-title-text-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+  width: 100%;
+}
+
 .title-text-container{
   margin-top: 24px;
 }
@@ -290,6 +298,12 @@ ul {
 }
 
 
+.experience-sticker{
+  height: 100px;
+  width: 100px;
+}
+
+
 /* TIMELINE CONTENT */
 .experience-timeline-content {
   flex-grow: 1;
@@ -324,7 +338,5 @@ ul {
   color: var(--main-soft-blue);
   font-size: 16px;
 }
-
-
 
 /* SPECIFIC ITEMS */
