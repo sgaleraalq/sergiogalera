@@ -100,6 +100,7 @@ function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
   cleanAllColors();
   paintTimelineBar(startingYearPerc, finishYearPerc);
   paintCircle(experience.id);
+  displayExperienceTitle(contentId);
   displayExperienceContent(contentId);
 }
 
@@ -155,14 +156,55 @@ function paintCircle(itemId) {
   }
 }
 
+function displayExperienceTitle(contentId) {
+  document.querySelectorAll('.experience-title').forEach(title => {
+    title.classList.remove('visible');
+  });
+
+  document.querySelectorAll('.experience-labour').forEach(labour => {
+    labour.classList.remove('visible');
+  });
+
+  const content = document.getElementById(contentId);
+  const title = content.querySelector('.experience-title');
+  const experienceLabour = content.querySelector('.experience-labour');
+
+  if (title) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          title.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(title);
+  }
+
+  if (experienceLabour) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            experienceLabour.classList.add('visible');
+          }, 500)
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(experienceLabour);
+  }
+}
+
+
 function displayExperienceContent(contentId) {
   document.querySelectorAll('.experience-content-container > div').forEach(item => {
     item.style.display = 'none';
   });
 
   const content = document.getElementById(contentId);
-  console.log(content);
-
   if (content) {
     const items = content.querySelectorAll(".experience-timeline-list li");
     items.forEach(item => {
@@ -171,14 +213,19 @@ function displayExperienceContent(contentId) {
 
     content.style.display = 'block';
 
+    const initialDelay = 1250; 
+    const itemDelay = 750;
+
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           const item = entry.target;
 
           setTimeout(() => {
-            item.classList.add("visible");
-          }, index * 750);
+            setTimeout(() => {
+              item.classList.add("visible");
+            }, index * itemDelay);
+          }, initialDelay);
 
           observer.unobserve(item);
         }
@@ -190,6 +237,8 @@ function displayExperienceContent(contentId) {
     console.warn(`No content found for ID: ${contentId}`);
   }
 }
+
+
 
 
 createTimelineItems();
