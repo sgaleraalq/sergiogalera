@@ -379,11 +379,12 @@ ul {
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+  background-color: red;
 }
 
 /* SPECIFIC ITEMS */
 #dna-gif{
-  width: 150px;
+  width: 100px;
   transform: rotate(90deg);
 }
 
