@@ -7,6 +7,9 @@ const timelineExperiences = [
   { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
   { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
 ];
+const timelineBarColor = 'var(--main-orange)';
+document.querySelector('.timeline-bar-background').style.backgroundColor = timelineBarColor;
+
 let isExperienceNotLoaded = true;
 
 
@@ -31,9 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        const startingYearPerc = calculateStartingPercentage(timelineExperiences[0].startYear);
-        const finishYearPerc = calculateStartingPercentage(timelineExperiences[0].finishYear);
-        const timelineItem = document.getElementById(timelineExperiences[0].id);
+        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
+        const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
+        const timelineItem = document.getElementById(lastExperience.id);
         initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
       }
     });
@@ -138,7 +142,7 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
 
   if (finishYearPerc === 100) {
     setTimeout(() => {
-      timeline.style.setProperty('--arrow-color', 'var(--main-soft-blue)');
+      timeline.style.setProperty('--arrow-color', timelineBarColor);
     }, (1.8*1000));
   }
 }
@@ -147,7 +151,7 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
 function paintCircle(itemId) {
   const circle = document.querySelector(`#${itemId} .timeline-circle`);
   if (circle) {
-    circle.style.backgroundColor = 'var(--main-soft-blue)';
+    circle.style.backgroundColor = timelineBarColor;
   }
 }
 

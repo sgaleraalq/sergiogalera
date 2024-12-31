@@ -23,7 +23,7 @@ ul {
   height: 100%;
 }
 
-.experience-title-container {
+.experience-section-title {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -63,7 +63,7 @@ ul {
   position: absolute;
   width: 100%;
   top: 50%;
-  height: 2px;
+  height: 3px;
   background-color: white;
   border-radius: 3px;
   --arrow-color: white;
@@ -87,8 +87,7 @@ ul {
   width: 0%;
   position: absolute;
   top: 50%;
-  background-color: var(--main-soft-blue);
-  height: 2px;
+  height: 3px;
   transition: width 2.5s ease-in-out;
 }
 
@@ -222,6 +221,20 @@ ul {
     margin: 0;
 }
 
+.experience-timeline-content {
+  flex-grow: 1;
+  padding: 0px 24px;
+}
+
+/* TIMELINE TITLE (Unav, Au university, Nasertic...) */
+.experience-title-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
 .experience-title-img {
   margin-left: 100px;
   width: 40px;
@@ -236,7 +249,7 @@ ul {
   color: white;
   font-size: 14px;
   margin: 0;
-  margin-top: 12px;;
+  margin-top: 12px;
   margin-left: 24px;
 }
 
@@ -245,14 +258,11 @@ ul {
   color: var(--main-soft-blue);
 }
 
-.experience-timeline-content {
-  flex-grow: 1;
-  padding: 0px 24px;
-}
 
+/* TIMELINE LIST */
 .experience-timeline-list {
   list-style: none;
-  margin-top: 32px;
+  margin: 0;
 }
 
 .experience-timeline-list li {
@@ -278,6 +288,9 @@ ul {
   font-size: 16px;
 }
 
+
+
+/* SPECIFIC ITEMS */
 #experience-content-title{
   font-size: 24px;
   margin: 0;
