@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        // const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        const lastExperience = timelineExperiences[0];
+        
         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
         const timelineItem = document.getElementById(lastExperience.id);

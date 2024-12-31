@@ -349,33 +349,19 @@ ul {
 }
 
 /* SPECIFIC ITEMS */
+.experience-1-timeline-first-content {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+}
+
+#dna_gif{
+  width: 150px;
+}
+
 
 #earth-globe {
   width: 300px;
   height: 300px;
   border: 1px solid blue;
-}
-
-
-/* EXPERIENCE 1 ITEMS */
-.experience-1-timeline-first-content {
-  display: flex;
-  gap: 200px;
-}
-
-.experience-1-extras {
-  display: flex;
-  align-items: center;
-}
-
-.experience-timeline-list {
-
-}
-
-#experience-1-timeline-content{
-
-}
-
-#dna_gif{
-  width: 100px;
 }
