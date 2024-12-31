@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/introduction.css">
     <link rel="stylesheet" href="./styles/about_me.css">
     <link rel="stylesheet" href="./styles/experience.css">
+    <link rel="stylesheet" href="./styles/projects.css">
 </head>
 
 
@@ -194,12 +195,13 @@
         <section id="experience" class="experience-container">
             <!-- <div id="earth-globe"></div> -->
             <div class="experience-main-container">
-                <div class="experience-title-container">
+                <div class="experience-section-title">
                     <h1 class="experience-title-number">02.</h1>
-                    <h1 class="experience-title">Experience</h1>
+                    <h1 class="experience-section-title-text">Experience</h1>
                     <div class="experience-title-separator"></div>
                 </div>
 
+                <!-- TIMELINE BAR -->
                 <div class="experience-timeline-container">
                     <div class="experience-timeline" id="experience-timeline">
                         <div class="timeline-bar" id="timeline-bar"></div>
@@ -208,14 +210,19 @@
                 </div>
                 
                 <div class="experience-content-container" id="experience-content-container">
+
+                    <!-- UNAV --------------- -->
                     <div class="experience-1-container" id="experience-biochemistry-degree">
                         <div class="experience-title-container">
-                            <img src="./static/images/unav_logo.png" alt="University of Navarra" class="experience-title-img" id="experience-img-unav"></img>
-                            <div class="title-text-container">      
-                                <h3 class="experience-title" id="experience-content-title">Universidad de Navarra</h3>
-                                <p class="experience-labour">
-                                    <span class="experience-date">2015 - 2019</span>. Biochemistry degree
-                                </p>
+                            <img src="./static/images/experience/unav_logo.png" alt="University of Navarra" class="experience-title-img" id="experience-img-unav"></img>
+                            <div class="all-title-text-container">
+                                <div class="title-text-container">      
+                                    <h3 class="experience-title" id="experience-content-title">Universidad de Navarra</h3>
+                                    <p class="experience-labour">
+                                        <span class="experience-date">2015 - 2019</span>. Biochemistry degree
+                                    </p>
+                                </div>
+                                <img src="./static/images/studies_stamp.png" alt="Sticker" class="experience-sticker">
                             </div>
                         </div>
                         <div class="experience-timeline-content" id="experience-1-timeline-content">
@@ -237,20 +244,43 @@
                             </div>
                         </div>
                     </div>
-                
+
+                    <!-- UCL --------------- -->
                     <div class="internship-1-container" id="internship-ucl">
-                        <h3>UCL Internship</h3>
-                        <p>Details about the UCL internship...</p>
+                        <div class="experience-title-container">
+                            <img src="./static/images/experience/ucl_logo.jpg" alt="University College London" class="experience-title-img" id="experience-img-ucl"></img>
+                            <div class="all-title-text-container">
+                                <div class="title-text-container">      
+                                    <h3 class="experience-title" id="experience-content-title">University College of London</h3>
+                                    <p class="experience-labour">
+                                        <span class="experience-date">2018</span>. Intern in a cancer research project
+                                    </p>
+                                </div>
+                                <img src="./static/images/experience/studies_stamp.png" alt="Sticker" class="experience-sticker">
+                            </div>
+                        </div>
+                        <div class="experience-timeline-content">
+                            <ul class="experience-timeline-list">
+                                <li>Performed immunohistochemical techniques in a cancer research center</li>
+                                <li>Handled human tissue samples with a focus on maintaining sample integrity</li>
+                                <li>Assisted in the analysis of tissue samples using microscopy and image analysis tools</li>
+                                <li>Gained expertise in laboratory protocols, data analysis, and maintaining lab safety standards</li>
+                            </ul>
+                        </div>
                     </div>
-                
+
+                    <!-- AARHUS --------------- -->                
                     <div class="experience-2-container" id="experience-bioinformatics-master">
                         <div class="experience-title-container">
-                            <img src="./static/images/au_logo.png" alt="Aarhus University" class="experience-title-img" id="experience-img-au"></img>
-                            <div class="title-text-container">      
-                                <h3 class="experience-title" id="experience-content-title">Aarhus University</h3>
-                                <p class="experience-labour">
-                                    <span class="experience-date">2020 - 2022</span>. Master's Degree in Bioinformatics
-                                </p>
+                            <img src="./static/images/experience/au_logo.png" alt="Aarhus University" class="experience-title-img" id="experience-img-au"></img>
+                            <div class="all-title-text-container">
+                                <div class="title-text-container">      
+                                    <h3 class="experience-title" id="experience-content-title">Aarhus University</h3>
+                                    <p class="experience-labour">
+                                        <span class="experience-date">2020 - 2022</span>. Master's Degree in Bioinformatics
+                                    </p>
+                                </div>
+                                <img src="./static/images/experience/studies_stamp.png" alt="Sticker" class="experience-sticker">
                             </div>
                         </div>
                         <div class="experience-timeline-content">
@@ -264,19 +294,41 @@
                         </div>
                     </div>
                 
+                    <!-- QIAGEN --------------- -->
                     <div class="internship-2-container" id="internship-qiagen-project">
-                        <h3>Qiagen Project</h3>
-                        <p>Details about the Qiagen project...</p>
+                        <div class="experience-title-container">
+                            <img src="./static/images/experience/qiagen_logo.jpg" alt="Qiagen logo" class="experience-title-img" id="experience-img-qiagen"></img>
+                            <div class="all-title-text-container">
+                                <div class="title-text-container">      
+                                    <h3 class="experience-title" id="experience-content-title">QIAGEN</h3>
+                                    <p class="experience-labour">
+                                        <span class="experience-date">2021</span>. Master's Thesis Project
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-timeline-content">
+                            <ul class="experience-timeline-list">
+                                <li>Handled bulk and single-cell RNA-seq data for T-cell clonotyping analysis</li>
+                                <li>Implemented algorithms for T-cell clonality analysis, using Python, R, and CLC Genomics Workbench</li>
+                                <li>Conducted data preprocessing, normalization, and visualization of RNA-seq datasets</li>
+                                <li>Performed benchmarking of various methods for clonotype identification and comparison</li>
+                            </ul>
+                        </div>
                     </div>
                 
+                    <!-- NASERTIC --------------- -->
                     <div class="experience-3-container" id="experience-nasertic">
                         <div class="experience-title-container">
-                            <img src="./static/images/nasertic_logo.png" alt="Nasertic" class="experience-title-img" id="experience-img-nasertic"></img>
-                            <div class="title-text-container">      
-                                <h3 class="experience-title" id="experience-content-title">Nasertic</h3>
-                                <p class="experience-labour">
-                                    <span class="experience-date">2022 - Present</span>. Bioinformatics Specialist
-                                </p>
+                            <img src="./static/images/experience/nasertic_logo.png" alt="Nasertic" class="experience-title-img" id="experience-img-nasertic"></img>
+                            <div class="all-title-text-container">
+                                <div class="title-text-container">
+                                    <h3 class="experience-title" id="experience-content-title">Nasertic</h3>
+                                    <p class="experience-labour">
+                                        <span class="experience-date">2022 - Present</span>. Bioinformatics Specialist
+                                    </p>
+                                </div>
+                                <img src="./static/images/experience/work_stamp.png" alt="Work stamp" class="experience-sticker">
                             </div>
                         </div>
                         <div class="experience-timeline-content">

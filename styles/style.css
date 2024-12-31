@@ -4,6 +4,11 @@
   --secondary-purple: #c39eff;
   --main-gray: #889294;
   --main-gray-whiter: #adb3b4;
+  --main-orange: #ff792c;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {

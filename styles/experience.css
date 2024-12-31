@@ -10,11 +10,6 @@ ul {
   padding: 70px 100px;
 }
 
-#earth-globe {
-  width: 300px;
-  height: 300px;
-}
-
 .experience-main-container {
   display: flex;
   flex-direction: column;
@@ -22,7 +17,7 @@ ul {
   height: 100%;
 }
 
-.experience-title-container {
+.experience-section-title {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -33,7 +28,7 @@ ul {
   color: var(--main-soft-blue);
 }
 
-.experience-title {
+.experience-section-title-text {
   color: white;
 }
 
@@ -62,7 +57,7 @@ ul {
   position: absolute;
   width: 100%;
   top: 50%;
-  height: 2px;
+  height: 3px;
   background-color: white;
   border-radius: 3px;
   --arrow-color: white;
@@ -86,8 +81,7 @@ ul {
   width: 0%;
   position: absolute;
   top: 50%;
-  background-color: var(--main-soft-blue);
-  height: 2px;
+  height: 3px;
   transition: width 2.5s ease-in-out;
 }
 
@@ -101,12 +95,20 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
 .timeline-item:hover .timeline-circle::before {
   opacity: 1;
+}
+
+.timeline-item.selected .timeline-circle {
+  background-color: white;
+}
+
+.timeline-item.selected .timeline-circle::before {
+  opacity: 1;
+  color: white;
 }
 
 .timeline-circle {
@@ -121,6 +123,7 @@ ul {
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
+  cursor: pointer;
 }
 
 .timeline-circle::before {
@@ -139,6 +142,11 @@ ul {
   pointer-events: none;
 }
 
+.timeline-item.selected .timeline-circle::before {
+  color: white;
+  opacity: 1;
+}
+
 .internship-item {
   width: 40px;
   height: 40px;
@@ -148,7 +156,6 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -159,15 +166,18 @@ ul {
 .internship-pointer {
   width: 0;
   height: 0;
+  cursor: pointer;
   border-left: 5px solid transparent;
-  border-right: 5px solid transparent; 
+  border-right: 5px solid transparent;
   border-top: 10px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 30%;
   transform: translateY(-30%);
+  z-index: 3;  
+}
+
+.internship-pointer.clicked {
+  border-top-color: var(--main-orange);
 }
 
 .internship-pointer::before {
@@ -187,20 +197,10 @@ ul {
 }
 
 
-
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
-  border: 1px solid white;
-}
-
-
-.internship-1-container {
-  background-color: yellow;
-}
-
-.internship-2-container {
-  background-color: purple;
+  /* border: 1px solid white; */
 }
 
 .experience-1-container,
@@ -222,14 +222,33 @@ ul {
     margin: 0;
 }
 
-.experience-title-img {
-  margin-left: 100px;
-  width: 60px;
+/* TIMELINE TITLE (Unav, Au university, Nasertic...) */
+.experience-title-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 24px;
 }
 
-#experience-content-title{
-  font-size: 36px;
-  margin: 0;
+.experience-title-img {
+  margin-left: 100px;
+  margin-right: 24px;
+  width: 60px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.experience-title-img.visible {
+  opacity: 1;
+}
+
+.all-title-text-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+  width: 100%;
 }
 
 .title-text-container{
@@ -237,13 +256,48 @@ ul {
   margin-left: 24px;
 }
 
+.experience-title {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.1s ease, transform 0.5s ease-in-out;
+}
+
+.experience-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-title {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.1s ease, transform 0.5s ease-in-out;
+}
+
+.experience-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .experience-labour {
   font-family: 'JetBrains Mono', monospace;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
-  margin-top: 12px;;
+  margin-top: 12px;
   margin-left: 24px;
+  opacity: 0;
+  transition: opacity 1s ease
+}
+
+.experience-labour.visible {
+  opacity: 1;
 }
 
 .experience-date {
@@ -251,14 +305,24 @@ ul {
   color: var(--main-soft-blue);
 }
 
+
+.experience-sticker{
+  display: none;
+  /* height: 100px; */
+  /* width: 100px; */
+}
+
+
+/* TIMELINE CONTENT */
 .experience-timeline-content {
   flex-grow: 1;
   padding: 0px 24px;
 }
 
+/* TIMELINE LIST */
 .experience-timeline-list {
   list-style: none;
-  margin-top: 32px;
+  margin: 0;
 }
 
 .experience-timeline-list li {
@@ -284,10 +348,12 @@ ul {
   font-size: 16px;
 }
 
+/* SPECIFIC ITEMS */
 
-
-#experience-img-au{
-  filter: invert(1) brightness(1000%) saturate(0);
+#earth-globe {
+  width: 300px;
+  height: 300px;
+  border: 1px solid blue;
 }
 
 

@@ -7,6 +7,9 @@ const timelineExperiences = [
   { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
   { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
 ];
+const timelineBarColor = 'var(--main-orange)';
+document.querySelector('.timeline-bar-background').style.backgroundColor = timelineBarColor;
+
 let isExperienceNotLoaded = true;
 
 
@@ -31,9 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        const startingYearPerc = calculateStartingPercentage(timelineExperiences[0].startYear);
-        const finishYearPerc = calculateStartingPercentage(timelineExperiences[0].finishYear);
-        const timelineItem = document.getElementById(timelineExperiences[0].id);
+        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
+        const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
+        const timelineItem = document.getElementById(lastExperience.id);
         initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
       }
     });
@@ -49,15 +53,33 @@ document.getElementById('experience-timeline').addEventListener('click', (e) => 
   const timelineItem = e.target.closest('.timeline-item');
   if (!timelineItem) return;
 
-  const year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
-  const finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+  let year, finishYear, startingYearPerc, finishYearPerc;
 
-  const startingYearPerc = calculateStartingPercentage(year);
-  const finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+  // Comprobamos si el clic fue sobre un timeline-circle o internship-item
+  switch (true) {
+    case e.target.closest('.timeline-circle') !== null:
+      document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+      year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
+      finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+      startingYearPerc = calculateStartingPercentage(year);
+      finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+      break;
+
+      case e.target.closest('.internship-pointer') !== null:
+        document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+        const internshipPointer = e.target.closest('.internship-pointer');
+        internshipPointer.classList.add('clicked');   
+        year = timelineItem.querySelector('.internship-pointer').getAttribute('data-year');
+        finishYear = timelineItem.querySelector('.internship-pointer').getAttribute('finish-year');
+        startingYearPerc = calculateStartingPercentage(year);
+        finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+        break;
+    default:
+      return;
+  }
 
   initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
 });
-
 
 
 /**
@@ -93,12 +115,18 @@ function createTimelineItems() {
 function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
   const contentId = experience.getAttribute('data-content-id');
 
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    item.classList.remove('selected');
+  });
+
+  experience.classList.add('selected');
+
   cleanAllColors();
   paintTimelineBar(startingYearPerc, finishYearPerc);
   paintCircle(experience.id);
+  displayExperienceTitle(contentId);
   displayExperienceContent(contentId);
 }
-
 
 function calculateStartingPercentage(year) {
   const currentYear = new Date().getFullYear();
@@ -115,7 +143,7 @@ function cleanAllColors() {
     circle.style.backgroundColor = '#ddd';
   });
 
-  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');
+  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');  
 
   const timelineBar = document.getElementById('timeline-bar-background');
   
@@ -138,16 +166,75 @@ function paintTimelineBar(startingYearPerc, finishYearPerc) {
 
   if (finishYearPerc === 100) {
     setTimeout(() => {
-      timeline.style.setProperty('--arrow-color', 'var(--main-soft-blue)');
+      timeline.style.setProperty('--arrow-color', timelineBarColor);
     }, (1.8*1000));
   }
 }
 
-
 function paintCircle(itemId) {
   const circle = document.querySelector(`#${itemId} .timeline-circle`);
   if (circle) {
-    circle.style.backgroundColor = 'var(--main-soft-blue)';
+    circle.style.backgroundColor = timelineBarColor;
+  }
+}
+
+function displayExperienceTitle(contentId) {
+  document.querySelectorAll('.experience-title').forEach(title => {
+    title.classList.remove('visible');
+  });
+
+  document.querySelectorAll('.experience-labour').forEach(labour => {
+    labour.classList.remove('visible');
+  });
+
+  document.querySelectorAll('.experience-title-img').forEach(image => {
+    image.classList.remove('visible');
+  });
+  const content = document.getElementById(contentId);
+  const title = content.querySelector('.experience-title');
+  const experienceLabour = content.querySelector('.experience-labour');
+
+  if (title) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          title.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(title);
+  }
+
+  if (experienceLabour) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            experienceLabour.classList.add('visible');
+          }, 500)
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(experienceLabour);
+  }
+
+  const image = content.querySelector('.experience-title-img');
+
+  if (image) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          image.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(image);
   }
 }
 
@@ -157,7 +244,6 @@ function displayExperienceContent(contentId) {
   });
 
   const content = document.getElementById(contentId);
-
   if (content) {
     const items = content.querySelectorAll(".experience-timeline-list li");
     items.forEach(item => {
@@ -166,14 +252,19 @@ function displayExperienceContent(contentId) {
 
     content.style.display = 'block';
 
+    const initialDelay = 1250; 
+    const itemDelay = 750;
+
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           const item = entry.target;
 
           setTimeout(() => {
-            item.classList.add("visible");
-          }, index * 750);
+            setTimeout(() => {
+              item.classList.add("visible");
+            }, index * itemDelay);
+          }, initialDelay);
 
           observer.unobserve(item);
         }
