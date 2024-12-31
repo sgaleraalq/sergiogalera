@@ -7,6 +7,10 @@
   --main-orange: #ff792c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
