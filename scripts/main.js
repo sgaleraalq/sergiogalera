@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        // const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
-        const lastExperience = timelineExperiences[0];
+        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        // const lastExperience = timelineExperiences[0];
         
         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
@@ -192,6 +192,11 @@ function displayExperienceTitle(contentId) {
   document.querySelectorAll('.experience-title-img').forEach(image => {
     image.classList.remove('visible');
   });
+
+  document.querySelectorAll('.experience-location-container').forEach(location => {
+    location.classList.remove('visible');
+  });
+
   const content = document.getElementById(contentId);
   const title = content.querySelector('.experience-title');
   const experienceLabour = content.querySelector('.experience-labour');
@@ -237,6 +242,21 @@ function displayExperienceTitle(contentId) {
     });
 
     observer.observe(image);
+  }
+
+  const location = content.querySelector('.experience-location-container');
+  if (location) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            location.classList.add('visible');
+          }, 500);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    observer.observe(location);
   }
 }
 
