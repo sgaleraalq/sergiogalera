@@ -6,6 +6,25 @@
 }
 
 .contact-main-container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
+  align-items: center;
+  background-color: red;
+}
+
+
+.contact-title{
+  color: white;
+  font-size: 40px;
+}
+
+.contact-text {
+  flex-grow: 1;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  padding: 0 200px;
+  text-align: center;
 }

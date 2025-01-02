@@ -4,6 +4,7 @@
   --secondary-purple: #c39eff;
   --main-gray: #889294;
   --main-gray-whiter: #adb3b4;
+  --main-white-gray: #f0f0f0;
   --main-orange: #ff792c;
 }
 
@@ -207,7 +208,7 @@ p {
 }
 
 .section-title {
-  color: white;
+  color: var(--main-white-gray);
   font-size: 24px;
 }
 
