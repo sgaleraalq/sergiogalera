@@ -17,22 +17,22 @@ ul {
   height: 100%;
 }
 
-.experience-section-title {
+.section-experience-header {
   display: flex;
   flex-direction: row;
   gap: 16px;
   align-items: center;
 }
 
-.experience-title-number {
+.section-experience-number {
   color: var(--main-soft-blue);
 }
 
-.experience-section-title-text {
+.section-experience-title {
   color: white;
 }
 
-.experience-title-separator {
+.section-experience-separator {
   height: 1px;
   flex-grow: 1;
   background-color: var(--main-soft-blue);

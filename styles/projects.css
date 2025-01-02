@@ -2,5 +2,18 @@
 .projects-container {
   height: 100vh;
   width: 100%;
+  padding: 70px 100px;
+  background-color: blue;
+}
+
+.section-projects-header {
+  display: flex;
+  border: 1px solid white;
+  width: 100%;
+  min-height: 100px;
+}
+
+.section-projects-number{
+  color: white;
 }
 

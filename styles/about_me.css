@@ -20,7 +20,7 @@
   display: block;
 }
 
-.about-me-title-container {
+.section-about-me-header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -29,18 +29,18 @@
   box-sizing: border-box;
 }
 
-.about-me-title-number {
+.section-about-me-number {
   color: var(--main-soft-blue);
   font-size: 24px;
   margin-right: 24px;
 }
 
-.about-me-title {
+.section-about-me-title {
   color: white;
   font-size: 24px;
 }
 
-.about-me-separator {
+.section-about-me-separator {
   height: 1px;
   background-color: var(--main-soft-blue);
   flex-grow: 1;
