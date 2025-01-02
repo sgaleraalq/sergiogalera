@@ -20,30 +20,6 @@
   display: block;
 }
 
-.section-about-me-header {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-  align-items: center;
-}
-
-.section-about-me-number {
-  color: var(--main-soft-blue);
-  font-size: 24px;
-}
-
-.section-about-me-title {
-  color: white;
-  font-size: 24px;
-}
-
-.section-about-me-separator {
-  height: 2px;
-  background-color: var(--main-soft-blue);
-  flex-grow: 1;
-}
-
 .about-me-text {
   padding-bottom: 16px;
   color: var(--main-gray);
@@ -121,10 +97,6 @@
 
   .about-me-blank-space {
     width: 0%;
-  }
-
-  .about-me-separator {
-    margin-right: 20px;
   }
 
   .about-me-text{

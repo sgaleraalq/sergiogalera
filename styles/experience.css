@@ -17,28 +17,6 @@ ul {
   height: 100%;
 }
 
-.section-experience-header {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
-}
-
-.section-experience-number {
-  color: var(--main-soft-blue);
-}
-
-.section-experience-title {
-  color: white;
-  font-size: 24px;
-}
-
-.section-experience-separator {
-  height: 2px;
-  flex-grow: 1;
-  background-color: var(--main-soft-blue);
-}
-
 .experience-timeline-container {
   display: flex;
   justify-content: center;
@@ -201,7 +179,6 @@ ul {
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
-  /* border: 1px solid white; */
 }
 
 .experience-1-container,
@@ -213,7 +190,7 @@ ul {
     width: 100%;
     height: 100%;
     padding: 50px;
-    border: 1px solid white;
+    border: 1px solid var(--main-gray);
 }
 
 .experience-1-container > *,

@@ -10,26 +10,4 @@
   width: 100%;
 }
 
-.section-projects-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  min-height: 100px;
-}
-
-.section-projects-separator {
-  flex-grow: 1;
-  height: 2px;
-  background-color: white;
-}
-
-.section-projects-number{
-  color: var(--main-soft-blue);
-}
-
-.section-projects-title {
-  color: white;
-  font-size: 24px;
-}
 
