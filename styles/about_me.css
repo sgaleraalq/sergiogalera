@@ -3,7 +3,7 @@
   display: block;
   position: relative;
   padding: 70px 0px;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1000px;
 }
 
@@ -113,12 +113,13 @@
     display: block;
   }
 
-  .about-me-description{
+  .about-me-description {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 70px;
+    max-width: 100%;
   }
 
   .about-me-blank-space {

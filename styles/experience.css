@@ -5,7 +5,7 @@ ul {
 }
 
 .experience-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 70px 100px;
 }
@@ -227,13 +227,12 @@ ul {
 .experience-title-container {
   display: flex;
   flex-direction: row;
-  gap: 16px;
   align-items: center;
   padding-bottom: 24px;
 }
 
 .experience-title-img {
-  margin-left: 100px;
+  margin-left: 70px;
   margin-right: 24px;
   width: 60px;
   opacity: 0;
@@ -359,7 +358,7 @@ ul {
 }
 
 .experience-location{
-  width: 100px;
+  max-height: 70px;
 }
 
 .experience-location-text{
@@ -375,16 +374,15 @@ ul {
 }
 
 .experience-timeline-extra-content {
-  display: flex;
+  display: none;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 
 /* SPECIFIC ITEMS */
 #dna-gif{
-  width: 100px;
+  max-width: 70px;
   transform: rotate(90deg);
 }
 
