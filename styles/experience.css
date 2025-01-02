@@ -5,7 +5,7 @@ ul {
 }
 
 .experience-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 70px 100px;
 }
@@ -15,27 +15,6 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 100%;
-}
-
-.experience-section-title {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
-}
-
-.experience-title-number {
-  color: var(--main-soft-blue);
-}
-
-.experience-section-title-text {
-  color: white;
-}
-
-.experience-title-separator {
-  height: 1px;
-  flex-grow: 1;
-  background-color: var(--main-soft-blue);
 }
 
 .experience-timeline-container {
@@ -200,7 +179,6 @@ ul {
 .experience-content-container {
   flex-grow: 1;
   margin-top: 40px;
-  /* border: 1px solid white; */
 }
 
 .experience-1-container,
@@ -212,7 +190,7 @@ ul {
     width: 100%;
     height: 100%;
     padding: 50px;
-    border: 1px solid white;
+    border: 1px solid var(--main-gray);
 }
 
 .experience-1-container > *,
@@ -227,13 +205,12 @@ ul {
 .experience-title-container {
   display: flex;
   flex-direction: row;
-  gap: 16px;
   align-items: center;
   padding-bottom: 24px;
 }
 
 .experience-title-img {
-  margin-left: 100px;
+  margin-left: 70px;
   margin-right: 24px;
   width: 60px;
   opacity: 0;
@@ -359,7 +336,7 @@ ul {
 }
 
 .experience-location{
-  width: 100px;
+  max-height: 70px;
 }
 
 .experience-location-text{
@@ -375,7 +352,7 @@ ul {
 }
 
 .experience-timeline-extra-content {
-  display: flex;
+  display: none;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
@@ -383,7 +360,7 @@ ul {
 
 /* SPECIFIC ITEMS */
 #dna-gif{
-  width: 100px;
+  max-width: 70px;
   transform: rotate(90deg);
 }
 

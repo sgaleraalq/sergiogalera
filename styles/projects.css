@@ -2,5 +2,14 @@
 .projects-container {
   height: 100vh;
   width: 100%;
+  padding: 70px 100px;
 }
 
+.projects-main-container {
+  height: 100%;
+  width: 100%;
+}
+
+#projects-header{
+  padding: 0px 100px;
+}
