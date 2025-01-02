@@ -1,4 +1,34 @@
 /* CONTACT CONTAINER */
 .contact-container {
   height: 100vh;
+  width: 100%;
+  padding: 70px 100px;
+}
+
+.contact-main-container {
+  height: 100%;
+  width: 100%;
+}
+
+.section-contact-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 100px;
+}
+
+.section-contact-separator {
+  flex-grow: 1;
+  height: 2px;
+  background-color: white;
+}
+
+.section-contact-number{
+  color: var(--main-soft-blue);
+}
+
+.section-contact-title {
+  color: white;
+  font-size: 24px;
 }

@@ -30,10 +30,11 @@ ul {
 
 .section-experience-title {
   color: white;
+  font-size: 24px;
 }
 
 .section-experience-separator {
-  height: 1px;
+  height: 2px;
   flex-grow: 1;
   background-color: var(--main-soft-blue);
 }

@@ -23,16 +23,14 @@
 .section-about-me-header {
   width: 100%;
   display: flex;
+  gap: 20px;
   flex-direction: row;
   align-items: center;
-  white-space: nowrap;
-  box-sizing: border-box;
 }
 
 .section-about-me-number {
   color: var(--main-soft-blue);
   font-size: 24px;
-  margin-right: 24px;
 }
 
 .section-about-me-title {
@@ -41,10 +39,9 @@
 }
 
 .section-about-me-separator {
-  height: 1px;
+  height: 2px;
   background-color: var(--main-soft-blue);
   flex-grow: 1;
-  margin-left: 20px;
 }
 
 .about-me-text {
