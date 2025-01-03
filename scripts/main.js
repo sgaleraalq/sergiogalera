@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        // const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
-        const lastExperience = timelineExperiences[3];
+        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        // const lastExperience = timelineExperiences[3];
         
         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
@@ -283,23 +283,11 @@ function displayExperienceContent(contentId) {
     const initialDelay = 1250; 
     const itemDelay = 750;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          const item = entry.target;
-
-          setTimeout(() => {
-            setTimeout(() => {
-              item.classList.add("visible");
-            }, index * itemDelay);
-          }, initialDelay);
-
-          observer.unobserve(item);
-        }
-      });
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add("visible");
+      }, initialDelay + index * itemDelay);
     });
-
-    items.forEach(item => observer.observe(item));
   } else {
     console.warn(`No content found for ID: ${contentId}`);
   }
