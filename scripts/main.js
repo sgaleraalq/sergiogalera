@@ -12,17 +12,21 @@ document.querySelector('.timeline-bar-background').style.backgroundColor = timel
 
 let isExperienceNotLoaded = true;
 
-
+let lastScrollPosition = 0;
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
 
   if (currentScrollPosition <= headerHeight) {
-    // Desplaza el encabezado hacia arriba proporcionalmente al scroll
     header.style.transform = `translateY(-${currentScrollPosition}px)`;
   } else {
-    // Cuando el scroll excede la altura del encabezado, escóndelo completamente
     header.style.transform = `translateY(-${headerHeight}px)`;
   }
+
+  if (currentScrollPosition < lastScrollPosition) {
+    header.style.transform = 'translateY(0)';
+  }
+
+  lastScrollPosition = currentScrollPosition;
 });
 
 
@@ -34,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
         isExperienceNotLoaded = false;
-        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
-        // const lastExperience = timelineExperiences[0];
+        // const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+        const lastExperience = timelineExperiences[3];
         
         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
@@ -274,6 +278,7 @@ function displayExperienceContent(contentId) {
 
     content.style.display = 'flex';
     content.style.flexDirection = 'column';
+    content.style.flexGrow = 1;
 
     const initialDelay = 1250; 
     const itemDelay = 750;

@@ -60,6 +60,11 @@ p {
   align-items: center;
   gap: 30px;
   font-family: "SF Mono", monospace;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.website-navigation.visible {
+  opacity: 1;
 }
 
 .mob-website-navigation{
