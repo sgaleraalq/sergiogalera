@@ -1,16 +1,46 @@
 .main-container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.whatever {
-    width: 100%;
-    font-size: 50px;
-    color: white;
+.information-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.technology-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.technology-icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.technology {
+    font-size: 14px;
+    color: var(--android-color);
+}
+
+.title {
+    font-size: 20px;
+    
+}
+
+.description{
+    position: absolute;
+    width: 60%;
+    background-color: blue;
 }
 
 .project-image {
-    width: 200px;
+    right: 0;
+    width: 600px;
     height: auto;
 }
