@@ -35,15 +35,37 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Cargar la plantilla projects_container.html
     const template = await loadComponent();
 
-    data.forEach((project, index) => {
-        const tempContainer = document.createElement("div");
-        tempContainer.innerHTML = template;
+    for (let index = 0; index < data.length; index++) {
+        const project = data[index];
+
+        // Solo procesar el primer proyecto
+        if (index === 0) {
+            const tempContainer = document.createElement("div");
+            tempContainer.innerHTML = template;
+
+            const title = tempContainer.querySelector("#title");
+            title.textContent = project.title;  // Cambiar el texto del título
+
+            // Añadir el contenido al contenedor
+            projectsContainer.innerHTML += tempContainer.innerHTML;
+
+            break;  // Detener la iteración después del primer elemento
+        }
+    }
+
+    // data.forEach((project, index) => {
+    //     const tempContainer = document.createElement("div");
+    //     tempContainer.innerHTML = template;
 
 
-        const title = tempContainer.querySelector("#title")
-        title.textContent = project.title
+    //     const title = tempContainer.querySelector("#title")
+    //     title.textContent = project.title
         
 
-        projectsContainer.innerHTML += tempContainer.innerHTML;
-    })
+    //     projectsContainer.innerHTML += tempContainer.innerHTML;
+        
+    //     if (index === 1) {
+    //         return;
+    //     }
+    // })
 });

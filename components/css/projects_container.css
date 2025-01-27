@@ -1,12 +1,16 @@
 .main-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    border: 1px solid blue;
-    background-color: magenta;
 }
 
 .whatever {
     width: 100%;
     font-size: 50px;
-    color: red;
+    color: white;
+}
+
+.project-image {
+    width: 200px;
+    height: auto;
 }
