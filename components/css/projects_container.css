@@ -1,10 +1,12 @@
-.projects-main-container {
+.main-container {
     display: flex;
     width: 100%;
     border: 1px solid blue;
+    background-color: magenta;
 }
 
 .whatever {
+    width: 100%;
     font-size: 50px;
     color: red;
 }
