@@ -1,0 +1,10 @@
+.projects-main-container {
+    display: flex;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.whatever {
+    font-size: 50px;
+    color: red;
+}
