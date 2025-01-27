@@ -11,7 +11,7 @@
 }
 
 .projects-list-container {
-  display: inline-block;
+  display: block;
   width: 100%;
   border: 1px solid red;
 }
