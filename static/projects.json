@@ -1,7 +1,7 @@
 [
     {
         "category": "Android",
-        "title": "Gaztelu Bira App",
+        "title": "Gaztelu Bira App 1",
         "description": "The Gaztelu Bira App is an Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). Built with Kotlin, it allows users to view player stats, match results, and other team data. It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart. The app follows Android development best practices, using technologies like Firebase for data storage and MVVM for architecture.",
         "image": "example.png",
         "programming_languages": ["Kotlin"],
@@ -13,7 +13,7 @@
     
     {
         "category": "Android",
-        "title": "Gaztelu Bira App",
+        "title": "Gaztelu Bira App 2",
         "description": "The Gaztelu Bira App is an Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). Built with Kotlin, it allows users to view player stats, match results, and other team data. It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart. The app follows Android development best practices, using technologies like Firebase for data storage and MVVM for architecture.",
         "image": "example2.png",
         "programming_languages": ["Kotlin"],
@@ -24,7 +24,7 @@
     },
     {
         "category": "Android",
-        "title": "Gaztelu Bira App",
+        "title": "Gaztelu Bira App 3",
         "description": "The Gaztelu Bira App is an Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). Built with Kotlin, it allows users to view player stats, match results, and other team data. It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart. The app follows Android development best practices, using technologies like Firebase for data storage and MVVM for architecture.",
         "image": "example.png",
         "programming_languages": ["Kotlin"],
@@ -36,7 +36,7 @@
     
     {
         "category": "Android",
-        "title": "Gaztelu Bira App",
+        "title": "Gaztelu Bira App 4",
         "description": "The Gaztelu Bira App is an Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). Built with Kotlin, it allows users to view player stats, match results, and other team data. It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart. The app follows Android development best practices, using technologies like Firebase for data storage and MVVM for architecture.",
         "image": "example2.png",
         "programming_languages": ["Kotlin"],
