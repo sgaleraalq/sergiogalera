@@ -73,6 +73,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         
         if (index % 2 == 1) {
             tempContainer.querySelector(".main-container").classList.add("reverse")
+            tempContainer.querySelector(".info-container").classList.add("reverse")
+            tempContainer.querySelector(".technology-container").classList.add("reverse")
+            tempContainer.querySelector(".skills-container").classList.add("reverse")
+            tempContainer.querySelector(".project-image").classList.add("reverse")
+            tempContainer.querySelector(".title").classList.add("reverse")
+            tempContainer.querySelector(".description").classList.add("reverse")
         }
         projectsContainer.innerHTML += tempContainer.innerHTML;
 

@@ -16,9 +16,13 @@
     flex-direction: row-reverse;
 }
 
-.information-container {
+.info-container {
     display: flex;
     flex-direction: column;
+}
+
+.info-container.reverse {
+    align-items: flex-end;
 }
 
 .technology-container{
@@ -28,16 +32,33 @@
     align-items: center;
 }
 
+.technology-container.reverse{
+    flex-direction: row-reverse;
+}
+
 .description-container {
     display: flex;
     flex-direction: column; 
 }
 
 .skills-container{
+    max-width: 400px;
     margin-left: 10px;
     display: flex;
+    column-gap: 30px;
+    row-gap: 10px;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.links-container {
+    margin-top: 20px;
+}
+
+.skill {
+    margin: 0;
+    padding: 0;
 }
 
 .technology-icon {
@@ -52,13 +73,19 @@
 }
 
 .title {
+    display: flex;
     margin: 0;
     margin-left: 10px;
     font-size: 20px;
     color: white;
 }
 
-.description{
+.title.reverse {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.description {
     margin-top: 10px;
     margin-left: 30px;
     padding: 20px;
@@ -68,7 +95,13 @@
     box-shadow: 0px 0px 10px 0px var(--soft-dark);
 }
 
-.img-container{
+.description.reverse {
+    margin-right: 30px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.img-container {
     position: relative;
     z-index: -1
 }
@@ -78,4 +111,9 @@
     right: 0;
     width: 600px;
     height: auto;
+}
+
+.project-image.reverse{
+    left: 0;
+    right: auto;
 }
