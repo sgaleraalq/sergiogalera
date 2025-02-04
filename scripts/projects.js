@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // };
 
         // TECHNOLOGY CONTAINER
-        displayTechnology(tempContainer.querySelector(".technology-container"), project.technology);
+        displayTechnology(tempContainer.querySelector(".technology-container"), project.technology, project.technology_url);
 
         // TEXT CONTAINERS
         tempContainer.querySelector("#title").textContent = project.title;
@@ -83,17 +83,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     })
 });
 
-function displayTechnology(container, technology) {
+function displayTechnology(container, technology, url) {
     const icons = {
         "android": {
             "icon": "/static/icons/ic_android.svg",
             "alt": "Android",
-            "link": "https://developer.android.com/"
+            "link": url
         },
         "web": {
             "icon": "/static/icons/ic_web.svg",
             "alt": "Website",
-            "link": ""
+            "link": url
         }
     }
 
@@ -120,6 +120,7 @@ function displayTechnology(container, technology) {
             break;
     }
 
+    if (!techUrl) { techUrl = window.location.href.replace("/#.*$", ""); } // TODO
     icon.src = iconSrc;
     icon.alt = iconAlt;
     link.href = techUrl;
