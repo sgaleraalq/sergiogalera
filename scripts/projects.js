@@ -39,10 +39,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         const tempContainer = document.createElement("div");
         tempContainer.innerHTML = template;
 
+        // MAIN IMAGE
+        const mainImage = tempContainer.querySelector(".project-image");
+        mainImage.src = project.image;
+        // TODO
+        // mainImage.onerror = function() {
+        //     this.src = "/static/images/projects/error_image.png";
+        // };
+
+        // TECHNOLOGY CONTAINER
+        displayTechnology(tempContainer.querySelector(".technology-container"), project.technology);
 
         // TEXT CONTAINERS
         tempContainer.querySelector("#title").textContent = project.title;
-        tempContainer.querySelector("#technology").textContent = project.technology;
         tempContainer.querySelector("#description").textContent = project.description;
         tempContainer.querySelector("#description").innerHTML = project.description.replace(/\n/g, '<br>');
         
@@ -73,6 +82,49 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     })
 });
+
+function displayTechnology(container, technology) {
+    const icons = {
+        "android": {
+            "icon": "/static/icons/ic_android.svg",
+            "alt": "Android",
+            "link": "https://developer.android.com/"
+        },
+        "web": {
+            "icon": "/static/icons/ic_web.svg",
+            "alt": "Website",
+            "link": ""
+        }
+    }
+
+    const icon = container.querySelector("img");
+    const link = container.querySelector("a");
+    const techText = container.querySelector("#technology");
+
+    let iconSrc, iconAlt, techUrl;
+    switch (technology.toLowerCase()) {
+        case "android":
+            iconSrc = icons.android.icon;
+            iconAlt = icons.android.alt;
+            techUrl = icons.android.link;
+            break;
+        case "website":
+            iconSrc = icons.web.icon;
+            iconAlt = icons.web.alt;
+            techUrl = icons.web.link;
+            break;
+        default:
+            iconSrc = "";
+            iconAlt = "";
+            techUrl = "";
+            break;
+    }
+
+    icon.src = iconSrc;
+    icon.alt = iconAlt;
+    link.href = techUrl;
+    techText.textContent = technology;
+}
 
 
 function displayLinks(container, link, icon) {
