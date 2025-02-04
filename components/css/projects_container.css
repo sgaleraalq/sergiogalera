@@ -86,6 +86,7 @@
 }
 
 .description {
+    max-height: 200px;
     margin-top: 10px;
     margin-left: 30px;
     padding: 20px;
@@ -93,6 +94,7 @@
     max-width: 500px;
     background-color: var(--soft-dark);
     box-shadow: 0px 0px 10px 0px var(--soft-dark);
+    overflow: hidden;
 }
 
 .description.reverse {
