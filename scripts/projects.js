@@ -35,37 +35,46 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Cargar la plantilla projects_container.html
     const template = await loadComponent();
 
-    for (let index = 0; index < data.length; index++) {
-        const project = data[index];
+    // for (let index = 0; index < data.length; index++) {
+    //     const project = data[index];
 
-        // Solo procesar el primer proyecto
-        if (index === 0) {
-            const tempContainer = document.createElement("div");
-            tempContainer.innerHTML = template;
+    //     // Solo procesar el primer proyecto
+    //     if (index === 0) {
+    //         const tempContainer = document.createElement("div");
+    //         tempContainer.innerHTML = template;
 
-            const title = tempContainer.querySelector("#title");
-            title.textContent = project.title;  // Cambiar el texto del título
+    //         const title = tempContainer.querySelector("#title");
+    //         title.textContent = project.title;  // Cambiar el texto del título
 
-            // Añadir el contenido al contenedor
-            projectsContainer.innerHTML += tempContainer.innerHTML;
+    //         // If project is reversed
+    //         if (project.reverse) {
+    //             tempContainer.querySelector(".main-container").classList.add("reverse")
+    //         }
 
-            break;  // Detener la iteración después del primer elemento
-        }
-    }
+    //         // Añadir el contenido al contenedor
+    //         projectsContainer.innerHTML += tempContainer.innerHTML;
 
-    // data.forEach((project, index) => {
-    //     const tempContainer = document.createElement("div");
-    //     tempContainer.innerHTML = template;
-
-
-    //     const title = tempContainer.querySelector("#title")
-    //     title.textContent = project.title
-        
-
-    //     projectsContainer.innerHTML += tempContainer.innerHTML;
-        
-    //     if (index === 1) {
-    //         return;
+    //         break;  // Detener la iteración después del primer elemento
     //     }
-    // })
+
+    //     if (index % 2 == 1) {
+    //         tempContainer.querySelector(".main-container").classList.add("reverse")
+    //     }
+    // }
+
+    data.forEach((project, index) => {
+        const tempContainer = document.createElement("div");
+        tempContainer.innerHTML = template;
+
+
+        const title = tempContainer.querySelector("#title")
+        title.textContent = project.title
+
+        
+        if (index % 2 == 1) {
+            tempContainer.querySelector(".main-container").classList.add("reverse")
+        }
+        projectsContainer.innerHTML += tempContainer.innerHTML;
+
+    })
 });
