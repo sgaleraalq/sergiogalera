@@ -94,7 +94,7 @@
 }
 
 .description {
-    max-height: 200px;
+    height: 200px;
     margin-top: 10px;
     margin-left: 30px;
     padding: 20px;
@@ -112,6 +112,7 @@
 }
 
 .img-container {
+    margin-top: 30px;
     position: relative;
     z-index: -1
 }
