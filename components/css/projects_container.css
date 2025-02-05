@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 50px 0px 50px 0px;
+    padding: 75px 0px 75px 0px;
 }
 
 .main-container.reverse {
@@ -40,12 +40,11 @@
     display: flex;
     flex-direction: column; 
     position: relative;
-    height: 200px;
     max-width: 500px;
     align-items: center;
     justify-content: center;
     margin: 20px 0px 20px 30px;
-    padding: 20px;
+    padding: 10px 30px 10px 30px;
     background-color: var(--soft-dark);
     box-shadow: 0px 0px 10px 0px var(--soft-dark);
 }
@@ -96,6 +95,7 @@
 .title {
     display: flex;
     margin: 0;
+    margin-top: 5px;
     margin-left: 10px;
     font-size: 20px;
     color: white;

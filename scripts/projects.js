@@ -84,47 +84,39 @@ document.addEventListener("DOMContentLoaded", async function () {
     })
 });
 
-function displayTechnology(container, technology, url) {
+function displayTechnology(container, technology) {
     const icons = {
         "android": {
             "icon": "/static/icons/ic_android.svg",
             "alt": "Android",
-            "link": url
         },
         "web": {
             "icon": "/static/icons/ic_web.svg",
             "alt": "Website",
-            "link": url
         }
     }
 
     const icon = container.querySelector("img");
-    const link = container.querySelector("a");
     const techText = container.querySelector("#technology");
 
-    let iconSrc, iconAlt, techUrl;
+    let iconSrc, iconAlt;
     switch (technology.toLowerCase()) {
         case "android":
             iconSrc = icons.android.icon;
             iconAlt = icons.android.alt;
-            techUrl = icons.android.link;
             break;
         case "website":
             iconSrc = icons.web.icon;
             iconAlt = icons.web.alt;
-            techUrl = icons.web.link;
             break;
         default:
             iconSrc = "";
             iconAlt = "";
-            techUrl = "";
             break;
     }
 
-    if (!techUrl) { techUrl = window.location.href.replace("/#.*$", ""); } // TODO
     icon.src = iconSrc;
     icon.alt = iconAlt;
-    link.href = techUrl;
     techText.textContent = technology;
 }
 
