@@ -1,6 +1,6 @@
-async function loadData() {
+async function loadData(file_name) {
     try {
-        const response = await fetch("../static/projects.json");
+        const response = await fetch(`/static/${file_name}`);
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.statusText}`);
         }
@@ -24,12 +24,10 @@ async function loadComponent() {
     }
 }
 
-
-// Ejecutar cuando el DOM esté listo
-document.addEventListener("DOMContentLoaded", async function () {
+async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
 
-    const data = await loadData();
+    const data = await loadData("projects.json");
     console.log(data); 
 
     // Cargar la plantilla projects_container.html
@@ -82,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         projectsContainer.innerHTML += tempContainer.innerHTML;
 
     })
-});
+}
 
 function displayTechnology(container, technology) {
     const icons = {
@@ -139,3 +137,16 @@ function displayLinks(container, link, icon) {
         container.appendChild(anchor);
     }
 }
+
+
+async function loadOtherProjects() {
+    const data = await loadData("other_projects.json");
+    console.log("Other projects: ", data);
+}
+
+
+// Ejecutar cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", async function () {
+    loadProjects();
+    loadOtherProjects();
+});
