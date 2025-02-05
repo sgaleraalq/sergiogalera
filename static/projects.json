@@ -3,7 +3,7 @@
         "technology": "Android",
         "title": "Gaztelu Bira App",
         "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data.  The app, written in XML follows Android development best practices",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/images/projects/img_gaztelu_bira.png",
         "programming_languages": [
             "Kotlin"
         ],
@@ -25,7 +25,7 @@
         "technology": "Android",
         "title": "Easy Spot",
         "description": "Android app that allows users to create a family group in order to share last parking location of their cars. \n\nIt uses Google Maps API to display the location of the cars and Firebase Auth and Firestore to store the data.",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/images/projects/img_easy_spot.png",
         "programming_languages": [
             "Kotlin"
         ],

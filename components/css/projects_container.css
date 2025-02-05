@@ -112,7 +112,6 @@
 }
 
 .img-container {
-    margin-top: 30px;
     position: relative;
     z-index: -1
 }
@@ -120,11 +119,13 @@
 .project-image {
     position: absolute;
     right: 0;
-    width: 650px;
+    margin-right: -120px;
+    width: 800px;
     height: auto;
 }
 
 .project-image.reverse{
     left: 0;
+    margin-left: -120px;
     right: auto;
 }
