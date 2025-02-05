@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             tempContainer.querySelector(".info-container").classList.add("reverse");
             tempContainer.querySelector(".technology-container").classList.add("reverse");
             tempContainer.querySelector(".skills-container").classList.add("reverse");
+            tempContainer.querySelector(".description-container").classList.add("reverse");
             tempContainer.querySelector(".project-image").classList.add("reverse");
             tempContainer.querySelector(".title").classList.add("reverse");
             tempContainer.querySelector(".description").classList.add("reverse");

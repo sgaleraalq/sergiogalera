@@ -39,6 +39,19 @@
 .description-container {
     display: flex;
     flex-direction: column; 
+    position: relative;
+    height: 200px;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 20px 30px;
+    padding: 20px;
+    background-color: var(--soft-dark);
+    box-shadow: 0px 0px 10px 0px var(--soft-dark);
+}
+
+.description-container.reverse{
+    margin: 20px 30px 20px 0px;
 }
 
 .skills-container{
@@ -94,21 +107,7 @@
 }
 
 .description {
-    height: 200px;
-    margin-top: 10px;
-    margin-left: 30px;
-    padding: 20px;
-    position: relative;
-    max-width: 500px;
-    background-color: var(--soft-dark);
-    box-shadow: 0px 0px 10px 0px var(--soft-dark);
-    overflow: hidden;
-}
-
-.description.reverse {
-    margin-right: 30px;
-    margin-left: 0;
-    text-align: right;
+    text-align: justify;
 }
 
 .img-container {
@@ -120,7 +119,7 @@
 .project-image {
     position: absolute;
     right: 0;
-    width: 600px;
+    width: 650px;
     height: auto;
 }
 
