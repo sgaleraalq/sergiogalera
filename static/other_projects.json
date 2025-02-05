@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Codewars",
+        "description": "whatever",
+        "image": "/static/images/other_projects/codewars.png",
+        "programming_languages": ["Python", "JavaScript", "Java"]
+    },
+    {
+        "name": "Gaztelu Bira First App",
+        "description": "whatever",
+        "image": "/static/images/other_projects/gaztelu_bira.png",
+        "programming_languages": ["Kotlin"]
+    },
+    {
+        "name": "Random selector",
+        "description": "whatever",
+        "image": "/static/images/other_projects/random_selector.png",
+        "programming_languages": ["Python"]
+    }
+]
