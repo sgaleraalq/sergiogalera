@@ -65,7 +65,7 @@
         "technology_url": "https://developer.android.com/",
         "title": "MathMania",
         "description": "Android app that allows users to practice math operations. \n\nIt includes different levels of difficulty and a timer to challenge the user. The app is written in Kotlin and follows Android development best practices.",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/images/projects/img_math_mania.png",
         "programming_languages": [
             "Kotlin"
         ],
