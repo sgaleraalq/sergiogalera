@@ -19,13 +19,14 @@
         ],
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
         "playstore_url": "",
+        "explanation_url": "http://127.0.0.1:3000/",
         "full_description": "It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart."
     },
     {
         "technology": "Android",
         "technology_url": "https://developer.android.com/",
         "title": "Easy Spot",
-        "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data.  The app, written in XML follows Android development best practices",
+        "description": "Android app that allows users to create a family group in order to share last parking location of their cars. \n\nIt uses Google Maps API to display the location of the cars and Firebase Auth and Firestore to store the data.",
         "image": "/static/images/projects/example.png",
         "programming_languages": [
             "Kotlin"
@@ -39,13 +40,14 @@
         ],
         "link": "",
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
-        "playstore_url": ""
+        "playstore_url": "",
+        "explanation_url": "http://127.0.0.1:3000/"
     },
     {
         "technology": "Website",
         "technology_url": "http://127.0.0.1:3000/",
         "title": "Personal portfolio",
-        "description": "Website app that explains my professional experience and showcases my projects. \n\nIt is a responsive website that adapts to different screen sizes and devices.",
+        "description": "Personal portfolio made as a website app that explains my professional experience and showcases my projects. \n\nIt is a responsive website that adapts to different screen sizes and devices.",
         "image": "/static/images/projects/example.png",
         "programming_languages": [
             "HTML",
@@ -53,10 +55,12 @@
             "JavaScript"
         ],
         "skills": [
-            "Web development"
+            "Web development",
+            "Responsive design"
         ],
         "link": "",
         "github_url": "https://github.com/sgaleraalq/sergiogalera",
-        "playstore_url": ""
+        "playstore_url": "",
+        "explanation_url": "http://127.0.0.1:3000/"
     }
 ]

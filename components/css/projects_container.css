@@ -107,6 +107,7 @@
 }
 
 .description {
+    overflow: hidden;
     text-align: justify;
 }
 

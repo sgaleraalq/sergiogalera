@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const linksContainer = tempContainer.querySelector(".links-container");
         displayLinks(linksContainer, project.github_url, "ic_github.svg");
         displayLinks(linksContainer, project.playstore_url, "ic_playstore.svg");
+        displayLinks(linksContainer, project.explanation_url, "ic_go.svg");
         
         // IF PROJECT IS ODD, REVERSE THE CONTAINERS
         if (index % 2 == 1) {
@@ -77,7 +78,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             tempContainer.querySelector(".description-container").classList.add("reverse");
             tempContainer.querySelector(".project-image").classList.add("reverse");
             tempContainer.querySelector(".title").classList.add("reverse");
-            tempContainer.querySelector(".description").classList.add("reverse");
         }
         projectsContainer.innerHTML += tempContainer.innerHTML;
 
@@ -134,7 +134,7 @@ function displayLinks(container, link, icon) {
         // Create link and open in a new tab
         const anchor = document.createElement("a");
         anchor.href = link;
-        anchor.target = "_blank";
+        if (icon != "ic_go.svg") anchor.target = "_blank"; // Open in a new tab if not explanation link
         anchor.classList.add("link"); 
 
         // Adds icon to website
