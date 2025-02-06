@@ -1,20 +1,20 @@
 [
     {
         "name": "Codewars",
-        "description": "whatever",
+        "description": "Codewars is a website that offers coding challenges to improve your skills",
         "image": "/static/images/projects/example.png",
         "programming_languages": ["Python", "JavaScript", "Java"]
     },
     {
-        "name": "Gaztelu Bira First App",
-        "description": "whatever",
-        "image": "/static/images/projects/example.png",
-        "programming_languages": ["Kotlin"]
-    },
-    {
         "name": "Random selector",
-        "description": "whatever",
+        "description": "A simple app that selects a random item from a list in a fancy way",
         "image": "/static/images/projects/example.png",
         "programming_languages": ["Python"]
+    },
+    {
+        "name": "Gaztelu Bira First App",
+        "description": "The first app I made and first design for Gaztelu Bira App",
+        "image": "/static/images/projects/example.png",
+        "programming_languages": ["Kotlin"]
     }
 ]

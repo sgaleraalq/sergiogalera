@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 100px 0px 100px 0px;
+    padding: 150px 0px 150px 0px;
 }
 
 .main-container.reverse {
