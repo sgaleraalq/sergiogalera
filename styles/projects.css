@@ -73,6 +73,13 @@
   transform: translate(-50%, -50%);
 }
 
+.other-project-image.compressed {
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  background-color: var(--soft-dark);
+}
+
 .languages-container {
   display: flex;
   justify-content: center;

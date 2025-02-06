@@ -160,7 +160,6 @@ async function loadOtherProjects() {
             .map(lang => `<img src="${languageIcons[lang] || '/static/icons/default.svg'}" alt="${lang}" title="${lang}" class="language-icon">`)
             .join("");
 
-
         projectElement.innerHTML = `
             <a href="${project.link}" target="_blank" class="project-link">
                 <img src="${project.image}" alt="${project.name}" class="other-project-image">
@@ -169,7 +168,15 @@ async function loadOtherProjects() {
                 <div class="languages-container">${languagesHTML}</div>
             </a>
         `;
+
         container.appendChild(projectElement);
+
+        if (project.compress) {
+            const imgElement = projectElement.querySelector(".other-project-image");
+            if (imgElement) {
+                imgElement.classList.add("compressed");
+            }
+        }
     });
 }
 
