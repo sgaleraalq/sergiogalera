@@ -29,6 +29,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  margin-top: 50px;
+}
+
+.other-project-card {
+  background: var(--soft-dark);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px var(--soft-dark);
+  text-align: center;
+}
+
+.other-project-card img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 @media (max-width: 1080px) {

@@ -141,7 +141,23 @@ function displayLinks(container, link, icon) {
 
 async function loadOtherProjects() {
     const data = await loadData("other_projects.json");
-    console.log("Other projects: ", data);
+    const container = document.getElementById("other-projects-list-container");
+
+    container.innerHTML = "";
+    
+    data.forEach(project => {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("other-project-card");
+
+        projectElement.innerHTML = `
+            <img src="${project.image}" alt="${project.name}">
+            <h3>${project.name}</h3>
+            <p>${project.description}</p>
+            <p><strong>Languages:</strong> ${project.programming_languages.join(", ")}</p>
+        `;
+
+        container.appendChild(projectElement);
+    });
 }
 
 
