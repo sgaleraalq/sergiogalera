@@ -144,16 +144,27 @@ async function loadOtherProjects() {
     const container = document.getElementById("other-projects-list-container");
 
     container.innerHTML = "";
-    
+
     data.forEach(project => {
         const projectElement = document.createElement("div");
         projectElement.classList.add("other-project-card");
 
+        const languageIcons = {
+            "Python": "/static/icons/ic_python.svg",
+            "JavaScript": "/static/icons/ic_javascript.svg",
+            "Java": "/static/icons/ic_java.svg",
+            "Kotlin": "/static/icons/ic_kotlin.svg"
+        };
+
+        const languagesHTML = project.programming_languages
+            .map(lang => `<img src="${languageIcons[lang] || '/static/icons/default.svg'}" alt="${lang}" title="${lang}" class="language-icon">`)
+            .join("");
+
         projectElement.innerHTML = `
-            <img src="${project.image}" alt="${project.name}">
+            <img src="${project.image}" alt="${project.name}" class="other-project-image">
             <h3>${project.name}</h3>
             <p>${project.description}</p>
-            <p><strong>Languages:</strong> ${project.programming_languages.join(", ")}</p>
+            <div class="languages-container">${languagesHTML}</div>
         `;
 
         container.appendChild(projectElement);
