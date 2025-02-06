@@ -162,12 +162,13 @@ async function loadOtherProjects() {
 
 
         projectElement.innerHTML = `
-            <img src="${project.image}" alt="${project.name}" class="other-project-image">
-            <h3>${project.name}</h3>
-            <p>${project.description}</p>
-            <div class="languages-container">${languagesHTML}</div>
+            <a href="${project.link}" target="_blank" class="project-link">
+                <img src="${project.image}" alt="${project.name}" class="other-project-image">
+                <h3>${project.name}</h3>
+                <p>${project.description}</p>
+                <div class="languages-container">${languagesHTML}</div>
+            </a>
         `;
-
         container.appendChild(projectElement);
     });
 }

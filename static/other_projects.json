@@ -3,18 +3,21 @@
         "name": "Codewars",
         "description": "Codewars is a website that offers coding challenges to improve your skills",
         "image": "/static/images/projects/example.png",
-        "programming_languages": ["Python", "JavaScript", "Java"]
+        "programming_languages": ["Python", "JavaScript", "Java"],
+        "link": "https://github.com/sgaleraalq/codewars"
     },
     {
         "name": "Random selector",
         "description": "A simple app that selects a random item from a list in a fancy way",
         "image": "/static/gifs/random_selector.gif",
-        "programming_languages": ["Python"]
+        "programming_languages": ["Python"],
+        "link": "https://github.com/sgaleraalq/Random-Selector"
     },
     {
         "name": "Gaztelu Bira First App",
         "description": "The first app I made and first design for Gaztelu Bira App",
         "image": "/static/images/projects/example.png",
-        "programming_languages": ["Kotlin"]
+        "programming_languages": ["Kotlin"],
+        "link": "https://github.com/sgaleraalq/GazteluBiraActivity"
     }
 ]
