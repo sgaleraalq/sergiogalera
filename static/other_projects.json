@@ -8,7 +8,7 @@
     {
         "name": "Random selector",
         "description": "A simple app that selects a random item from a list in a fancy way",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/gifs/random_selector.gif",
         "programming_languages": ["Python"]
     },
     {

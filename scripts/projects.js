@@ -160,6 +160,7 @@ async function loadOtherProjects() {
             .map(lang => `<img src="${languageIcons[lang] || '/static/icons/default.svg'}" alt="${lang}" title="${lang}" class="language-icon">`)
             .join("");
 
+
         projectElement.innerHTML = `
             <img src="${project.image}" alt="${project.name}" class="other-project-image">
             <h3>${project.name}</h3>
