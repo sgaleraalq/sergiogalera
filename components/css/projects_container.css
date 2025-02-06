@@ -47,6 +47,7 @@
     padding: 10px 30px 10px 30px;
     background-color: var(--soft-dark);
     box-shadow: 0px 0px 10px 0px var(--soft-dark);
+    z-index: 1;
 }
 
 .description-container.reverse{
@@ -113,7 +114,8 @@
 
 .img-container {
     position: relative;
-    z-index: -1
+    z-index: 0;
+    pointer-events: none;
 }
 
 .project-image {
@@ -122,12 +124,20 @@
     margin-right: -120px;
     width: 800px;
     height: auto;
+    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%);
+    transition: filter 0.3s ease-in-out;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .project-image.reverse{
     left: 0;
     margin-left: -120px;
     right: auto;
+}
+
+.project-image:hover {
+    filter: none;
 }
 
 .error-container {
