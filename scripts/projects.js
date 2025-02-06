@@ -28,7 +28,6 @@ async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
 
     const data = await loadData("projects.json");
-    console.log(data); 
 
     // Cargar la plantilla projects_container.html
     const template = await loadComponent();
@@ -40,47 +39,66 @@ async function loadProjects() {
         // MAIN IMAGE
         const mainImage = tempContainer.querySelector(".project-image");
         mainImage.src = project.image;
-        // TODO
-        // mainImage.onerror = function() {
-        //     this.src = "/static/images/projects/error_image.png";
-        // };
-
-        // TECHNOLOGY CONTAINER
-        displayTechnology(tempContainer.querySelector(".technology-container"), project.technology, project.technology_url);
-
-        // TEXT CONTAINERS
-        tempContainer.querySelector("#title").textContent = project.title;
-        tempContainer.querySelector("#description").textContent = project.description;
-        tempContainer.querySelector("#description").innerHTML = project.description.replace(/\n/g, '<br>');
         
-        // PROJECTS CONTAINER
+        // Esperar a que la imagen cargue
+        mainImage.onload = function () {};
+
+        // Manejar error si no se encuentra la imagen
+        mainImage.onerror = function() { loadErrorImage(this) };
+
+        // CONTENEDORES Y DATOS
+        displayTechnology(tempContainer.querySelector(".technology-container"), project.technology);
+        tempContainer.querySelector("#title").textContent = project.title;
+        tempContainer.querySelector("#description").innerHTML = project.description.replace(/\n/g, '<br>');
+
+        // Agregar skills
         project.skills.forEach(skill => {
             const skillElement = document.createElement("p");
             skillElement.classList.add("skill");
             skillElement.textContent = skill;
             tempContainer.querySelector(".skills-container").appendChild(skillElement);
-        })
+        });
 
         // LINKS CONTAINER
         const linksContainer = tempContainer.querySelector(".links-container");
         displayLinks(linksContainer, project.github_url, "ic_github.svg");
         displayLinks(linksContainer, project.playstore_url, "ic_playstore.svg");
         displayLinks(linksContainer, project.explanation_url, "ic_go.svg");
-        
-        // IF PROJECT IS ODD, REVERSE THE CONTAINERS
-        if (index % 2 == 1) {
-            tempContainer.querySelector(".main-container").classList.add("reverse");
-            tempContainer.querySelector(".info-container").classList.add("reverse");
-            tempContainer.querySelector(".technology-container").classList.add("reverse");
-            tempContainer.querySelector(".skills-container").classList.add("reverse");
-            tempContainer.querySelector(".description-container").classList.add("reverse");
-            tempContainer.querySelector(".project-image").classList.add("reverse");
-            tempContainer.querySelector(".title").classList.add("reverse");
-        }
-        projectsContainer.innerHTML += tempContainer.innerHTML;
 
-    })
+        // Alternar orden si el índice es impar
+        if (index % 2 === 1) {
+            tempContainer.querySelectorAll(".main-container, .info-container, .technology-container, .skills-container, .description-container, .project-image, .title")
+                .forEach(el => el.classList.add("reverse"));
+        }
+
+        projectsContainer.appendChild(tempContainer);
+    });
 }
+
+function loadErrorImage(imageElement) {
+    // Crear un contenedor de error
+    const errorContainer = document.createElement("div");
+    errorContainer.classList.add("error-container");
+
+    // Crear la imagen de error
+    const errorImage = document.createElement("img");
+    errorImage.src = "/static/icons/ic_error.svg";
+    errorImage.alt = "Imagen no disponible";
+    errorImage.classList.add("error-image");
+
+    // Crear el mensaje de error
+    const errorMessage = document.createElement("p");
+    errorMessage.textContent = "No se pudo cargar la imagen.";
+    errorMessage.classList.add("error-message");
+
+    // Agregar la imagen y el mensaje al contenedor
+    errorContainer.appendChild(errorImage);
+    errorContainer.appendChild(errorMessage);
+
+    // Reemplazar la imagen en el DOM
+    imageElement.replaceWith(errorContainer);
+}
+
 
 function displayTechnology(container, technology) {
     const icons = {
@@ -124,7 +142,7 @@ function displayLinks(container, link, icon) {
         // Create link and open in a new tab
         const anchor = document.createElement("a");
         anchor.href = link;
-        if (icon != "ic_go.svg") anchor.target = "_blank"; // Open in a new tab if not explanation link
+        if (icon != "ic_go.svg") anchor.target = "_blank";
         anchor.classList.add("link"); 
 
         // Adds icon to website
