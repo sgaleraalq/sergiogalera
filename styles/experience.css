@@ -364,4 +364,42 @@ ul {
   .experience-container {
     padding: 0px 50px;
   }
+
+  .experience-1-container,
+  .internship-1-container,
+  .experience-2-container,
+  .internship-2-container,
+  .experience-3-container {
+    display: none;
+    padding: 10px 20px;
+  }
+
+  .experience-timeline-list li::before {
+    margin-left: -40px;
+  }
+
+  .experience-timeline-content {
+    padding: 0;
+  }
+
+  .experience-timeline-list li {
+    padding-left: 0px;
+  }
+
+  .experience-timeline-list li {
+    font-size: 12px;
+  }
+
+  .experience-labour {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .experience-location-container {
+    display: none;
+  }
+
+  .experience-title-img {
+    margin: 0;
+  }
 }
