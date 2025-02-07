@@ -16,8 +16,9 @@
     {
         "name": "Gaztelu Bira First App",
         "description": "The first app I made and first design for Gaztelu Bira App",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/images/projects/img_gaztelu_bira_first_app.png",
         "programming_languages": ["Kotlin"],
-        "link": "https://github.com/sgaleraalq/GazteluBiraActivity"
+        "link": "https://github.com/sgaleraalq/GazteluBiraActivity",
+        "compress": true
     }
 ]
