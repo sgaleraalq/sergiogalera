@@ -98,16 +98,19 @@
 }
 
 
-
 @media (max-width: 1080px) {
   .projects-container {
     padding: 100px 0px 0px 0px;
   }
+
+  #projects-header{
+    padding: 0;
+  }
+  
 }
 
 @media (max-width: 768px) {
   .projects-container{
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 50px 50px;
   }
 }
