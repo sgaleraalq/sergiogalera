@@ -224,3 +224,24 @@ document.addEventListener("DOMContentLoaded", async function () {
     loadProjects();
     loadOtherProjects();
 });
+
+
+function checkAndToggleReverseClass() {
+    const mediaQuery = window.matchMedia('(max-width: 1000px)');
+    
+    const reverseElements = document.querySelectorAll('.reverse');
+    
+    if (mediaQuery.matches) {
+        // Delete reverse attribute if max-width is 1000px
+        reverseElements.forEach((element) => {
+            element.classList.remove('reverse');
+        });
+    } else {
+        reverseElements.forEach((element) => {
+            element.classList.add('reverse');
+        });
+    }
+}
+
+window.addEventListener('resize', checkAndToggleReverseClass);
+window.addEventListener('load', checkAndToggleReverseClass);

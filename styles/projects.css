@@ -23,7 +23,7 @@
   text-align: center;
   color: var(--main-soft-blue);
   font-size: 24px;
-  margin-top: 140px;
+  margin-top: 50px;
 }
 
 .other-projects-list-container {
@@ -101,6 +101,13 @@
 
 @media (max-width: 1080px) {
   .projects-container {
-    padding: 100px 0px;
+    padding: 100px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container{
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }

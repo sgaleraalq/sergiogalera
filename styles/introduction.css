@@ -62,26 +62,26 @@
 }
 
 @media (max-width: 768px){    
-    .introduction-container {
-      padding-top: 150px;
-      padding-bottom: 20px;
-    }
-
-    .introduction {
-      font-size: 14px;
-    }
-  
-    .intro-title {
-      font-size: 24px;
-      transition-delay: 200ms;
-    }
-  
-    .intro-subtitle {
-      font-size: 20px;
-    }
-
-    .intro-description {
-      text-align: justify;
-    }
+  .introduction-container {
+    padding-top: 150px;
+    padding-bottom: 20px;
   }
+
+  .introduction {
+    font-size: 14px;
+  }
+
+  .intro-title {
+    font-size: 24px;
+    transition-delay: 200ms;
+  }
+
+  .intro-subtitle {
+    font-size: 20px;
+  }
+
+  .intro-description {
+    text-align: justify;
+  }
+}
   
