@@ -100,7 +100,7 @@
 
 @media (max-width: 1080px) {
   .projects-container {
-    padding: 100px 0px 0px 0px;
+    margin-top: 70px;
   }
 
   #projects-header{

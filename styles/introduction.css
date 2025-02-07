@@ -1,13 +1,12 @@
 .introduction-container {
   margin: 0px 5%;
+  margin-bottom: 0px;
   margin-top: 100px;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  background-color: red
-  ;
 }
 
 .introduction {
@@ -44,7 +43,6 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-bottom: 100px;
 }
 
 .button-get-in-touch {

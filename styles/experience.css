@@ -362,7 +362,13 @@ ul {
 
 @media (max-width: 1080px) {
   .experience-container {
-    padding: 0px 50px;
+    min-height: auto;
+    margin-top: 70px;
+    padding: 20px 0px;
+  }
+
+  .experience-main-container{
+    padding: 0px 20px;
   }
 
   .experience-1-container,
