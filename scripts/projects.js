@@ -39,12 +39,12 @@ async function loadProjects() {
         // MAIN IMAGE
         const mainImage = tempContainer.querySelector(".project-image");
         mainImage.src = project.image;
-        
-        // Esperar a que la imagen cargue
         mainImage.onload = function () {};
-
-        // Manejar error si no se encuentra la imagen
         mainImage.onerror = function() { loadErrorImage(this) };
+        mainImage.addEventListener("mouseenter", function(){ changeImage(this, project.gif) });
+        mainImage.addEventListener("mouseleave", function(){ changeImage(this, project.image) });
+        mainImage.addEventListener("animationend", function(){ changeImage(this, project.image) });
+        mainImage.addEventListener("click", function(){ navigateToProject(project.id) });
 
         // CONTENEDORES Y DATOS
         displayTechnology(tempContainer.querySelector(".technology-container"), project.technology);
@@ -75,6 +75,15 @@ async function loadProjects() {
     });
 }
 
+function navigateToProject(projectId) {
+    if (projectId == "personal_portfolio") {
+        window.location.reload();
+    } else {
+        const url = `/projects/${projectId}`;
+        window.location.href = url;
+    }
+}
+
 function loadErrorImage(imageElement) {
     // Crear un contenedor de error
     const errorContainer = document.createElement("div");
@@ -99,6 +108,17 @@ function loadErrorImage(imageElement) {
     imageElement.replaceWith(errorContainer);
 }
 
+function changeImage(imageElement, newSrc) {
+    if (!newSrc || imageElement.src === newSrc) return;
+
+    fetch(newSrc, { method: "HEAD" })
+        .then(response => {
+            if (response.ok) {
+                imageElement.src = newSrc;
+            }
+        })
+        .catch(error => console.error("Error verificando la imagen:", error));
+}
 
 function displayTechnology(container, technology) {
     const icons = {

@@ -161,3 +161,57 @@
     font-size: 14px;
     margin-top: 10px;
 }
+
+@media (max-width: 1000px) {
+    .main-container {
+        flex-direction: column;
+        padding: 50px 0px 50px 0px;
+        justify-content: center;
+        border: 1px solid red;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .main-container.reverse {
+        flex-direction: column;
+    }
+
+    .description-container {
+        margin: 20px 0px 20px 0px;
+    }
+
+    .description-container.reverse {
+        margin: 20px 0px 20px 0px;
+    }
+
+    .skills-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .skills-container.reverse {
+        justify-content: center;
+    }
+
+    .title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .title.reverse {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-image {
+        position: relative;
+        width: 400px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .project-image.reverse {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+}
