@@ -25,7 +25,6 @@ async function loadComponent(component) {
   }
 }
 
-
 const header = document.querySelector('.header-container');
 const headerHeight = header.offsetHeight;
 let lastScrollPosition = 0;

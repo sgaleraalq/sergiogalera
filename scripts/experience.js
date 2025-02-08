@@ -31,11 +31,12 @@ document.addEventListener('DOMContentLoaded', async function(){
     const lastYear = Math.max(...data.map(experience => experience.startYear));
     
     loadTimelineItems(data);
-    loadExperience(data);
     window.selectedExperience = data.find(experience => experience.startYear === lastYear);
+    loadExperience();
 })
 
 
+// START TIMELINE FUNCTIONS
 function loadTimelineItems(data) {
     let experienceYears = [];
     let intershipYears = [];
@@ -128,7 +129,21 @@ function colorArrow(){
         timelineArrow.style.borderLeftColor = "var(--main-orange)";
     }, 1300);
 }
+// FINISH TIMELINE FUNCTIONS
 
-function loadExperience(data){
 
+// START EXPERIENCE FUNCTIONSf
+async function loadExperience(){
+    const experienceDescriptionContainer = document.getElementById("experience-description-container");
+
+    const template = await loadComponent(component);
+    const tempContainer = document.createElement("div");
+    tempContainer.classList.add("exp-container");
+
+    tempContainer.innerHTML = template;
+
+    // Agregar el nodo al contenedor principal
+    experienceDescriptionContainer.appendChild(tempContainer);
+
+    console.log(tempContainer)
 }
