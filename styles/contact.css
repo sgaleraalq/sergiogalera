@@ -1,3 +1,20 @@
+/* .introduction-container{
+  display: none;
+}
+
+.experience-container{
+  display: none;
+}
+
+.projects-container{
+  display: none;
+}
+
+.about-me-main-container{
+  display: none;
+}
+ */
+
 /* CONTACT CONTAINER */
 .contact-container {
   height: 100vh;
@@ -37,14 +54,18 @@
 
 .section-contact-header {
   color: var(--main-soft-blue);
+  width: 100%;
   font-size: 16px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .contact-title{
   color: var(--main-white-gray);
   font-size: 40px;
   padding: 20px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .contact-text-container {
@@ -59,7 +80,6 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-  padding: 0 200px;
   margin: 0;
   text-align: center;
 }
