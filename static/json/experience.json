@@ -1,0 +1,68 @@
+[
+    {
+        "id": "biochemistry-degree",
+        "startYear": 2015,
+        "finishYear": 2019,
+        "isExperience": true,
+        "contentId": "experience-unav",
+        "content": [
+            "Solid background on biomolecular and biomedical science",
+            "Experience in advanced lab techniques",
+            "Analytical skills and scientific problem solving",
+            "Collaborative experience in academic research projects"
+        ]
+    },
+    {
+        "id": "bioinformatics-master",
+        "startYear": 2020,
+        "finishYear": 2022,
+        "isExperience": true,
+        "contentId": "experience-bioinformatics-master",
+        "content": [
+            "Computational biology and bioinformatics",
+            "Proficiency in programming languages such as Python, R, and Bash",
+            "Experience with bioinformatics tools and platforms",
+            "Ability to analyze large biological datasets",
+            "Collaborative experience in interdisciplinary research and computer science"
+        ]
+    },
+    {
+        "id": "nasertic",
+        "startYear": 2022,
+        "finishYear": "now",
+        "isExperience": true,
+        "contentId": "experience-nasertic",
+        "content": [
+            "Developing and optimizing pipelines in Nextflow",
+            "Proficient scripting in Python for bioinformatics workflows",
+            "Working with high-performance computing clusters",
+            "Specialized in molecular genetics and metagenomics techniques",
+            "Experience integrating advanced bioinformatics methods"
+        ]
+    },
+    {
+        "id": "ucl-internship",
+        "startYear": 2018,
+        "finishYear": 2018,
+        "isExperience": false,
+        "contentId": "internship-ucl",
+        "content": [
+            "Immunohistochemical techniques in a cancer research center",
+            "Analysis of tissue samples using microscopy and image analysis tools",
+            "Laboratory protocols expertise, data analysis, and lab safety standards"
+        ]
+    },
+    {
+        "id": "qiagen-project",
+        "startYear": 2021,
+        "finishYear": 2021,
+        "isExperience": false,
+        "contentId": "internship-qiagen-project",
+        "content": [
+            "Handled bulk and single-cell RNA-seq data",
+            "Implemented algorithms for T-cell clonality analysis using Python",
+            "Conducted data preprocessing, normalization, and visualization",
+            "Performed benchmarking for clonotype identification and comparison"
+        ]
+    }
+]

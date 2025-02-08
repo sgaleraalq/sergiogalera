@@ -1,0 +1,415 @@
+
+.experience-content{
+    position: relative;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+  }
+  
+  .experience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+  }
+  
+  .experience-timeline-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .experience-content-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .experience-timeline {
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    min-height: 20px;
+    min-width: 250px;
+    margin-top: 32px;
+  }
+  
+  .timeline-bar {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    --arrow-color: white;
+  }
+  
+  .timeline-bar::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid var(--arrow-color);
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    transform: translateY(-50%);
+    transition: border-left 0.5s ease-in-out;
+  }
+  
+  .timeline-bar-background {
+    width: 0%;
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    transition: width 2.5s ease-in-out;
+  }
+  
+  .timeline-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .timeline-item:hover .timeline-circle::before {
+    opacity: 1;
+  }
+  
+  .timeline-item.selected .timeline-circle {
+    background-color: white;
+  }
+  
+  .timeline-item.selected .timeline-circle::before {
+    opacity: 1;
+    color: white;
+  }
+  
+  .timeline-circle {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .timeline-circle::before {
+    content: attr(data-year);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .timeline-item.selected .timeline-circle::before {
+    color: white;
+    opacity: 1;
+  }
+  
+  .internship-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .internship-item:hover .internship-pointer::before {
+    opacity: 1;
+  }
+  
+  .internship-pointer {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    z-index: 3;
+  }
+  
+  .internship-pointer.clicked {
+    border-top-color: var(--main-orange);
+  }
+  
+  .internship-pointer::before {
+    content: attr(data-year);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+  }
+  
+  
+  .experience-1-container,
+  .internship-1-container,
+  .experience-2-container,
+  .internship-2-container,
+  .experience-3-container {
+    display: none;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid var(--main-gray);
+  }
+  
+  .experience-1-container > *,
+  .internship-1-container > *,
+  .experience-2-container > *,
+  .internship-2-container > *,
+  .experience-3-container > * {
+    margin: 0;
+  }
+  
+  /* TIMELINE TITLE (Unav, Au university, Nasertic...) */
+  .experience-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+  
+  .experience-title-img {
+    margin-left: 70px;
+    margin-right: 24px;
+    width: 60px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .experience-title-img.visible {
+    opacity: 1;
+  }
+  
+  .all-title-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    width: 100%;
+  }
+  
+  .title-text-container {
+    margin-top: 24px;
+    margin-left: 24px;
+  }
+  
+  .experience-title {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.1s ease, transform 0.5s ease-in-out;
+  }
+  
+  .experience-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .experience-title {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.1s ease, transform 0.5s ease-in-out;
+  }
+  
+  .experience-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .experience-labour {
+    font-family: "JetBrains Mono", monospace;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 12px;
+    margin-left: 24px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .experience-labour.visible {
+    opacity: 1;
+  }
+  
+  .experience-date {
+    font-weight: bold;
+    color: var(--main-soft-blue);
+  }
+  
+  
+  /* TIMELINE CONTENT */
+  .experience-timeline-content {
+    flex-grow: 1;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* TIMELINE LIST */
+  .experience-timeline-list {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .experience-timeline-list li {
+    position: relative;
+    margin: 18px 0;
+    padding-left: 40px;
+    color: var(--main-gray-whiter);
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.1s ease, transform 1s ease;
+  }
+  
+  .experience-timeline-list li.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .experience-timeline-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: var(--main-soft-blue);
+    font-size: 16px;
+  }
+  
+  .experience-location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+  }
+  
+  .experience-location {
+    max-height: 70px;
+  }
+  
+  .experience-location-text {
+    margin: 0;
+    margin-top: 10px;
+    color: var(--main-gray-whiter);
+    font-size: 12px;
+  }
+  
+  .experience-location-container.visible {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .experience-timeline-extra-content {
+    display: none;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* SPECIFIC ITEMS */
+  #dna-gif {
+    max-width: 70px;
+    transform: rotate(90deg);
+  }
+  
+  #earth-globe {
+    width: 300px;
+    height: 300px;
+    border: 1px solid blue;
+  }
+  
+  
+  @media (max-width: 1080px) {
+    .experience-container {
+      min-height: auto;
+      margin-top: 70px;
+      padding: 20px 0px;
+    }
+  
+    .experience-main-container{
+      padding: 0px 20px;
+    }
+  
+    .experience-1-container,
+    .internship-1-container,
+    .experience-2-container,
+    .internship-2-container,
+    .experience-3-container {
+      display: none;
+      padding: 10px 20px;
+    }
+  
+    .experience-timeline-list li::before {
+      margin-left: -40px;
+    }
+  
+    .experience-timeline-content {
+      padding: 0;
+    }
+  
+    .experience-timeline-list li {
+      padding-left: 0px;
+    }
+  
+    .experience-timeline-list li {
+      font-size: 12px;
+    }
+  
+    .experience-labour {
+      margin: 0;
+      font-size: 12px;
+    }
+  
+    .experience-location-container {
+      display: none;
+    }
+  
+    .experience-title-img {
+      margin: 0;
+    }
+  }

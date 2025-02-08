@@ -1,33 +1,12 @@
-async function loadData(file_name) {
-    try {
-        const response = await fetch(`/static/${file_name}`);
-        if (!response.ok) {
-            throw new Error(`Error en la solicitud: ${response.statusText}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error: ", error);
-    }
-}
+const projects      = "/static/json/projects.json";
+const otherProjects = "/static/json/other_projects.json";
 
-async function loadComponent() {
-    try {
-        const response = await fetch("/components/html/projects_container.html");
-        if (!response.ok) {
-            throw new Error(`Error en la solicitud: ${response.statusText}`);
-        }
-        const text = await response.text();
-        return text;
-    } catch (error) {
-        console.error("Error: ", error);
-    }
-}
+import { loadData, loadComponent } from "/scripts/main.js";
 
 async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
 
-    const data = await loadData("projects.json");
+    const data = await loadData(projects);
 
     // Cargar la plantilla projects_container.html
     const template = await loadComponent();
@@ -178,7 +157,7 @@ function displayLinks(container, link, icon) {
 
 
 async function loadOtherProjects() {
-    const data = await loadData("other_projects.json");
+    const data = await loadData(otherProjects);
     const container = document.getElementById("other-projects-list-container");
 
     container.innerHTML = "";
