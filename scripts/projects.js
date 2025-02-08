@@ -221,26 +221,29 @@ async function loadOtherProjects() {
 
 // Ejecutar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", async function () {
-    loadProjects();
-    loadOtherProjects();
+    await loadProjects();
+    await loadOtherProjects();
+    checkAndToggleReverseClass();
 });
 
 
 function checkAndToggleReverseClass() {
-    const mediaQuery = window.matchMedia('(max-width: 1000px)');
-    
+    const mediaQuery = window.matchMedia('(max-width: 1800px)');
     const reverseElements = document.querySelectorAll('.reverse');
-    
-    if (mediaQuery.matches) {
-        // Delete reverse attribute if max-width is 1000px
-        reverseElements.forEach((element) => {
-            element.classList.remove('reverse');
-        });
-    } else {
-        reverseElements.forEach((element) => {
-            element.classList.add('reverse');
-        });
+
+    function handleMediaChange(e) {
+        if (e.matches) {
+            reverseElements.forEach(element => element.classList.remove('reverse'));
+        } else {
+            reverseElements.forEach(element => element.classList.add('reverse'));
+        }
     }
+
+    // Ejecutar al cargar la página
+    handleMediaChange(mediaQuery);
+
+    // Escuchar cambios en el tamaño de la ventana
+    mediaQuery.addEventListener('change', handleMediaChange);
 }
 
 window.addEventListener('resize', checkAndToggleReverseClass);

@@ -45,7 +45,7 @@
   justify-content: start;
 }
 
-.button-get-in-touch {
+.button-contact {
   margin-top: 50px;
   padding: 1.25rem 1.75rem;
   background-color: transparent;
@@ -57,7 +57,7 @@
   transition: all 0.3s ease;
 }
 
-.button-get-in-touch:hover {
+.button-contact:hover {
   background-color: #00ffcc;
   color: #0a192f;
 }

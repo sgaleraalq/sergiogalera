@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 150px 0px 150px 0px;
+    padding: 100px 50px;
 }
 
 .main-container.reverse {
@@ -162,7 +162,7 @@
     margin-top: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1800px) {
     .main-container {
         flex-direction: column;
         justify-content: center;
