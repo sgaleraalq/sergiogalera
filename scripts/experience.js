@@ -23,6 +23,8 @@ function onExperienceChange(){
     resetAllColors();
     resetAllSelections();
     loadTimelineBackground();
+    resetExperience();
+    loadExperience();
 }
 
 // When document is ready load components
@@ -32,7 +34,6 @@ document.addEventListener('DOMContentLoaded', async function(){
     
     loadTimelineItems(data);
     window.selectedExperience = data.find(experience => experience.startYear === lastYear);
-    loadExperience();
 })
 
 
@@ -133,6 +134,11 @@ function colorArrow(){
 
 
 // START EXPERIENCE FUNCTIONSf
+function resetExperience(){
+    const experienceDescriptionContainer = document.getElementById("experience-description-container");
+    experienceDescriptionContainer.innerHTML = "";
+}
+
 async function loadExperience(){
     const experienceDescriptionContainer = document.getElementById("experience-description-container");
 
@@ -141,6 +147,24 @@ async function loadExperience(){
     tempContainer.classList.add("exp-container");
 
     tempContainer.innerHTML = template;
+
+    // Title image
+    const titleImage = tempContainer.querySelector(".exp-image");
+    titleImage.src = window.selectedExperience.image;
+
+    // Title
+    const title = tempContainer.querySelector(".exp-title-text");
+    title.innerHTML = window.selectedExperience.title;
+
+    // Years
+    const years = tempContainer.querySelector(".exp-subtitle-years");
+    const startYear = window.selectedExperience.startYear;
+    const finishYear = window.selectedExperience.finishYear;
+    if (startYear === finishYear){ years.innerHTML = `${startYear}.` } else { years.innerHTML = `${startYear} - ${finishYear}.` }
+
+    // Role
+    const subtitle = tempContainer.querySelector(".exp-subtitle-text");
+    subtitle.innerHTML = window.selectedExperience.role;
 
     // Agregar el nodo al contenedor principal
     experienceDescriptionContainer.appendChild(tempContainer);
