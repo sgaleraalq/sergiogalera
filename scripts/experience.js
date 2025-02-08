@@ -166,6 +166,14 @@ async function loadExperience(){
     const subtitle = tempContainer.querySelector(".exp-subtitle-text");
     subtitle.innerHTML = window.selectedExperience.role;
 
+    // Content
+    const expList = tempContainer.querySelector(".exp-list");
+    window.selectedExperience.content.forEach(description => {
+        const item = document.createElement("li");
+        item.innerHTML = description;
+        expList.appendChild(item);
+    });
+
     // Agregar el nodo al contenedor principal
     experienceDescriptionContainer.appendChild(tempContainer);
 
