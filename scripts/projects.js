@@ -1,7 +1,6 @@
-const projects      = "/static/json/projects.json";
-const otherProjects = "/static/json/other_projects.json";
-
-import { loadData, loadComponent } from "/scripts/main.js";
+const projects          = "/static/json/projects.json";
+const projectComponent  = "/components/html/projects_container.html"
+const otherProjects     = "/static/json/other_projects.json";
 
 async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
@@ -9,7 +8,7 @@ async function loadProjects() {
     const data = await loadData(projects);
 
     // Cargar la plantilla projects_container.html
-    const template = await loadComponent();
+    const template = await loadComponent(projectComponent);
 
     data.forEach((project, index) => {
         const tempContainer = document.createElement("div");

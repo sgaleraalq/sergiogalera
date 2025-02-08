@@ -1,6 +1,5 @@
 
-
-export async function loadData(file_name) {
+async function loadData(file_name) {
   try {
       const response = await fetch(file_name);
       if (!response.ok) {
@@ -13,7 +12,7 @@ export async function loadData(file_name) {
   }
 }
 
-export async function loadComponent(component) {
+async function loadComponent(component) {
   try {
       const response = await fetch(component);
       if (!response.ok) {
@@ -31,300 +30,300 @@ export async function loadComponent(component) {
 
 
 
-const header = document.querySelector('.header-container');
-const headerHeight = header.offsetHeight;
-const timelineExperiences = [
-  { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-unav' },
-  { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
-  { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
-  { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
-  { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
-];
-const timelineBarColor = 'var(--main-orange)';
-document.querySelector('.timeline-bar-background').style.backgroundColor = timelineBarColor;
+// const header = document.querySelector('.header-container');
+// const headerHeight = header.offsetHeight;
+// const timelineExperiences = [
+//   { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-unav' },
+//   { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
+//   { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
+//   { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
+//   { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
+// ];
+// const timelineBarColor = 'var(--main-orange)';
+// document.querySelector('.timeline-bar-background').style.backgroundColor = timelineBarColor;
 
-let isExperienceNotLoaded = true;
+// let isExperienceNotLoaded = true;
 
-let lastScrollPosition = 0;
-window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.scrollY;
+// let lastScrollPosition = 0;
+// window.addEventListener('scroll', () => {
+//   const currentScrollPosition = window.scrollY;
 
-  if (currentScrollPosition <= headerHeight) {
-    header.style.transform = `translateY(-${currentScrollPosition}px)`;
-  } else {
-    header.style.transform = `translateY(-${headerHeight}px)`;
-  }
+//   if (currentScrollPosition <= headerHeight) {
+//     header.style.transform = `translateY(-${currentScrollPosition}px)`;
+//   } else {
+//     header.style.transform = `translateY(-${headerHeight}px)`;
+//   }
 
-  if (currentScrollPosition < lastScrollPosition) {
-    header.style.transform = 'translateY(0)';
-  }
+//   if (currentScrollPosition < lastScrollPosition) {
+//     header.style.transform = 'translateY(0)';
+//   }
 
-  lastScrollPosition = currentScrollPosition;
-});
+//   lastScrollPosition = currentScrollPosition;
+// });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const experienceDiv = document.getElementById('experience-content-container');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const experienceDiv = document.getElementById('experience-content-container');
 
-  // Crear el IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
-        isExperienceNotLoaded = false;
-        const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
-        // const lastExperience = timelineExperiences[3];
+//   // Crear el IntersectionObserver
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting && entry.intersectionRatio === 1 && isExperienceNotLoaded) {
+//         isExperienceNotLoaded = false;
+//         const lastExperience = timelineExperiences.find(item => item.finishYear === 'now'); 
+//         // const lastExperience = timelineExperiences[3];
         
-        const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
-        const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
-        const timelineItem = document.getElementById(lastExperience.id);
-        initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
-      }
-    });
-  }, {
-    threshold: [0, 1]
-  });
+//         const startingYearPerc = calculateStartingPercentage(lastExperience.startYear);
+//         const finishYearPerc = calculateStartingPercentage(lastExperience.finishYear);
+//         const timelineItem = document.getElementById(lastExperience.id);
+//         initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
+//       }
+//     });
+//   }, {
+//     threshold: [0, 1]
+//   });
 
-  // Observar el elemento
-  observer.observe(experienceDiv);
-});
+//   // Observar el elemento
+//   observer.observe(experienceDiv);
+// });
 
-document.getElementById('experience-timeline').addEventListener('click', (e) => {
-  const timelineItem = e.target.closest('.timeline-item');
-  if (!timelineItem) return;
+// document.getElementById('experience-timeline').addEventListener('click', (e) => {
+//   const timelineItem = e.target.closest('.timeline-item');
+//   if (!timelineItem) return;
 
-  let year, finishYear, startingYearPerc, finishYearPerc;
+//   let year, finishYear, startingYearPerc, finishYearPerc;
 
-  // Comprobamos si el clic fue sobre un timeline-circle o internship-item
-  switch (true) {
-    case e.target.closest('.timeline-circle') !== null:
-      document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
-      year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
-      finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
-      startingYearPerc = calculateStartingPercentage(year);
-      finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
-      break;
+//   // Comprobamos si el clic fue sobre un timeline-circle o internship-item
+//   switch (true) {
+//     case e.target.closest('.timeline-circle') !== null:
+//       document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+//       year = timelineItem.querySelector('.timeline-circle').getAttribute('data-year');
+//       finishYear = timelineItem.querySelector('.timeline-circle').getAttribute('finish-year');
+//       startingYearPerc = calculateStartingPercentage(year);
+//       finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+//       break;
 
-      case e.target.closest('.internship-pointer') !== null:
-        document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
-        const internshipPointer = e.target.closest('.internship-pointer');
-        internshipPointer.classList.add('clicked');   
-        year = timelineItem.querySelector('.internship-pointer').getAttribute('data-year');
-        finishYear = timelineItem.querySelector('.internship-pointer').getAttribute('finish-year');
-        startingYearPerc = calculateStartingPercentage(year);
-        finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
-        break;
-    default:
-      return;
-  }
+//       case e.target.closest('.internship-pointer') !== null:
+//         document.querySelectorAll('.internship-pointer').forEach(pointer => pointer.classList.remove('clicked'));
+//         const internshipPointer = e.target.closest('.internship-pointer');
+//         internshipPointer.classList.add('clicked');   
+//         year = timelineItem.querySelector('.internship-pointer').getAttribute('data-year');
+//         finishYear = timelineItem.querySelector('.internship-pointer').getAttribute('finish-year');
+//         startingYearPerc = calculateStartingPercentage(year);
+//         finishYearPerc = finishYear === "now" ? 100 : calculateStartingPercentage(finishYear);
+//         break;
+//     default:
+//       return;
+//   }
 
-  initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
-});
+//   initExperienceContent(timelineItem, startingYearPerc, finishYearPerc);
+// });
 
 
-/**
- * Timeline
- */
-function createTimelineItems() {
-  const timelineContainer = document.getElementById('experience-timeline');
+// /**
+//  * Timeline
+//  */
+// function createTimelineItems() {
+//   const timelineContainer = document.getElementById('experience-timeline');
 
-  // Elimina elementos previos
-  const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
-  timelineItems.forEach(item => item.remove());
+//   // Elimina elementos previos
+//   const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
+//   timelineItems.forEach(item => item.remove());
 
-  // Crea nuevos elementos
-  timelineExperiences.forEach(item => {
-    const startingPerc = calculateStartingPercentage(item.startYear);
+//   // Crea nuevos elementos
+//   timelineExperiences.forEach(item => {
+//     const startingPerc = calculateStartingPercentage(item.startYear);
 
-    const timelineItem = document.createElement('div');
-    timelineItem.classList.add('timeline-item');
-    timelineItem.id = item.id;
-    timelineItem.style.left = `${startingPerc}%`;
-    timelineItem.setAttribute('data-content-id', item.contentId); // Añade el atributo data-content-id
+//     const timelineItem = document.createElement('div');
+//     timelineItem.classList.add('timeline-item');
+//     timelineItem.id = item.id;
+//     timelineItem.style.left = `${startingPerc}%`;
+//     timelineItem.setAttribute('data-content-id', item.contentId); // Añade el atributo data-content-id
 
-    const timelineCircle = document.createElement('div');
-    timelineCircle.classList.add(item.isExperience ? 'timeline-circle' : 'internship-pointer');
-    timelineCircle.setAttribute('data-year', item.startYear);
-    timelineCircle.setAttribute('finish-year', item.finishYear);
+//     const timelineCircle = document.createElement('div');
+//     timelineCircle.classList.add(item.isExperience ? 'timeline-circle' : 'internship-pointer');
+//     timelineCircle.setAttribute('data-year', item.startYear);
+//     timelineCircle.setAttribute('finish-year', item.finishYear);
 
-    timelineItem.appendChild(timelineCircle);
-    timelineContainer.appendChild(timelineItem);
-  });
-}
+//     timelineItem.appendChild(timelineCircle);
+//     timelineContainer.appendChild(timelineItem);
+//   });
+// }
 
-function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
-  const contentId = experience.getAttribute('data-content-id');
+// function initExperienceContent(experience, startingYearPerc, finishYearPerc) {
+//   const contentId = experience.getAttribute('data-content-id');
 
-  document.querySelectorAll('.timeline-item').forEach(item => {
-    item.classList.remove('selected');
-  });
+//   document.querySelectorAll('.timeline-item').forEach(item => {
+//     item.classList.remove('selected');
+//   });
 
-  experience.classList.add('selected');
+//   experience.classList.add('selected');
 
-  cleanAllColors();
-  paintTimelineBar(startingYearPerc, finishYearPerc);
-  paintCircle(experience.id);
-  displayExperienceTitle(contentId);
-  displayExperienceContent(contentId);
-}
+//   cleanAllColors();
+//   paintTimelineBar(startingYearPerc, finishYearPerc);
+//   paintCircle(experience.id);
+//   displayExperienceTitle(contentId);
+//   displayExperienceContent(contentId);
+// }
 
-function calculateStartingPercentage(year) {
-  const currentYear = new Date().getFullYear();
-  const startingYear = 2015;
+// function calculateStartingPercentage(year) {
+//   const currentYear = new Date().getFullYear();
+//   const startingYear = 2015;
 
-  if (year < startingYear) return 0;
-  if (year === 'now') return 100;
+//   if (year < startingYear) return 0;
+//   if (year === 'now') return 100;
 
-  return ((year - startingYear) / (currentYear - startingYear)) * 100;
-}
+//   return ((year - startingYear) / (currentYear - startingYear)) * 100;
+// }
 
-function cleanAllColors() {
-  document.querySelectorAll('.timeline-circle').forEach(circle => {
-    circle.style.backgroundColor = '#ddd';
-  });
+// function cleanAllColors() {
+//   document.querySelectorAll('.timeline-circle').forEach(circle => {
+//     circle.style.backgroundColor = '#ddd';
+//   });
 
-  document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');  
+//   document.getElementById('timeline-bar').style.setProperty('--arrow-color', '#ddd');  
 
-  const timelineBar = document.getElementById('timeline-bar-background');
+//   const timelineBar = document.getElementById('timeline-bar-background');
   
-  timelineBar.style.transition = 'none';
-  timelineBar.style.width = '0%';
-  timelineBar.offsetHeight;
+//   timelineBar.style.transition = 'none';
+//   timelineBar.style.width = '0%';
+//   timelineBar.offsetHeight;
 
-  timelineBar.style.transition = 'width 2.5s ease-in-out';
-}
+//   timelineBar.style.transition = 'width 2.5s ease-in-out';
+// }
 
-function paintTimelineBar(startingYearPerc, finishYearPerc) {
-  const timelineBar = document.getElementById('timeline-bar-background');
-  const timeline = document.getElementById('timeline-bar');
+// function paintTimelineBar(startingYearPerc, finishYearPerc) {
+//   const timelineBar = document.getElementById('timeline-bar-background');
+//   const timeline = document.getElementById('timeline-bar');
 
-  timelineBar.style.transition = 'none';
-  timelineBar.style.left = `${startingYearPerc}%`;
-  timelineBar.offsetHeight;
-  timelineBar.style.transition = 'width 2.5s ease-in-out';
-  timelineBar.style.width = `${finishYearPerc - startingYearPerc}%`;
+//   timelineBar.style.transition = 'none';
+//   timelineBar.style.left = `${startingYearPerc}%`;
+//   timelineBar.offsetHeight;
+//   timelineBar.style.transition = 'width 2.5s ease-in-out';
+//   timelineBar.style.width = `${finishYearPerc - startingYearPerc}%`;
 
-  if (finishYearPerc === 100) {
-    setTimeout(() => {
-      timeline.style.setProperty('--arrow-color', timelineBarColor);
-    }, (1.8*1000));
-  }
-}
+//   if (finishYearPerc === 100) {
+//     setTimeout(() => {
+//       timeline.style.setProperty('--arrow-color', timelineBarColor);
+//     }, (1.8*1000));
+//   }
+// }
 
-function paintCircle(itemId) {
-  const circle = document.querySelector(`#${itemId} .timeline-circle`);
-  if (circle) {
-    circle.style.backgroundColor = timelineBarColor;
-  }
-}
+// function paintCircle(itemId) {
+//   const circle = document.querySelector(`#${itemId} .timeline-circle`);
+//   if (circle) {
+//     circle.style.backgroundColor = timelineBarColor;
+//   }
+// }
 
-function displayExperienceTitle(contentId) {
-  document.querySelectorAll('.experience-title').forEach(title => {
-    title.classList.remove('visible');
-  });
+// function displayExperienceTitle(contentId) {
+//   document.querySelectorAll('.experience-title').forEach(title => {
+//     title.classList.remove('visible');
+//   });
 
-  document.querySelectorAll('.experience-labour').forEach(labour => {
-    labour.classList.remove('visible');
-  });
+//   document.querySelectorAll('.experience-labour').forEach(labour => {
+//     labour.classList.remove('visible');
+//   });
 
-  document.querySelectorAll('.experience-title-img').forEach(image => {
-    image.classList.remove('visible');
-  });
+//   document.querySelectorAll('.experience-title-img').forEach(image => {
+//     image.classList.remove('visible');
+//   });
 
-  document.querySelectorAll('.experience-location-container').forEach(location => {
-    location.classList.remove('visible');
-  });
+//   document.querySelectorAll('.experience-location-container').forEach(location => {
+//     location.classList.remove('visible');
+//   });
 
-  const content = document.getElementById(contentId);
-  const title = content.querySelector('.experience-title');
-  const experienceLabour = content.querySelector('.experience-labour');
+//   const content = document.getElementById(contentId);
+//   const title = content.querySelector('.experience-title');
+//   const experienceLabour = content.querySelector('.experience-labour');
 
-  if (title) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          title.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+//   if (title) {
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           title.classList.add('visible');
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     });
 
-    observer.observe(title);
-  }
+//     observer.observe(title);
+//   }
 
-  if (experienceLabour) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            experienceLabour.classList.add('visible');
-          }, 500)
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+//   if (experienceLabour) {
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           setTimeout(() => {
+//             experienceLabour.classList.add('visible');
+//           }, 500)
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     });
 
-    observer.observe(experienceLabour);
-  }
+//     observer.observe(experienceLabour);
+//   }
 
-  const image = content.querySelector('.experience-title-img');
+//   const image = content.querySelector('.experience-title-img');
 
-  if (image) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          image.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+//   if (image) {
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           image.classList.add('visible');
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     });
 
-    observer.observe(image);
-  }
+//     observer.observe(image);
+//   }
 
-  const location = content.querySelector('.experience-location-container');
-  if (location) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            location.classList.add('visible');
-          }, 500);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-    observer.observe(location);
-  }
-}
+//   const location = content.querySelector('.experience-location-container');
+//   if (location) {
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           setTimeout(() => {
+//             location.classList.add('visible');
+//           }, 500);
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     });
+//     observer.observe(location);
+//   }
+// }
 
-function displayExperienceContent(contentId) {
-  document.querySelectorAll('.experience-content-container > div').forEach(item => {
-    item.style.display = 'none';
-  });
+// function displayExperienceContent(contentId) {
+//   document.querySelectorAll('.experience-content-container > div').forEach(item => {
+//     item.style.display = 'none';
+//   });
 
-  const content = document.getElementById(contentId);
-  if (content) {
-    const items = content.querySelectorAll(".experience-timeline-list li");
-    items.forEach(item => {
-      item.classList.remove("visible");
-    });
+//   const content = document.getElementById(contentId);
+//   if (content) {
+//     const items = content.querySelectorAll(".experience-timeline-list li");
+//     items.forEach(item => {
+//       item.classList.remove("visible");
+//     });
 
-    content.style.display = 'flex';
-    content.style.flexDirection = 'column';
-    content.style.flexGrow = 1;
+//     content.style.display = 'flex';
+//     content.style.flexDirection = 'column';
+//     content.style.flexGrow = 1;
 
-    const initialDelay = 1250; 
-    const itemDelay = 750;
+//     const initialDelay = 1250; 
+//     const itemDelay = 750;
 
-    items.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add("visible");
-      }, initialDelay + index * itemDelay);
-    });
-  } else {
-    console.warn(`No content found for ID: ${contentId}`);
-  }
-}
+//     items.forEach((item, index) => {
+//       setTimeout(() => {
+//         item.classList.add("visible");
+//       }, initialDelay + index * itemDelay);
+//     });
+//   } else {
+//     console.warn(`No content found for ID: ${contentId}`);
+//   }
+// }
 
 
-createTimelineItems();
+// createTimelineItems();
