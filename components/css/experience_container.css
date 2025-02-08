@@ -72,11 +72,12 @@
 }
 
 .exp-list > li {
+  font-family: 'JetBrains Mono', monospace;
   position: relative;
   margin: 18px 0;
   padding-left: 40px;
-  color: white;
-  font-size: 24px;
+  color: var(--main-white-gray);
+  font-size: 22px;
   transition: opacity 0.1s ease, transform 1s ease;
 }
 
@@ -123,6 +124,11 @@
   }
 
   .exp-list > li {
-    font-size: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  .exp-list li::before {
+    left: -30px;
   }
 }

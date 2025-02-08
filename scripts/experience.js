@@ -102,7 +102,6 @@ function loadTimelineBackground() {
 
     if (window.selectedExperience.isExperience){
         const selectedExperience = document.querySelector(`.timeline-experience-item[data-year="${window.selectedExperience.startYear}"]`);
-        selectedExperience.classList.add("selected"); // Year visible
         selectedExperience.style.background = "var(--main-orange)";
 
         const firstPercentage = calculatePercentage(window.selectedExperience.startYear);
@@ -118,7 +117,6 @@ function loadTimelineBackground() {
         }
     } else {        
         const selectedInternship = document.querySelector(`.timeline-internship-item[data-year="${window.selectedExperience.startYear}"]`);
-        selectedInternship.classList.add("selected"); // Year visible
         selectedInternship.style.borderTopColor = "var(--main-orange)";
     }
 }
