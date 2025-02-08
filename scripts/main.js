@@ -26,41 +26,27 @@ async function loadComponent(component) {
 }
 
 
+const header = document.querySelector('.header-container');
+const headerHeight = header.offsetHeight;
+let lastScrollPosition = 0;
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.scrollY;
 
+  if (currentScrollPosition <= headerHeight) {
+    header.style.transform = `translateY(-${currentScrollPosition}px)`;
+  } else {
+    header.style.transform = `translateY(-${headerHeight}px)`;
+  }
 
+  if (currentScrollPosition < lastScrollPosition) {
+    header.style.transform = 'translateY(0)';
+  }
 
+  lastScrollPosition = currentScrollPosition;
+});
 
-// const header = document.querySelector('.header-container');
-// const headerHeight = header.offsetHeight;
-// const timelineExperiences = [
-//   { id: 'biochemistry-degree', startYear: 2015, finishYear: 2019, isExperience: true, contentId: 'experience-unav' },
-//   { id: 'bioinformatics-master', startYear: 2020, finishYear: 2022, isExperience: true, contentId: 'experience-bioinformatics-master' },
-//   { id: 'nasertic', startYear: 2022, finishYear: 'now', isExperience: true, contentId: 'experience-nasertic' },
-//   { id: 'ucl-internship', startYear: 2018, finishYear: 2018, isExperience: false, contentId: 'internship-ucl' },
-//   { id: 'qiagen-project', startYear: 2021, finishYear: 2021, isExperience: false, contentId: 'internship-qiagen-project' },
-// ];
-// const timelineBarColor = 'var(--main-orange)';
-// document.querySelector('.timeline-bar-background').style.backgroundColor = timelineBarColor;
 
 // let isExperienceNotLoaded = true;
-
-// let lastScrollPosition = 0;
-// window.addEventListener('scroll', () => {
-//   const currentScrollPosition = window.scrollY;
-
-//   if (currentScrollPosition <= headerHeight) {
-//     header.style.transform = `translateY(-${currentScrollPosition}px)`;
-//   } else {
-//     header.style.transform = `translateY(-${headerHeight}px)`;
-//   }
-
-//   if (currentScrollPosition < lastScrollPosition) {
-//     header.style.transform = 'translateY(0)';
-//   }
-
-//   lastScrollPosition = currentScrollPosition;
-// });
-
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const experienceDiv = document.getElementById('experience-content-container');
