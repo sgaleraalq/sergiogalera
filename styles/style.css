@@ -59,7 +59,8 @@ p {
 }
 
 .website-navigation {
-  display: flex;
+  /* display: flex; */
+  display:none;
   flex-direction: row;
   align-items: center;
   gap: 30px;
@@ -72,7 +73,10 @@ p {
 }
 
 .mob-website-navigation{
-  display: none;
+  display: flex;
+  background-color: blue;
+  height: 40px;
+  width: 40px;
 }
 
 /* Lista de navegación */
@@ -126,6 +130,7 @@ p {
   text-align: center;
   font-weight: 500;
 }
+
 
 /* END WEBSITE NAVIGATION CONTAINER */
 /* *********************** */

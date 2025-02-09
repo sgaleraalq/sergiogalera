@@ -153,7 +153,13 @@
   }
 
   .exp-list-container {
+    flex-direction: column;
     padding: 0px 20px;
+    gap: 0px;
+  }
+
+  .exp-location-container {
+    margin-top: 0px;
   }
 
   .exp-list > li {

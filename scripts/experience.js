@@ -53,11 +53,11 @@ function loadTimelineItems(data) {
 
     firstYear = Math.min(...experienceYears, ...intershipYears);
 
-    loadTimelineItem(experienceYears, "timeline-experience-item", firstYear, now);
-    loadTimelineItem(intershipYears,  "timeline-internship-item", firstYear, now);
+    loadTimelineItem(experienceYears, "timeline-experience-item");
+    loadTimelineItem(intershipYears,  "timeline-internship-item");
 }
 
-function loadTimelineItem(yearList, element, firstYear, now) {
+function loadTimelineItem(yearList, element) {
     const timeline = document.querySelector("#timeline");
     yearList.forEach(year => {
         const yearElement = document.createElement("div");
@@ -102,6 +102,7 @@ function loadTimelineBackground() {
 
     if (window.selectedExperience.isExperience){
         const selectedExperience = document.querySelector(`.timeline-experience-item[data-year="${window.selectedExperience.startYear}"]`);
+        selectedExperience.classList.add("selected"); // Makes year visible on top of timeline bar
         selectedExperience.style.background = "var(--main-orange)";
 
         const firstPercentage = calculatePercentage(window.selectedExperience.startYear);
@@ -117,6 +118,7 @@ function loadTimelineBackground() {
         }
     } else {        
         const selectedInternship = document.querySelector(`.timeline-internship-item[data-year="${window.selectedExperience.startYear}"]`);
+        selectedInternship.classList.add("selected"); // Makes year visible on top of timeline bar
         selectedInternship.style.borderTopColor = "var(--main-orange)";
     }
 }
@@ -143,7 +145,6 @@ async function loadExperience(){
     const template = await loadComponent(component);
     const tempContainer = document.createElement("div");
     tempContainer.classList.add("exp-container");
-
     tempContainer.innerHTML = template;
 
     // Title image
