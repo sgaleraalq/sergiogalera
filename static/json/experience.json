@@ -7,6 +7,8 @@
         "image": "/static/images/experience/unav_logo.png",
         "title": "University of Navarra",
         "role": "Biochemistry Degree",
+        "location": "Pamplona, Spain",
+        "locationImg": "/static/images/locations/navarra_location.png",
         "content": [
             "Solid background on biomolecular and biomedical science",
             "Experience in advanced lab techniques",
@@ -22,6 +24,8 @@
         "image": "/static/images/experience/au_logo.png",
         "title": "Aarhus University",
         "role": "Master's Degree in Bioinformatics",
+        "location": "Aarhus, Denmark",
+        "locationImg": "/static/images/locations/aarhus_location.png",
         "content": [
             "Computational biology and bioinformatics",
             "Proficiency in programming languages such as Python, R, and Bash",
@@ -38,6 +42,8 @@
         "image": "/static/images/experience/nasertic_logo.png",
         "title": "Nasertic",
         "role": "Bioinformatics Specialist",
+        "location": "Pamplona, Spain",
+        "locationImg": "/static/images/locations/navarra_location.png",
         "content": [
             "Developing and optimizing pipelines in Nextflow",
             "Proficient scripting in Python for bioinformatics workflows",
@@ -54,6 +60,8 @@
         "image": "/static/images/experience/ucl_logo.jpg",
         "title": "University College London",
         "role": "Research Internship",
+        "location": "London, United Kingdom",
+        "locationImg": "/static/images/locations/london_location.png",
         "content": [
             "Immunohistochemical techniques in a cancer research center",
             "Analysis of tissue samples using microscopy and image analysis tools",
@@ -68,6 +76,8 @@
         "image": "/static/images/experience/qiagen_logo.jpg",
         "title": "QIAGEN",
         "role": "Master's Thesis Project",
+        "location": "Aarhus, Denmark",
+        "locationImg": "/static/images/locations/aarhus_location.png",
         "content": [
             "Handled bulk and single-cell RNA-seq data",
             "Implemented algorithms for T-cell clonality analysis using Python",

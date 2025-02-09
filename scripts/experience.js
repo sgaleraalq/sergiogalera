@@ -172,8 +172,26 @@ async function loadExperience(){
         expList.appendChild(item);
     });
 
+    // Location
+    const locationImg = tempContainer.querySelector(".exp-location-image");
+    locationImg.style.opacity = 0;
+    locationImg.onload = () => { locationImg.style.opacity = 1;}
+    locationImg.src = window.selectedExperience.locationImg;
+    const locationText = tempContainer.querySelector(".exp-location-text");
+    locationText.innerHTML = window.selectedExperience.location;
+
     // Agregar el nodo al contenedor principal
     experienceDescriptionContainer.appendChild(tempContainer);
 
-    console.log(tempContainer)
+    experienceAnimations(expList);
+}
+
+function experienceAnimations(expList) {
+    // Sequential animation for each list item
+    const listItems = expList.querySelectorAll("li");
+    listItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add("visible");
+        }, index * 200);
+    });
 }

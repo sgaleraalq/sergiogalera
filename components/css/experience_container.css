@@ -49,17 +49,13 @@
   color: var(--main-soft-blue)
 }
 
-.exp-content {
-  height: 100%;
-  width: 100%;
-}
-
 .exp-list-container {
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0px 60px;
   padding-bottom: 20px;
+  gap: 20px;
 }
 
 .exp-list {
@@ -75,10 +71,17 @@
   font-family: 'JetBrains Mono', monospace;
   position: relative;
   margin: 18px 0;
+  opacity: 0;
   padding-left: 40px;
   color: var(--main-white-gray);
   font-size: 22px;
-  transition: opacity 0.1s ease, transform 1s ease;
+  transform: translateX(-60px);
+  transition: opacity 0.1s ease, transform 1.5s ease;
+}
+
+.exp-list li.visible {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .exp-list li::before {
@@ -89,6 +92,28 @@
   font-size: 16px;
 }
 
+.exp-location {
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.exp-location-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.exp-location-container > img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.exp-location-container > p {
+  text-align: center;
+  color: white;
+}
 
 @media (max-width: 768px) {
   .exp-title-container {
