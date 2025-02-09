@@ -131,7 +131,7 @@ function colorArrow(){
 // FINISH TIMELINE FUNCTIONS
 
 
-// START EXPERIENCE FUNCTIONSf
+// START EXPERIENCE FUNCTIONS
 function resetExperience(){
     const experienceDescriptionContainer = document.getElementById("experience-description-container");
     experienceDescriptionContainer.innerHTML = "";
@@ -198,7 +198,7 @@ function experienceAnimations(expList) {
 
     // Location visible after all list items
     setTimeout(() => {
-        const locationImg = document.querySelector(".exp-location-container");
-        locationImg.classList.add("visible");
+        const locationImgContainer = document.querySelector(".exp-location-container");
+        locationImgContainer.classList.add("visible");
     }, totalDelay);
 }
