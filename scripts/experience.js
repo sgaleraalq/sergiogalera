@@ -174,8 +174,6 @@ async function loadExperience(){
 
     // Location
     const locationImg = tempContainer.querySelector(".exp-location-image");
-    locationImg.style.opacity = 0;
-    locationImg.onload = () => { locationImg.style.opacity = 1;}
     locationImg.src = window.selectedExperience.locationImg;
     const locationText = tempContainer.querySelector(".exp-location-text");
     locationText.innerHTML = window.selectedExperience.location;
@@ -187,11 +185,20 @@ async function loadExperience(){
 }
 
 function experienceAnimations(expList) {
-    // Sequential animation for each list item
     const listItems = expList.querySelectorAll("li");
+    const delayPerItem = 200; 
+    const totalDelay = listItems.length * delayPerItem; 
+
+    // Sequential list animation
     listItems.forEach((item, index) => {
         setTimeout(() => {
             item.classList.add("visible");
-        }, index * 200);
+        }, index * delayPerItem);
     });
+
+    // Location visible after all list items
+    setTimeout(() => {
+        const locationImg = document.querySelector(".exp-location-container");
+        locationImg.classList.add("visible");
+    }, totalDelay);
 }
