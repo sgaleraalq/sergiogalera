@@ -2,6 +2,8 @@ const projects          = "/static/json/projects.json";
 const projectComponent  = "/components/html/projects_container.html"
 const otherProjects     = "/static/json/other_projects.json";
 
+import { loadData, loadComponent } from "./main.js";
+
 async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
 
