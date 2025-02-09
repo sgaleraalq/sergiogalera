@@ -45,8 +45,8 @@ window.addEventListener('scroll', () => {
 });
 
 
-// MOBILE MANAGEMENT
-// const mobileMenuVisible = false;
+// // MOBILE MANAGEMENT
+// // const mobileMenuVisible = false;
 // const lottieAnimation = lottie.loadAnimation({
 //   container: document.getElementById('mobile-navigation-animation'),
 //   renderer: 'svg',
@@ -55,6 +55,6 @@ window.addEventListener('scroll', () => {
 //   path: '/static/lottie/lottie_menu_to_cross.json',
 // })
 
-// document.getElementById("mobile-navigation-animation").addEventListener("click", () => {
-//   animation.goToAndPlay(0, true); // Reproducir desde el inicio
-// });
+// // document.getElementById("mobile-navigation-animation").addEventListener("click", () => {
+// //   animation.goToAndPlay(0, true); // Reproducir desde el inicio
+// // });
