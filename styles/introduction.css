@@ -70,7 +70,11 @@
     margin-right: 0px;
     margin-left: 0px;
     height: auto;
-    justify-content: start;
+  }
+
+  .intro-description-container {
+    max-width: 500px;
+    margin: 25px auto;
   }
 
   .introduction {

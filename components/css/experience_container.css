@@ -123,7 +123,7 @@
   color: white;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   .exp-title-container {
     flex-direction: column;
     gap: 20px;
