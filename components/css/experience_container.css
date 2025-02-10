@@ -178,8 +178,8 @@
   }
 
   .exp-location-container > img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 140px;
+    max-height: 170px;
     border-radius: 10px;
   }
 }

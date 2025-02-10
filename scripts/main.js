@@ -27,33 +27,42 @@ async function loadComponent(component) {
 }
 
 const header = document.querySelector('.header-container');
-const headerHeight = header.offsetHeight;
-
+let headerHeight = header.offsetHeight;
 let lastScrollPosition = 0;
+let isClicked = false;
+
+// Evento de scroll
 window.addEventListener('scroll', () => {
   const currentScrollPosition = window.scrollY;
 
-  if (currentScrollPosition <= headerHeight) {
-    header.style.transform = `translateY(-${currentScrollPosition}px)`;
-  } else {
-    header.style.transform = `translateY(-${headerHeight}px)`;
-  }
+  if (!isClicked) {
+    if (currentScrollPosition <= headerHeight) {
+      header.style.transform = `translateY(-${currentScrollPosition}px)`;
+    } else {
+      header.style.transform = `translateY(-${headerHeight}px)`;
+    }
 
-  if (currentScrollPosition < lastScrollPosition) {
-    header.style.transform = 'translateY(0)';
+    if (currentScrollPosition < lastScrollPosition) {
+      header.style.transform = 'translateY(0)';
+    }
   }
 
   lastScrollPosition = currentScrollPosition;
 });
 
-// Añadimos un eventListener a los botones de navegación
+// Añadir eventListener a los botones de navegación
 const webNavBtns = document.querySelectorAll('.website-navigation-ref');
 webNavBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        console.log(headerHeight);
-        header.style.transform = `translateY(-${headerHeight}px)`;
-    });
+  btn.addEventListener('click', () => {
+    header.style.transform = `translateY(-${headerHeight}px)`;
+    isClicked = true;
+
+    setTimeout(() => {
+      isClicked = false;
+    }, 1000);
+  });
 });
+
 
 
 
