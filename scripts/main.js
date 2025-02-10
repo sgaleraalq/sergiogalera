@@ -46,6 +46,16 @@ window.addEventListener('scroll', () => {
   lastScrollPosition = currentScrollPosition;
 });
 
+// Añadimos un eventListener a los botones de navegación
+const webNavBtns = document.querySelectorAll('.website-navigation-ref');
+webNavBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        console.log(headerHeight);
+        header.style.transform = `translateY(-${headerHeight}px)`;
+    });
+});
+
+
 
 // // MOBILE MANAGEMENT
 // // const mobileMenuVisible = false;

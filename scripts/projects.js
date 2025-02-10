@@ -19,7 +19,6 @@ async function loadProjects() {
         // MAIN IMAGE
         const mainImage = tempContainer.querySelector(".project-image");
         mainImage.src = project.image;
-        mainImage.onload = function () { alignImageWithDescription(mainImage, tempContainer.querySelector(".description-container")) };
         mainImage.onerror = function() { loadErrorImage(this) };
         mainImage.addEventListener("mouseenter", function(){ changeImage(this, project.gif) });
         mainImage.addEventListener("mouseleave", function(){ changeImage(this, project.image) });

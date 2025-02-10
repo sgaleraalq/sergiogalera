@@ -164,7 +164,7 @@
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .main-container {
         flex-direction: column;
         justify-content: center;
@@ -226,6 +226,6 @@
 
 @media (max-width: 1800px) {
     .project-image {
-        width: 600px;
+        max-width: 600px;
     }
 }
