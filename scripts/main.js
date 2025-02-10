@@ -69,7 +69,6 @@ const mobileNavElements       = document.querySelectorAll('.mobile-nav-element')
 
 mobileMenuBtn.addEventListener('click', () => {
   if (!mobileMenuBtnClickable) return;
-  console.log(mobileMenu)
   mobileMenuBtnClickable = false;
   const menuVisible = mobileMenu.classList.contains('visible');
   
