@@ -69,25 +69,23 @@ const mobileNavElements = document.querySelectorAll('.mobile-nav-element');
 
 let isMenuOpen = false;
 
-// ✅ Manejar el clic en el botón de menú
 mobileMenuBtn.addEventListener('click', () => {
   if (!mobileMenuBtnClickable) return;
   mobileMenuBtnClickable = false;
 
-  // Cambiar dirección de la animación
+  // Manage states
   if (isMenuOpen) {
       document.body.style.overflow = 'auto';
       mobileMenu.classList.remove('visible');
       mobileMenu.classList.add('hidden');
-      lottieContainer.setDirection(-1); // Dirección inversa para cerrar
+      lottieContainer.setDirection(-1); 
   } else {
       document.body.style.overflow = 'hidden';
       mobileMenu.classList.remove('hidden');
       mobileMenu.classList.add('visible');
-      lottieContainer.setDirection(1); // Dirección para abrir
+      lottieContainer.setDirection(1); 
   }
 
-  // Reproducir la animación
   lottieContainer.play();
   isMenuOpen = !isMenuOpen;
 
@@ -108,6 +106,7 @@ mobileNavElements.forEach((navElement) => {
           mobileMenu.classList.remove('visible');
           mobileMenu.classList.add('hidden');
           targetElement.scrollIntoView({ behavior: 'smooth' });
+          lottieContainer.setDirection(-1);
           hideHeaderWhileScrollingUp();
       }
   });
