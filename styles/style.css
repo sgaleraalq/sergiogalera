@@ -76,6 +76,7 @@ p {
   height: 40px;
   width: 40px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu {
