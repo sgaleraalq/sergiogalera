@@ -54,12 +54,7 @@ window.addEventListener('scroll', () => {
 const webNavBtns = document.querySelectorAll('.website-navigation-ref');
 webNavBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    header.style.transform = `translateY(-${headerHeight}px)`;
-    isClicked = true;
-
-    setTimeout(() => {
-      isClicked = false;
-    }, 1000);
+    hideHeaderWhileScrollingUp();
   });
 });
 
@@ -106,6 +101,16 @@ mobileNavElements.forEach((navElement) => {
           mobileMenu.classList.remove('visible');
           mobileMenu.classList.add('hidden');
           targetElement.scrollIntoView({ behavior: 'smooth' });
+          hideHeaderWhileScrollingUp();
       }
   });
 });
+
+function hideHeaderWhileScrollingUp() {
+  header.style.transform = `translateY(-${headerHeight}px)`;
+  isClicked = true;
+
+  setTimeout(() => {
+    isClicked = false;
+  }, 1000);
+}
