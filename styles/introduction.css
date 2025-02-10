@@ -67,8 +67,7 @@
 
 @media (max-width: 768px){
   .introduction-container {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin: 0px;
     height: auto;
   }
 

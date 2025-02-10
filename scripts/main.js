@@ -1,5 +1,3 @@
-// import lottie from 'lottie-web';
-
 async function loadData(file_name) {
   try {
       const response = await fetch(file_name);
@@ -25,6 +23,7 @@ async function loadComponent(component) {
       console.error("Error: ", error);
   }
 }
+
 
 const header = document.querySelector('.header-container');
 let headerHeight = header.offsetHeight;
@@ -62,32 +61,41 @@ webNavBtns.forEach((btn) => {
 
 
 // MOBILE MANAGEMENT
-const mobileMenuBtn           = document.querySelector('.mobile-navigation-button');
-const mobileMenu              = document.querySelector('.mobile-menu');
-let   mobileMenuBtnClickable  = true;
-const mobileNavElements       = document.querySelectorAll('.mobile-nav-element');
+const mobileMenuBtn = document.querySelector('.mobile-navigation-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+const lottieContainer = document.getElementById('mobile-menu-btn');
+let mobileMenuBtnClickable = true;
+const mobileNavElements = document.querySelectorAll('.mobile-nav-element');
 
+let isMenuOpen = false;
+
+// ✅ Manejar el clic en el botón de menú
 mobileMenuBtn.addEventListener('click', () => {
   if (!mobileMenuBtnClickable) return;
   mobileMenuBtnClickable = false;
-  const menuVisible = mobileMenu.classList.contains('visible');
-  
-  if (menuVisible) {
-    // Allow to scroll if menu is hidden
-    document.body.style.overflow = 'auto';
-    mobileMenu.classList.remove('visible');
-    mobileMenu.classList.add('hidden');
+
+  // Cambiar dirección de la animación
+  if (isMenuOpen) {
+      document.body.style.overflow = 'auto';
+      mobileMenu.classList.remove('visible');
+      mobileMenu.classList.add('hidden');
+      lottieContainer.setDirection(-1); // Dirección inversa para cerrar
   } else {
-    // Dont allow to scroll if menu is shown
-    document.body.style.overflow = 'hidden';
-    mobileMenu.classList.remove('hidden');
-    mobileMenu.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('visible');
+      lottieContainer.setDirection(1); // Dirección para abrir
   }
-  
+
+  // Reproducir la animación
+  lottieContainer.play();
+  isMenuOpen = !isMenuOpen;
+
   setTimeout(() => {
-    mobileMenuBtnClickable = true;
+      mobileMenuBtnClickable = true;
   }, 1000);
 });
+
 
 mobileNavElements.forEach((navElement) => {
   navElement.addEventListener('click', () => {
