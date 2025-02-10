@@ -171,3 +171,15 @@
     left: -30px;
   }
 }
+
+@media (max-width: 1800px) {
+  .exp-list > li {
+    font-size: 14px;
+  }
+
+  .exp-location-container > img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+  }
+}

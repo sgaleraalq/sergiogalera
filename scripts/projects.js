@@ -2,7 +2,7 @@ const projects          = "/static/json/projects.json";
 const projectComponent  = "/components/html/projects_container.html"
 const otherProjects     = "/static/json/other_projects.json";
 
-import { loadData, loadComponent } from "./main.js";
+// import { loadData, loadComponent } from "./main.js";
 
 async function loadProjects() {
     const projectsContainer = document.getElementById("projects-list-container");
@@ -19,7 +19,7 @@ async function loadProjects() {
         // MAIN IMAGE
         const mainImage = tempContainer.querySelector(".project-image");
         mainImage.src = project.image;
-        mainImage.onload = function () {};
+        mainImage.onload = function () { alignImageWithDescription(mainImage, tempContainer.querySelector(".description-container")) };
         mainImage.onerror = function() { loadErrorImage(this) };
         mainImage.addEventListener("mouseenter", function(){ changeImage(this, project.gif) });
         mainImage.addEventListener("mouseleave", function(){ changeImage(this, project.image) });
@@ -54,6 +54,20 @@ async function loadProjects() {
         projectsContainer.appendChild(tempContainer);
     });
 }
+
+function alignImageWithDescription(imageElement, descriptionContainer) {
+    const rect = descriptionContainer.getBoundingClientRect();
+    console.log(rect.top, rect.bottom);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const descriptions = document.querySelectorAll(".description-container");
+    console.log(descriptions);
+    descriptions.forEach(description => {
+        const rect = description.getBoundingClientRect();
+        console.log("DOM loaded", rect.top, rect.bottom);
+    });
+});
 
 function navigateToProject(projectId) {
     if (projectId == "personal_portfolio") {

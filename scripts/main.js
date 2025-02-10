@@ -1,6 +1,6 @@
-import lottie from 'lottie-web';
+// import lottie from 'lottie-web';
 
-export async function loadData(file_name) {
+async function loadData(file_name) {
   try {
       const response = await fetch(file_name);
       if (!response.ok) {
@@ -13,7 +13,7 @@ export async function loadData(file_name) {
   }
 }
 
-export async function loadComponent(component) {
+async function loadComponent(component) {
   try {
       const response = await fetch(component);
       if (!response.ok) {

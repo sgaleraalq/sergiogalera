@@ -1,5 +1,5 @@
 .experience-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 70px 100px;
 }
@@ -157,6 +157,12 @@
     height: auto;
   }
 
+  .experience-content-container {
+    margin: 0px 0px;
+  }
+}
+
+@media (max-width: 1800px) {
   .experience-content-container {
     margin: 0px 0px;
   }

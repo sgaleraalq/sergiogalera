@@ -46,7 +46,6 @@
 }
 
 .button-contact {
-  margin-top: 50px;
   padding: 1.25rem 1.75rem;
   background-color: transparent;
   border: 1px solid #3df7d2;
@@ -55,6 +54,10 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+#get-in-touch {
+  margin-top: 20px;
 }
 
 .button-contact:hover {
