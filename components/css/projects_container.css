@@ -19,6 +19,7 @@
 .info-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .info-container.reverse {
@@ -37,26 +38,76 @@
 }
 
 .description-container {
-    display: flex;
-    flex-direction: column; 
     position: relative;
-    max-width: 500px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px 0px 20px 30px;
-    padding: 10px 30px 10px 30px;
-    background-color: var(--soft-dark);
-    box-shadow: 0px 0px 10px 0px var(--soft-dark);
-    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 .description-container.reverse{
+    flex-direction: row-reverse;
+}
+
+.description-text-container {
+    max-width: 40%;
+    margin: 20px 0px 20px 30px;
+    background-color: var(--soft-dark);
+    padding: 10px 30px 10px 30px;
+    box-shadow: 0px 0px 10px 0px var(--soft-dark);
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+
+.description-text-container.reverse{
+    max-width: 40%;
     margin: 20px 30px 20px 0px;
 }
 
+.img-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.project-image {
+    position: absolute;
+    right: 0;
+    max-width: 65%;
+    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%);
+    transition: filter 0.3s ease-in-out;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.project-image.reverse{
+    left: 0;
+}
+
+.project-image:hover {
+    filter: none;
+}
+
 .skills-container{
-    max-width: 400px;
-    margin-left: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.skills-container.reverse{
+    justify-content: end;
+}
+
+.skills-text-container {
+    max-width: 34%;
+    height: 100%;
     display: flex;
     column-gap: 30px;
     row-gap: 10px;
@@ -65,9 +116,10 @@
     justify-content: flex-start;
 }
 
-.skills-container.reverse{
+.skills-text-container.reverse{
     justify-content: flex-end;
 }
+
 
 .links-container {
     margin-top: 20px;
@@ -97,49 +149,13 @@
     display: flex;
     margin: 0;
     margin-top: 5px;
-    margin-left: 10px;
     font-size: 20px;
     color: white;
-}
-
-.title.reverse {
-    margin-left: 0;
-    margin-right: 10px;
 }
 
 .description {
     overflow: hidden;
     text-align: justify;
-}
-
-.img-container {
-    position: relative;
-    z-index: 0;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-}
-
-.project-image {
-    position: absolute;
-    right: 0;
-    margin-right: -120px;
-    width: 800px;
-    height: auto;
-    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%);
-    transition: filter 0.3s ease-in-out;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-.project-image.reverse{
-    left: 0;
-    margin-left: -120px;
-    right: auto;
-}
-
-.project-image:hover {
-    filter: none;
 }
 
 .error-container {

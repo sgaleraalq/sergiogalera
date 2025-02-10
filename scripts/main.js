@@ -120,3 +120,10 @@ function hideHeaderWhileScrollingUp() {
     isClicked = false;
   }, 1000);
 }
+
+
+// Obtener el ancho de la ventana del navegador
+const windowWidth = window.innerWidth;
+
+// Mostrar el ancho de la ventana en la consola
+console.log("Ancho de la ventana del navegador:", windowWidth);

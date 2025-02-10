@@ -51,7 +51,7 @@
         "title": "Personal portfolio",
         "description": "Personal portfolio made as a website app that explains my professional experience and showcases my projects. \n\nIt is a responsive website that adapts to different screen sizes and devices.",
         "image": "/static/images/projects/example.png",
-        "gif": "/static/gifs/random_selector.gif",
+        "gif": "",
         "programming_languages": [
             "HTML",
             "CSS",
