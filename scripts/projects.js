@@ -1,6 +1,6 @@
-const projects          = "/static/json/projects.json";
-const projectComponent  = "/components/html/projects_container.html"
-const otherProjects     = "/static/json/other_projects.json";
+const projects = "/static/json/projects.json";
+const projectComponent = "/components/html/projects_container.html"
+const otherProjects = "/static/json/other_projects.json";
 
 // import { loadData, loadComponent } from "./main.js";
 
@@ -19,12 +19,12 @@ async function loadProjects() {
         // MAIN IMAGE
         const mainImage = tempContainer.querySelector(".project-image");
         mainImage.src = project.image;
-        mainImage.onload = function() { };
-        mainImage.onerror = function() { loadErrorImage(this) };
-        mainImage.addEventListener("mouseenter", function(){ changeImage(this, project.gif) });
-        mainImage.addEventListener("mouseleave", function(){ changeImage(this, project.image) });
-        mainImage.addEventListener("animationend", function(){ changeImage(this, project.image) });
-        mainImage.addEventListener("click", function(){ navigateToProject(project.id) });
+        mainImage.onload = function () { };
+        mainImage.onerror = function () { loadErrorImage(this) };
+        mainImage.addEventListener("mouseenter", function () { changeImage(this, project.gif) });
+        mainImage.addEventListener("mouseleave", function () { changeImage(this, project.image) });
+        mainImage.addEventListener("animationend", function () { changeImage(this, project.image) });
+        mainImage.addEventListener("click", function () { navigateToProject(project.id) });
 
         // CONTENEDORES Y DATOS
         displayTechnology(tempContainer.querySelector(".technology-container"), project.technology);
@@ -143,11 +143,11 @@ function displayLinks(container, link, icon) {
         const anchor = document.createElement("a");
         anchor.href = link;
         if (icon != "ic_go.svg") anchor.target = "_blank";
-        anchor.classList.add("link"); 
+        anchor.classList.add("link");
 
         // Adds icon to website
         const img = document.createElement("img");
-        img.src = `/static/icons/${icon}`; 
+        img.src = `/static/icons/${icon}`;
         img.alt = icon.split(".")[0];
         img.classList.add("svg");
 
