@@ -76,6 +76,7 @@ p {
   height: 40px;
   width: 40px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu {
@@ -102,6 +103,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
   margin: 0;
   list-style: none;
 }
@@ -293,6 +295,10 @@ p {
 
 
 @media (max-width: 768px){
+  .header-container {
+    position: sticky;
+  }
+
   .website-navigation{
     display: none;
   }

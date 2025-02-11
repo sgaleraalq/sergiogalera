@@ -36,7 +36,7 @@ async function loadProjects() {
             const skillElement = document.createElement("p");
             skillElement.classList.add("skill");
             skillElement.textContent = skill;
-            tempContainer.querySelector(".skills-container").appendChild(skillElement);
+            tempContainer.querySelector(".skills-text-container").appendChild(skillElement);
         });
 
         // LINKS CONTAINER
@@ -47,8 +47,22 @@ async function loadProjects() {
 
         // Alternar orden si el índice es impar
         if (index % 2 === 1) {
-            tempContainer.querySelectorAll(".main-container, .info-container, .technology-container, .skills-container, .description-container, .project-image, .title")
-                .forEach(el => el.classList.add("reverse"));
+            const elementsToReverse = [
+                ".main-container",
+                ".info-container",
+                ".technology-container",
+                ".skills-container",
+                ".skills-text-container",
+                ".description-container",
+                ".description-text-container",
+                ".project-image",
+            ];
+            
+            elementsToReverse.forEach(selector => {
+                tempContainer.querySelectorAll(selector).forEach(el => {
+                    el.classList.add("reverse");
+                });
+            });
         }
 
         projectsContainer.appendChild(tempContainer);
