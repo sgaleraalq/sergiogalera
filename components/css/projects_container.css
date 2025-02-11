@@ -50,7 +50,7 @@
 }
 
 .description-text-container {
-    max-width: 40%;
+    max-width: 45%;
     margin: 20px 0px 20px 30px;
     background-color: var(--soft-dark);
     padding: 10px 30px 10px 30px;
@@ -61,7 +61,6 @@
 }
 
 .description-text-container.reverse{
-    max-width: 40%;
     margin: 20px 30px 20px 0px;
 }
 
