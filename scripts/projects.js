@@ -73,7 +73,7 @@ function navigateToProject(projectId) {
     if (projectId == "personal_portfolio") {
         window.location.reload();
     } else {
-        const url = `/projects/${projectId}`;
+        const url = `/pages/project.html?projectId=${projectId}`;
         window.location.href = url;
     }
 }
