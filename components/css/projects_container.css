@@ -85,6 +85,7 @@
     transition: filter 0.3s ease-in-out;
     pointer-events: auto;
     cursor: pointer;
+    animation-play-state: paused;
 }
 
 .project-image.reverse{
@@ -93,6 +94,7 @@
 
 .project-image:hover {
     filter: none;
+    animation-play-state: running;
 }
 
 .skills-container{
@@ -160,8 +162,8 @@
 .error-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
     text-align: center;
