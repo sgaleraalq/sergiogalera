@@ -1,10 +1,57 @@
+:root {
+    --main-soft-blue: #42c9b3;
+    --main-purple: #b285fa;
+    --secondary-purple: #c39eff;
+    --main-gray: #889294;
+    --main-gray-whiter: #adb3b4;
+    --main-white-gray: #f0f0f0;
+    --main-orange: #ff792c;
+    --android-color: #3ddc84;
+    --soft-dark: #253244;
+    --background-color: #030712;
+  }
+
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
-.whatever {
+.main-content {
     width: 100vw;
     height: 100vh;
-    background-color: red;
+}
+.mobile-container {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-frame-container {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1/2.15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mobile-content {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    /* object-fit: cover; */
+    /* border-radius: 10px; */
+    z-index: -1;
 }
