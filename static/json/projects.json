@@ -4,7 +4,7 @@
         "technology": "Android",
         "title": "Gaztelu Bira App",
         "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data.  The app, written in XML follows Android development best practices",
-        "image": "/static/images/projects/gaztelu_bira.gif",
+        "image": "/static/images/projects/img_gaztelu_bira.png",
         "gif": "/static/images/projects/gaztelu_bira.gif",
         "programming_languages": [
             "Kotlin"
