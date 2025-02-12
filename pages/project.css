@@ -51,7 +51,5 @@ body {
     position: absolute;
     width: 98%;
     height: 98%;
-    /* object-fit: cover; */
-    /* border-radius: 10px; */
     z-index: -1;
 }
