@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 function checkAndToggleReverseClass() {
-    const mediaQuery = window.matchMedia('(max-width: 1100px)');
+    const mediaQuery = window.matchMedia('(max-width: 1000px)');
     const reverseElements = document.querySelectorAll('.reverse');
 
     function handleMediaChange(e) {
