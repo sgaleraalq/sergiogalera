@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 .main-content {
@@ -32,7 +33,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
     opacity: 0.;
 }
 
@@ -62,8 +62,26 @@ body {
     z-index: -1;
 }
 
-.description-container {
+.content-container {
     height: 100%;
     width: 65%;
-    background-color: red;
+    padding: 20px;
+}
+
+.content-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.title-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.title-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
 }
