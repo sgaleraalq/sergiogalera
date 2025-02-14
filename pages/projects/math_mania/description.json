@@ -1,10 +1,10 @@
 {
     "logo": "/pages/projects/gaztelu_bira/img_gaztelu_bira_logo.png",
-    "title": "Gaztelu Bira",
+    "title": "Math Mania",
     "screens": [
         {
-            "stats": {
-                "img": "/pages/projects/gaztelu_bira/ic_stats.svg",
+            "lobby": {
+                "img": "/pages/projects/math_mania/icons/ic_group.svg",
                 "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_1.gif",
                 "description": [
                     "This app makes whatever.",
@@ -13,29 +13,9 @@
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 ]
             },
-            "matches": {
-                "img": "/pages/projects/gaztelu_bira/ic_matches.svg",
+            "game": {
+                "img": "/pages/projects/math_mania/icons/ic_game.svg",
                 "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_2.gif",
-                "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                ]
-            },
-            "gaztelu bira": {
-                "img": "/pages/projects/gaztelu_bira/ic_team.svg",
-                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_3.gif",
-                "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                ]
-            },
-            "1 v 1": {
-                "img": "/pages/projects/gaztelu_bira/ic_versus.svg",
-                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_4.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

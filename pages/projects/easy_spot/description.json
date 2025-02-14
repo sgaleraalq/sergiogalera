@@ -7,10 +7,15 @@
                 "img": "/pages/projects/easy_spot/icons/ic_map.svg",
                 "gif": "/pages/projects/easy_spot/easy_spot_1.gif",
                 "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    "Main screen of the app",
+                    "It shows a map where last location of where the user parked its car is shown",
+                    "There is a list of cars on the top of the screen where user can select the car he wants to see",
+                    "In the bottom right corner of the screen, user can insert a new location either by its current location or setting a new one",
+                    "",
+                    "Pressing a car location will display:",
+                    " - Last person who parked the car",
+                    " - Car location message",
+                    " - Time it was parked"
                 ]
             },
             "cars": {

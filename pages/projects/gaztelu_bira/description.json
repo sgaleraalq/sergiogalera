@@ -40,8 +40,6 @@
                 "description": [
                     "Recycler view of team players",
                     "Pressing in any of the players, redirects to another activity with the specific information of that player:",
-                    "",
-                    "",
                     " - Name",
                     " - Position",
                     " - Goals",
