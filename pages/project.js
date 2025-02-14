@@ -91,5 +91,33 @@ function selectScreenBtn(){
 
 function changeDescription() {
     const description = document.querySelector(".description-text");
-    description.textContent = _screensObject[_screenSelected].description;
+    description.innerHTML = "";  // Limpiar el contenido previo
+
+    const descArray = _screensObject[_screenSelected].description;
+    let list = null;
+
+    descArray.forEach(line => {
+        if (line.startsWith(" - ")) {
+            // Crear lista si es necesario
+            if (!list) {
+                list = document.createElement("ul");
+                list.classList.add("description-list");
+                description.appendChild(list);
+            }
+
+            const listItem = document.createElement("li");
+            // Reemplazar el texto de lista para que incluya SVG y texto
+            listItem.innerHTML = line.replace(/^ - /, "");  // Usamos innerHTML para interpretar el código SVG
+            list.appendChild(listItem);
+        } else {
+            // Para líneas normales, se agregan como párrafos
+            const paragraph = document.createElement("p");
+            paragraph.classList.add("text");
+            paragraph.innerHTML = line;  // Usamos innerHTML para insertar el SVG directamente
+            description.appendChild(paragraph);
+            
+            list = null;  // Limpiar la lista para el siguiente bloque de texto
+        }
+    });
 }
+

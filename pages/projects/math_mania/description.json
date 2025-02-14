@@ -1,11 +1,21 @@
 {
-    "logo": "/pages/projects/easy_spot/img_easy_spot_logo.png",
-    "title": "Easy Spot",
+    "logo": "/pages/projects/gaztelu_bira/img_gaztelu_bira_logo.png",
+    "title": "Gaztelu Bira",
     "screens": [
         {
-            "map": {
-                "img": "/pages/projects/easy_spot/icons/ic_map.svg",
-                "gif": "/pages/projects/easy_spot/easy_spot_1.gif",
+            "stats": {
+                "img": "/pages/projects/gaztelu_bira/ic_stats.svg",
+                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_1.gif",
+                "description": [
+                    "This app makes whatever.",
+                    "Sed do  dolore magna aliqua.",
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                ]
+            },
+            "matches": {
+                "img": "/pages/projects/gaztelu_bira/ic_matches.svg",
+                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_2.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -13,9 +23,9 @@
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 ]
             },
-            "cars": {
-                "img": "/pages/projects/easy_spot/icons/ic_cars.svg",
-                "gif": "/pages/projects/easy_spot/easy_spot_2.gif",
+            "gaztelu bira": {
+                "img": "/pages/projects/gaztelu_bira/ic_team.svg",
+                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_3.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -23,9 +33,9 @@
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 ]
             },
-            "group": {
-                "img": "/pages/projects/easy_spot/icons/ic_group.svg",
-                "gif": "/pages/projects/easy_spot/easy_spot_3.gif",
+            "1 v 1": {
+                "img": "/pages/projects/gaztelu_bira/ic_versus.svg",
+                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_4.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

@@ -139,7 +139,6 @@ body {
     justify-content: center;
 }
 
-
 .screen-icon {
     width: 20px;
     height: 20px;
@@ -182,6 +181,38 @@ body {
 .description-text {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description-icon {
+    width: 10px;
+    height: 10px;
+}
+
+.description-list {
+    width: 100%;
+    padding: 0px 20px;
+    margin: 5px 0;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+.description-list li::before {
+    content: "-";
+    margin-right: 20px;
+}
+
+.description-list > * {
+    color: var(--main-white-gray);
+}
+
+.text {
+    width: 100%;
+    margin: 10px 0;
+    color: var(--main-white-gray);
 }
 
 @media (max-width: 1000px) {
