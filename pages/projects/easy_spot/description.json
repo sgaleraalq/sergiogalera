@@ -5,6 +5,7 @@
         {
             "map": {
                 "img": "/pages/projects/easy_spot/ic_map.svg",
+                "gif": "/pages/projects/easy_spot/easy_spot_1.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -14,6 +15,7 @@
             },
             "cars": {
                 "img": "/pages/projects/easy_spot/ic_cars.svg",
+                "gif": "/pages/projects/easy_spot/easy_spot_2.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -23,6 +25,7 @@
             },
             "group": {
                 "img": "/pages/projects/easy_spot/ic_group.svg",
+                "gif": "/pages/projects/easy_spot/easy_spot_3.gif",
                 "description": [
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

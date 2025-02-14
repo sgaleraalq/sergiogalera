@@ -137,8 +137,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
 }
+
 
 .screen-icon {
     width: 20px;
@@ -148,6 +148,10 @@ body {
 
 .screen-text {
     color: var(--main-gray);
+}
+
+.screen-btn.selected .screen-icon-container {
+    background-color: white;
 }
 
 .screen-btn.selected .screen-text {
