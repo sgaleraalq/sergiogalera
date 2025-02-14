@@ -4,7 +4,6 @@ const component     = "/components/html/experience_container.html";
 let data;
 let _selectedExperience;
 
-// import { loadData, loadComponent } from "./main.js";
 
 let firstYear;
 const now = new Date().getFullYear();

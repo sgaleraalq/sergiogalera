@@ -1,29 +1,3 @@
-async function loadData(file_name) {
-  try {
-      const response = await fetch(file_name);
-      if (!response.ok) {
-          throw new Error(`Error en la solicitud: ${response.statusText}`);
-      }
-      const data = await response.json();
-      return data;
-  } catch (error) {
-      console.error("Error: ", error);
-  }
-}
-
-async function loadComponent(component) {
-  try {
-      const response = await fetch(component);
-      if (!response.ok) {
-          throw new Error(`Error en la solicitud: ${response.statusText}`);
-      }
-      const text = await response.text();
-      return text;
-  } catch (error) {
-      console.error("Error: ", error);
-  }
-}
-
 
 const header = document.querySelector('.header-container');
 let headerHeight = header.offsetHeight;
@@ -56,8 +30,6 @@ webNavBtns.forEach((btn) => {
     hideHeaderWhileScrollingUp();
   });
 });
-
-
 
 
 // MOBILE MANAGEMENT
@@ -120,10 +92,3 @@ function hideHeaderWhileScrollingUp() {
     isClicked = false;
   }, 1000);
 }
-
-
-// Obtener el ancho de la ventana del navegador
-const windowWidth = window.innerWidth;
-
-// Mostrar el ancho de la ventana en la consola
-console.log("Ancho de la ventana del navegador:", windowWidth);
