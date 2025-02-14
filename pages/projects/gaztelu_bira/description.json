@@ -38,7 +38,7 @@
                 "img": "/pages/projects/gaztelu_bira/icons/ic_team.svg",
                 "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_3.gif",
                 "description": [
-                    "Recycler view of team players",
+                    "List of all players in the team",
                     "Pressing in any of the players, redirects to another activity with the specific information of that player:",
                     " - Name",
                     " - Position",
@@ -55,9 +55,12 @@
                 "description": [
                     "Last screen of the app that compares players between them",
                     "",
+                    "",
                     "Comparing two players, shows a small animation of the comparison",
                     "",
+                    "",
                     "After a few seconds, a new activity will be shown where each player will appear with its respective stats along with a Radar Chart",
+                    "",
                     "",
                     "It uses power spinners to represent each individual stat and Radar Chart to compare them."
                 ]

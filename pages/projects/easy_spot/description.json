@@ -22,20 +22,30 @@
                 "img": "/pages/projects/easy_spot/icons/ic_cars.svg",
                 "gif": "/pages/projects/easy_spot/easy_spot_2.gif",
                 "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    "Screen to manage the cars within the group",
+                    "",
+                    "Any member of the group can add, remove, or edit a car, ensuring that the list stays updated",
+                    "",
+                    "Each car entry includes details such as the last parked location and the name of the person who parked it",
+                    "",
+                    "Users can also change the type of car when adding a new one, allowing for better organization",
+                    "",
+                    "A clear and simple interface makes it easy to switch between different cars and see their latest status"
                 ]
             },
             "group": {
                 "img": "/pages/projects/easy_spot/icons/ic_group.svg",
                 "gif": "/pages/projects/easy_spot/easy_spot_3.gif",
                 "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    "Screen to manage the members of your group",
+                    "",
+                    "Displays a list of all users in the group, along with their email for easy identification",
+                    "",
+                    "Any member can update the group name, keeping it relevant for the participants",
+                    "",
+                    "The group admin has additional controls, allowing them to remove users or promote them to admin",
+                    "",
+                    "A well-structured layout ensures that managing members and roles is straightforward"
                 ]
             }
         }
