@@ -1,11 +1,11 @@
 [
     {
-        "logo": "/static/projects/gaztelu_bira/img_gaztelu_bira_logo.png",
+        "logo": "/pages/projects/gaztelu_bira/img_gaztelu_bira_logo.png",
         "title": "Gaztelu Bira",
         "screens": [
             {
                 "stats": {
-                    "img": "/static/projects/gaztelu_bira/ic_stats.svg",
+                    "img": "/pages/projects/gaztelu_bira/ic_stats.svg",
                     "description": [
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -14,7 +14,7 @@
                     ]
                 },
                 "matches": {
-                    "img": "/static/projects/gaztelu_bira/ic_matches.svg",
+                    "img": "/pages/projects/gaztelu_bira/ic_matches.svg",
                     "description": [
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -23,7 +23,7 @@
                     ]
                 },
                 "gaztelu bira": {
-                    "img": "/static/projects/gaztelu_bira/ic_team.svg",
+                    "img": "/pages/projects/gaztelu_bira/ic_team.svg",
                     "description": [
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -32,7 +32,7 @@
                     ]
                 },
                 "1 v 1": {
-                    "img": "/static/projects/gaztelu_bira/ic_versus.svg",
+                    "img": "/pages/projects/gaztelu_bira/ic_versus.svg",
                     "description": [
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
