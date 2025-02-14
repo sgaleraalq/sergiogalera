@@ -268,5 +268,26 @@ body {
         font-size: 52px;
         text-align: center;
     }
+
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .title-logo {
+        width: 60px;
+        height: 60px;
+    }
     
+    .text {
+        font-size: 200%;
+    }
+
+    .description-list > * {
+        font-size: 200%;
+    }
+
+    .screen-text {
+        font-size: 150%;
+    }
 }
