@@ -89,16 +89,24 @@ function selectScreenBtn(){
     btn.classList.add("selected");
 }
 
+
 function changeDescription() {
     const description = document.querySelector(".description-text");
-    description.innerHTML = "";  // Limpiar el contenido previo
+    description.innerHTML = "";
 
     const descArray = _screensObject[_screenSelected].description;
     let list = null;
 
     descArray.forEach(line => {
-        if (line.startsWith(" - ")) {
-            // Crear lista si es necesario
+        // Handles images if present in the description text
+        if (line.includes("<img class='description-icon'") && !line.startsWith(" - ")) {
+            const paragraph = document.createElement("p");
+            paragraph.classList.add("text");
+            paragraph.innerHTML = line.replace(/^ - /, "");
+            description.appendChild(paragraph);
+        }
+        // When line is part of a list
+        else if (line.startsWith(" - ")) {
             if (!list) {
                 list = document.createElement("ul");
                 list.classList.add("description-list");
@@ -106,18 +114,17 @@ function changeDescription() {
             }
 
             const listItem = document.createElement("li");
-            // Reemplazar el texto de lista para que incluya SVG y texto
-            listItem.innerHTML = line.replace(/^ - /, "");  // Usamos innerHTML para interpretar el código SVG
+            listItem.innerHTML = line.replace(/^ - /, "");
             list.appendChild(listItem);
         } else {
-            // Para líneas normales, se agregan como párrafos
+            // Handles text, no list or images included
             const paragraph = document.createElement("p");
             paragraph.classList.add("text");
-            paragraph.innerHTML = line;  // Usamos innerHTML para insertar el SVG directamente
+            paragraph.textContent = line;
             description.appendChild(paragraph);
             
-            list = null;  // Limpiar la lista para el siguiente bloque de texto
+            // Reset list
+            list = null;
         }
     });
 }
-

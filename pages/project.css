@@ -188,8 +188,9 @@ body {
 }
 
 .description-icon {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
+    filter: invert(1)
 }
 
 .description-list {
@@ -198,6 +199,10 @@ body {
     margin: 5px 0;
     list-style-position: inside;
     list-style-type: none;
+}
+
+.description-list > li {
+    margin: 10px 0;
 }
 
 .description-list li::before {

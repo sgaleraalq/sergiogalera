@@ -7,14 +7,14 @@
                 "img": "/pages/projects/gaztelu_bira/icons/ic_stats.svg",
                 "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_1.gif",
                 "description": [
-                    "<svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_stats.svg'></svg> Main screen of the app",
+                    "Main screen of the app",
                     "It shows a list of each player with its respective stat sorted from highest to lowest. User can change desired stat by pressing the button on the top middle of the screen",
                     "There are 5 different types of stats:",
-                    " - <svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_goals.svg'></svg> Goals",
-                    " - <svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_assists.svg'></svg> Assists",
-                    " - <svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_penalties.svg'></svg> Penalties produced",
-                    " - <svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_clean_sheet.svg'></svg> Clean sheets when playing as a defender/goal keeper",
-                    " - <svg class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_games_played.svg'></svg> Games played",
+                    " - <img class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_goals.svg'></img> Goals",
+                    " - <img class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_assists.svg'></img> Assists",
+                    " - <img class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_penalties.svg'></img> Penalties produced",
+                    " - <img class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_clean_sheet.svg'></img> Clean sheets when playing as a defender/goal keeper",
+                    " - <img class='description-icon' src='/pages/projects/gaztelu_bira/icons/ic_games_played.svg'></img> Games played",
                     "If user presses any of the players, a dialog card will be shown with all the stats of that player"
                 ]
             },
