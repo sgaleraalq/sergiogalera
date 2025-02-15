@@ -124,12 +124,20 @@ function initAnimations() {
 }
 
 function showNavBtns() {
+  const webNav                = document.querySelector(".website-navigation");
+  const mobNav                = document.querySelector(".mobile-navigation-button");
   const docNavigation         = document.querySelector(".website-list");
   const resumeBtn             = document.querySelector(".website-navigation-resume");
   const mainContent           = document.querySelector(".main-content");
   const socialMediaContainer  = document.querySelector(".framer.social-media-container");
- 
-  if (!docNavigation || !resumeBtn || !mainContent) return;
+  
+  if (!webNav || getComputedStyle(webNav).display === "none") {
+    resumeBtn.classList.add("show");
+    mainContent.style.display = "block";
+    socialMediaContainer.classList.add("show");
+    mobNav.classList.add("show");
+    return;
+  }
 
   const navItems = Array.from(docNavigation.children);
 

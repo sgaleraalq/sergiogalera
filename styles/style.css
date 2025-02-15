@@ -353,7 +353,7 @@ p {
     position: sticky;
   }
 
-  .website-navigation{
+  .website-navigation {
     display: none;
   }
   
@@ -363,12 +363,17 @@ p {
 
   .mobile-navigation-button {
     display: flex;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .mobile-navigation-button.show {
+    opacity: 1;
   }
 
   .mobile-menu {
     display: flex;
   }
-
 
   .header-container{
     padding-right: 15px;
