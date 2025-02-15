@@ -96,13 +96,11 @@ function hideHeaderWhileScrollingUp() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const logoAnimationDuration     = 0; //1000;
-  const mainContent               = document.querySelector('.main-content');
   const introAnimationContainer   = document.querySelector('.intro-animation-container');
 
 
   setTimeout(() => {
     introAnimationContainer.style.display   = 'none';
-    mainContent.style.display               = 'block';
     initAnimations();
   }, logoAnimationDuration);
 });
@@ -126,9 +124,11 @@ function initAnimations() {
 }
 
 function showNavBtns() {
-  const docNavigation = document.querySelector(".website-list");
-  const resumeBtn = document.querySelector(".website-navigation-resume");
-  const mainContent = document.querySelector(".main-content");
+  const docNavigation         = document.querySelector(".website-list");
+  const resumeBtn             = document.querySelector(".website-navigation-resume");
+  const mainContent           = document.querySelector(".main-content");
+  const socialMediaContainer  = document.querySelector(".framer.social-media-container");
+ 
   if (!docNavigation || !resumeBtn || !mainContent) return;
 
   const navItems = Array.from(docNavigation.children);
@@ -140,7 +140,8 @@ function showNavBtns() {
       if (index === navItems.length - 1) {
         child.addEventListener("transitionend",() => {
             resumeBtn.classList.add("show");
-            mainContent.classList.add("show");
+            mainContent.style.display = "block";
+            socialMediaContainer.classList.add("show");
           },
           { once: true }
         );
