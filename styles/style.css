@@ -317,7 +317,6 @@ p {
 
 .main-content {
   display: none;
-  /* display: block; */
   margin: 0px auto;
   min-height: 100vh;
   max-width: 70%;
@@ -347,6 +346,17 @@ p {
   flex-grow: 1;
 }
 
+/* ANIMATION */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
 @media (max-width: 768px){
   .header-container {

@@ -95,15 +95,18 @@ function hideHeaderWhileScrollingUp() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  initWebsite();
+  initObservers();
+});
+
+function initWebsite() {
   const logoAnimationDuration     = 0; //1000;
   const introAnimationContainer   = document.querySelector('.intro-animation-container');
-
-
   setTimeout(() => {
     introAnimationContainer.style.display   = 'none';
     initAnimations();
   }, logoAnimationDuration);
-});
+}
 
 const animationDownInterval = 100;
 function initAnimations() {
@@ -156,4 +159,19 @@ function showNavBtns() {
       }
     }, animationDownInterval * index);
   });
+}
+
+
+function initObservers() {
+  const aboutMeContainer = document.querySelector(".about-me-description-container");
+
+  const aboutMeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        aboutMeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  aboutMeObserver.observe(aboutMeContainer);
 }
