@@ -10,6 +10,13 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 100px 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.5s ease;
+}
+
+.main-container.show {
+    animation: slideIn 1.5s ease forwards;
 }
 
 .main-container.reverse {

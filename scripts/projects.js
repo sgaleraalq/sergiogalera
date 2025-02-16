@@ -216,8 +216,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     await loadProjects();
     await loadOtherProjects();
     checkAndToggleReverseClass();
+    
+    const projects = document.querySelectorAll(".main-container");
+    projects.forEach(project => {
+        initObserverByElement(project, isDiv = true);
+    })
 });
-
 
 function checkAndToggleReverseClass() {
     const mediaQuery = window.matchMedia('(max-width: 1000px)');

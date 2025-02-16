@@ -163,15 +163,32 @@ function showNavBtns() {
 
 
 function initObservers() {
-  const aboutMeContainer = document.querySelector(".about-me-description-container");
+  initObserverByElement(".about-me-description-container");
+  initObserverByElement(".experience-main-container");
+  initObserverByElement(".projects-main-container");
+  initObserverByElement(".other-projects-title");
+  initObserverByElement(".other-projects-list-container");
+  initObserverByElement(".contact-main-container");
+}
 
-  const aboutMeObserver = new IntersectionObserver((entries) => {
+
+function initObserverByElement(container, isDiv = false) {
+  let div
+
+  console.log(container, isDiv);
+  if (!isDiv){
+    div = document.querySelector(container);
+  } else {
+    div = container;
+  }
+
+  const divObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        aboutMeObserver.unobserve(entry.target);
+        divObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
-  aboutMeObserver.observe(aboutMeContainer);
+  divObserver.observe(div);
 }
