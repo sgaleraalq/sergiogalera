@@ -165,7 +165,6 @@ function showNavBtns() {
 function initObservers() {
   initObserverByElement(".about-me-description-container");
   initObserverByElement(".experience-main-container");
-  initObserverByElement(".projects-main-container");
   initObserverByElement(".other-projects-title");
   initObserverByElement(".other-projects-list-container");
   initObserverByElement(".contact-main-container");

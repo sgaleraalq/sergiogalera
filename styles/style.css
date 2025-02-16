@@ -334,12 +334,15 @@ p {
 
 .section-number {
   color: var(--main-soft-blue);
-  font-size: 24px;
 }
 
 .section-title {
   color: var(--main-white-gray);
-  font-size: 24px;
+}
+
+.section-number,
+.section-title {
+  font-size: clamp(1.1rem, 5vw, 2rem);
 }
 
 .section-separator {
@@ -393,9 +396,5 @@ p {
 
   .main-content {
     max-width: 90%;
-  }
-
-  p {
-    font-size: 12px;
   }
 }

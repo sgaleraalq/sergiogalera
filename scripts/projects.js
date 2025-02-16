@@ -41,7 +41,7 @@ async function loadProjects() {
         const linksContainer = tempContainer.querySelector(".links-container");
         displayLinks(linksContainer, project.github_url, "ic_github.svg");
         displayLinks(linksContainer, project.playstore_url, "ic_playstore.svg");
-        displayLinks(linksContainer, project.explanation_url, "ic_go.svg");
+        if (project.explanation_url) { displayLinks(linksContainer, `/pages/project.html?projectId=${project.explanation_url}`, "ic_go.svg"); }
 
         // Alternar orden si el índice es impar
         if (index % 2 === 1) {

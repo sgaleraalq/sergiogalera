@@ -2,7 +2,7 @@
     {
         "id": "gaztelu_bira",
         "technology": "Android",
-        "title": "Gaztelu Bira App",
+        "title": "Gaztelu Bira",
         "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data.  The app, written in XML follows Android development best practices",
         "image": "/static/images/projects/img_gaztelu_bira.png",
         "gif": "/static/images/projects/gaztelu_bira.gif",
@@ -20,7 +20,7 @@
         ],
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
         "playstore_url": "",
-        "explanation_url": "http://127.0.0.1:3000/",
+        "explanation_url": "gaztelu_bira",
         "full_description": "It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart."
     },
     {
@@ -43,7 +43,7 @@
         "link": "",
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
         "playstore_url": "",
-        "explanation_url": "http://127.0.0.1:3000/"
+        "explanation_url": "easy_spot"
     },
     {
         "id": "personal_portfolio",
@@ -63,8 +63,7 @@
         ],
         "link": "",
         "github_url": "https://github.com/sgaleraalq/sergiogalera",
-        "playstore_url": "",
-        "explanation_url": "http://127.0.0.1:3000/"
+        "playstore_url": ""
     },
     {
         "id": "math_mania",
@@ -85,6 +84,6 @@
         "link": "",
         "github_url": "https://github.com/sgaleraalq/mathmania",
         "playstore_url": "TODO",
-        "explanation_url": "http://127.0.0.1:3000/"
+        "explanation_url": "math_mania"
     }
 ]

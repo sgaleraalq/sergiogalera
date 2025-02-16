@@ -28,7 +28,7 @@
 .exp-title-text {
   margin: 0;
   color: white;
-  font-size: 34px;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .exp-subtitle-container {
@@ -42,7 +42,7 @@
 .exp-subtitle-container > p {
   margin: 0;
   padding: 10px 0px;
-  font-size: 20px;
+  font-size: clamp(1rem, 1.2vw, 2rem);
 }
 
 .exp-subtitle-years {
@@ -74,7 +74,7 @@
   opacity: 0;
   padding-left: 40px;
   color: var(--main-white-gray);
-  font-size: 22px;
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
   transform: translateX(-60px);
   transition: opacity 0.1s ease, transform 1.5s ease;
 }
@@ -89,7 +89,7 @@
   position: absolute;
   left: -20px;
   color: var(--main-soft-blue);
-  font-size: 16px;
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
 }
 
 .exp-location {
@@ -123,6 +123,10 @@
   color: white;
 }
 
+.exp-location-text {
+  font-size: clamp(0.8rem, 1vw, 1.5rem)
+}
+
 @media (max-width: 1500px) {
   .exp-title-container {
     flex-direction: column;
@@ -135,7 +139,6 @@
 
   .exp-title-text {
     text-align: center;
-    font-size: 24px;
   }
   
   .exp-subtitle-container {
@@ -163,7 +166,6 @@
   }
 
   .exp-list > li {
-    font-size: 14px;
     padding-left: 10px;
   }
 
@@ -173,10 +175,6 @@
 }
 
 @media (max-width: 1800px) {
-  .exp-list > li {
-    font-size: 14px;
-  }
-
   .exp-location-container > img {
     max-width: 140px;
     max-height: 170px;

@@ -8,13 +8,6 @@
 .projects-main-container {
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1.5s ease;
-}
-
-.projects-main-container.show {
-  animation: slideIn 1.5s ease forwards;
 }
 
 .projects-list-container {

@@ -32,7 +32,7 @@
   padding-bottom: 16px;
   color: var(--main-gray);
   font-size: clamp(0.8rem, 0.9vw, 1.5rem);
-  max-width: 480px;
+  max-width: 600px;
 }
 
 .university-link {
