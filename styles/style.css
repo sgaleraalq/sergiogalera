@@ -9,6 +9,8 @@
   --android-color: #3ddc84;
   --soft-dark: #253244;
   --background-color: #030712;
+  font-size: 16px;
+  font-family: "JetBrains Mono", monospace;
 }
 
 html {

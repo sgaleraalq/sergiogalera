@@ -80,14 +80,9 @@
 }
 
 @media (max-width: 768px){
-  .contact-container {
-    margin-top: 150px;
-    padding-bottom: 100px;
-    height: auto;
-  }
-
   .contact-main-container {
     width: 100%;
+    height: 100dvh;
   }
 
   .contact-title {

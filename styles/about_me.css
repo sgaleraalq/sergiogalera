@@ -31,7 +31,7 @@
 .about-me-text {
   padding-bottom: 16px;
   color: var(--main-gray);
-  font-size: 16px;
+  font-size: clamp(0.8rem, 0.9vw, 1.5rem);
   max-width: 480px;
 }
 
@@ -76,7 +76,7 @@
   width: auto;
   display: inline-block;
   color: white;
-  font-size: 12px;
+  font-size: clamp(0.8rem, 0.6vw, 1.5rem);
   font-weight: 200;
 }
 
@@ -88,15 +88,11 @@
 
 @media (max-width: 1000px) {
   .about-me-main-container{
-    padding: 0px;
+    padding: 40px 0px;
   }
 
   .about-me-description-container {
     display: block;
-  }
-
-  .about-me-text {
-    max-width: 100%;
   }
 
   .about-me-description {
@@ -112,10 +108,10 @@
     width: 0%;
   }
 
-  .about-me-text{
-    font-size: 16px;
+  .about-me-text {
     padding-bottom: 2px;
     text-align: left;
+    max-width: 100%;
   }
 
   .about-me-imgs-container {
@@ -125,11 +121,8 @@
     max-width: 100%;
   }
 
-  .about-me-images {
-    max-width: 250px;
-  }
-
+  .about-me-images,
   .hobbies-container {
-    max-width: 250px;
+    max-width: 50%;
   }
 }
