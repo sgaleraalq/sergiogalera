@@ -2,7 +2,7 @@
     {
         "name": "Codewars",
         "description": "Codewars is a website that offers coding challenges to improve your skills",
-        "image": "/static/images/projects/example.png",
+        "image": "/static/images/projects/codewars.png",
         "programming_languages": ["Python", "JavaScript", "Java"],
         "link": "https://github.com/sgaleraalq/codewars"
     },
