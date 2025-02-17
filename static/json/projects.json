@@ -3,12 +3,9 @@
         "id": "gaztelu_bira",
         "technology": "Android",
         "title": "Gaztelu Bira",
-        "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data.  The app, written in XML follows Android development best practices",
+        "description": "Android app that tracks and displays statistics for a local sports team based in Pamplona, Navarra (Spain). \n\nIt displays player stats, match results, and other team data. The app, written in Kotlin with XML follows Android development best practices",
         "image": "/static/images/projects/img_gaztelu_bira.png",
         "gif": "/static/images/projects/gaztelu_bira.gif",
-        "programming_languages": [
-            "Kotlin"
-        ],
         "skills": [
             "XML",
             "MVVM",
@@ -20,8 +17,7 @@
         ],
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
         "playstore_url": "",
-        "explanation_url": "gaztelu_bira",
-        "full_description": "It also supports admin functionalities for adding games and stats, and includes a player comparison feature with a radar chart."
+        "explanation_url": "gaztelu_bira"
     },
     {
         "id": "easy_spot",
@@ -30,9 +26,6 @@
         "description": "Android app that allows users to create a family group in order to share last parking location of their cars. \n\nIt uses Google Maps API to display the location of the cars and Firebase Auth and Firestore to store the data.",
         "image": "/static/images/projects/img_easy_spot.png",
         "gif": "/static/images/projects/easy_spot.gif",
-        "programming_languages": [
-            "Kotlin"
-        ],
         "skills": [
             "Jetpack Compose",
             "MVVM",
@@ -40,7 +33,6 @@
             "Firestore",
             "Google MAPS API"
         ],
-        "link": "",
         "github_url": "https://github.com/sgaleraalq/gazteluBira",
         "playstore_url": "",
         "explanation_url": "easy_spot"
@@ -52,16 +44,10 @@
         "description": "Personal portfolio made as a website app that explains my professional experience and showcases my projects. \n\nIt is a responsive website that adapts to different screen sizes and devices.",
         "image": "/static/images/projects/example.png",
         "gif": "",
-        "programming_languages": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
         "skills": [
             "Web development",
             "Responsive design"
         ],
-        "link": "",
         "github_url": "https://github.com/sgaleraalq/sergiogalera",
         "playstore_url": ""
     },
@@ -73,15 +59,11 @@
         "description": "Android app that allows users to practice math operations. \n\nIt includes different levels of difficulty and a timer to challenge the user. The app is written in Kotlin and follows Android development best practices.",
         "image": "/static/images/projects/img_math_mania.png",
         "gif": "/static/images/projects/math_mania.gif",
-        "programming_languages": [
-            "Kotlin"
-        ],
         "skills": [
             "Jetpack Compose",
             "MVVM",
             "Firebase RealTime"
         ],
-        "link": "",
         "github_url": "https://github.com/sgaleraalq/mathmania",
         "playstore_url": "TODO",
         "explanation_url": "math_mania"
