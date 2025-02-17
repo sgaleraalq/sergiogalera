@@ -111,6 +111,56 @@
   opacity: 1;
 }
 
+.programming-languages-container {
+  margin-top: 50px;
+}
+
+.programming-languages-list {
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.language-element {
+  width: auto;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.language-information {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.language-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.language-text {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: var(--main-gray-whiter);
+}
+
+.language-skill {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.language-skill-element {
+  height: 30px;
+  width: 30px;
+  background-color: var(--soft-dark);
+  border-radius: 15%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
 
 @media (max-width: 1800px) {
   #projects-header{

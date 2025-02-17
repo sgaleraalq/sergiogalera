@@ -99,6 +99,30 @@
 
 
 
+/* REMOVE SOME SECTIONS */
+.introduction-container {
+  display: none;
+}
+
+.about-me-main-container {
+  display: none;
+}
+
+.experience-container {
+  display: none;
+}
+
+.projects-list-container {
+  display: none;
+}
+
+.other-projects-list-container {
+  display: none;
+}
+
+#other-projects {
+  display: none;
+}
 
 /* CANCEL ALL ANIMATIONS */
 .introduction,
