@@ -95,9 +95,18 @@ function hideHeaderWhileScrollingUp() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  initWebsite();
-  initObservers();
+  // initWebsite();
+  // initObservers();
+  disableAnimations();
 });
+
+function disableAnimations() {
+  const mainContent = document.querySelector('.main-content');
+  const introAnimationContainer   = document.querySelector('.intro-animation-container');
+  document.body.style.overflowY = "auto";
+  introAnimationContainer.style.display   = 'none';
+  mainContent.style.display = 'block';
+}
 
 function initWebsite() {
   const logoAnimationDuration     = 0; //1000;

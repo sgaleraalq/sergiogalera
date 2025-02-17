@@ -19,7 +19,7 @@
   padding: 0px 100px;
 }
 
-.other-projects-title{
+.other-projects-title {
   text-align: center;
   color: var(--main-soft-blue);
   font-size: clamp(1.1rem, 5vw, 2rem);

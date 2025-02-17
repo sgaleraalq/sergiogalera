@@ -95,3 +95,23 @@
     max-width: 70%;
   }
 }
+
+
+
+
+
+/* CANCEL ALL ANIMATIONS */
+.introduction,
+.intro-title,
+.intro-subtitle,
+.intro-description-container,
+.intro-button-container,
+.about-me-description-container,
+.experience-main-container,
+.main-container,
+.other-projects-title,
+.other-projects-list-container {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: slideIn 0s ease forwards;
+}
