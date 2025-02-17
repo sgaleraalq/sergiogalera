@@ -70,7 +70,7 @@ body {
 
 .title-text {
     margin-left: 50px;
-    font-size: clamp(3rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 .content-container {
@@ -215,14 +215,14 @@ body {
 
 .description-list > * {
     color: var(--main-white-gray);
-    font-size: clamp(1rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 
 .text {
     width: 100%;
     margin: 10px 0;
     color: var(--main-white-gray);
-    font-size: clamp(1rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 
 @media (max-width: 1000px) {
