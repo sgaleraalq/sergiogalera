@@ -98,8 +98,7 @@
 
 
 
-
-/* REMOVE SOME SECTIONS */
+/* REMOVE SOME SECTIONS
 .introduction-container {
   display: none;
 }
@@ -110,22 +109,22 @@
 
 .experience-container {
   display: none;
-}
+} */
 
-.projects-list-container {
+/* .projects-list-container {
   display: none;
 }
 
 .other-projects-list-container {
   display: none;
-}
+} */
 
-#other-projects {
+/* #other-projects {
   display: none;
-}
+} */
 
 /* CANCEL ALL ANIMATIONS */
-.introduction,
+/* .introduction,
 .intro-title,
 .intro-subtitle,
 .intro-description-container,
@@ -138,4 +137,4 @@
   opacity: 1;
   transform: translateY(0px);
   animation: slideIn 0s ease forwards;
-}
+} */

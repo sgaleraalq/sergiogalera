@@ -95,9 +95,9 @@ function hideHeaderWhileScrollingUp() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // initWebsite();
-  // initObservers();
-  disableAnimations();
+  initWebsite();
+  initObservers();
+  // disableAnimations();
 });
 
 function disableAnimations() {
