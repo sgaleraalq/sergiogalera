@@ -88,15 +88,17 @@
     position: absolute;
     right: 0;
     max-width: 65%;
-    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%);
+    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%) 
+            drop-shadow(2.5px 2.5px 2.5px rgba(255, 255, 255, 0.7));
     transition: filter 0.3s ease-in-out;
     pointer-events: auto;
     cursor: pointer;
-    animation-play-state: paused;
 }
 
 .project-image.reverse{
     left: 0;
+    filter: grayscale(80%) sepia(20%) hue-rotate(190deg) contrast(110%) 
+            drop-shadow(-2.5px 2.5px 2.5px rgba(255, 255, 255, 0.7));
 }
 
 .project-image:hover {
