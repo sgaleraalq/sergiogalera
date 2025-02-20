@@ -1,26 +1,31 @@
 {
-    "logo": "/pages/projects/gaztelu_bira/img_gaztelu_bira_logo.png",
+    "logo": "/pages/projects/math_mania/icons/ic_math_mania.svg",
     "title": "Math Mania",
     "screens": [
         {
             "lobby": {
                 "img": "/pages/projects/math_mania/icons/ic_group.svg",
-                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_1.gif",
+                "gif": "/pages/projects/math_mania/math_mania_1.gif",
                 "description": [
-                    "This app makes whatever.",
-                    "Sed do  dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    "This is the launh and lobby screen of the app",
+                    "Once user has set their character and name, they can join a room or create one",
+                    "If user creates a room, they will be the host and will be able to modify the game and start it after all players have joined",
+                    "If user joins a room, they will be able to see the game settings and wait for the host to start the game",
+                    "It is getting updated in Real Time"
                 ]
             },
             "game": {
                 "img": "/pages/projects/math_mania/icons/ic_game.svg",
-                "gif": "/pages/projects/gaztelu_bira/gaztelu_bira_2.gif",
+                "gif": "/pages/projects/math_mania/math_mania_2.gif",
                 "description": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    "This is the main screen of the game",
+                    "It will pop up a math operation and the user has to solve it as fast as possible",
+                    "There are some rules user must follow:",
+                    " - Failing to answer correctly will increase timer exponentially",
+                    " - Leaving the game will make user leave the room",
+                    " - Aswering correctly will display next operation until there are no more operations",
+                    "",
+                    "User will be able to see who is on leaderboard and their respective score in Real Time"
                 ]
             }
         }

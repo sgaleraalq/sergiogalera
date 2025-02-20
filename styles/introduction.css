@@ -20,7 +20,7 @@
 .intro-title {
   margin: 0;
   margin-top: 5px;
-  color: var(--main-purple);
+  color: var( --blue-strong);
   font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
