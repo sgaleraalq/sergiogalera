@@ -7,11 +7,13 @@
                 "img": "/pages/projects/math_mania/icons/ic_group.svg",
                 "gif": "/pages/projects/math_mania/math_mania_1.gif",
                 "description": [
-                    "This is the launh and lobby screen of the app",
+                    "This is the launch and lobby screen of the app",
                     "Once user has set their character and name, they can join a room or create one",
-                    "If user creates a room, they will be the host and will be able to modify the game and start it after all players have joined",
-                    "If user joins a room, they will be able to see the game settings and wait for the host to start the game",
-                    "It is getting updated in Real Time"
+                    "",
+                    " - Creating a room will make you host with permissions to start and modify the game",
+                    " - Joining a room they will be able to see the game settings and wait for the host to start the game",
+                    "",
+                    "The important feature is that is getting updated in real time"
                 ]
             },
             "game": {
