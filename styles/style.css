@@ -62,11 +62,24 @@ p {
   height: 10%;
 }
 
-/* .intro-logo {
-  width: 10%;
-} */
+.intro-video.shrink {
+  animation: grow-shrink 0.2s ease-in-out forwards;
+}
 
-
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
 /* *********************** */
 /* WEBSITE NAVIGATION CONTAINER */
 .header-container {

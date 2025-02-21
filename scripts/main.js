@@ -109,8 +109,14 @@ function disableAnimations() {
 }
 
 function initWebsite() {
-  // const logoAnimationDuration     = 0; //1000;
+  const logoAnimationDuration     = 3500;
   const introAnimationContainer   = document.querySelector('.intro-animation-container');
+  const introLogo                 = document.querySelector('.intro-video');
+
+  setTimeout(() => {
+    introLogo.classList.add('shrink');
+  }, 3300);
+
   setTimeout(() => {
     introAnimationContainer.style.display   = 'none';
     initAnimations();
