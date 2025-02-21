@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initWebsite() {
-  const logoAnimationDuration     = 3500;
+  const logoAnimationDuration     = 3500; 
   const introAnimationContainer   = document.querySelector('.intro-animation-container');
   const introLogo                 = document.querySelector('.intro-video');
 
