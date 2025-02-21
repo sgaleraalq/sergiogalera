@@ -100,14 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // disableAnimations();
 });
 
-function disableAnimations() {
-  const mainContent = document.querySelector('.main-content');
-  const introAnimationContainer   = document.querySelector('.intro-animation-container');
-  document.body.style.overflowY = "auto";
-  introAnimationContainer.style.display   = 'none';
-  mainContent.style.display = 'block';
-}
-
 function initWebsite() {
   const logoAnimationDuration     = 3500;
   const introAnimationContainer   = document.querySelector('.intro-animation-container');
@@ -205,4 +197,49 @@ function initObserverByElement(container, isDiv = false) {
     });
   }, { threshold: 0.2 });
   divObserver.observe(div);
+}
+
+
+
+
+// ALLOW DISABELING FOR DEVELOPMENT
+function disableAnimations() {
+  const mainContent                       = document.querySelector('.main-content');
+  const introAnimationContainer           = document.querySelector('.intro-animation-container');
+  document.body.style.overflowY           = "auto";
+  introAnimationContainer.style.display   = 'none';
+  mainContent.style.display               = 'block';
+
+  function removeAnimation(component){
+    component.style.opacity = "1";
+    component.style.transform = "translateY(0px)";
+    component.style.animation = "slideIn 0s ease forwards";
+  }
+  const selectors = [
+    ".introduction",
+    ".intro-title",
+    ".intro-subtitle",
+    ".intro-description-container",
+    ".intro-button-container",
+    ".about-me-description-container",
+    ".experience-main-container",
+    ".main-container",
+    ".other-projects-title",
+    ".other-projects-list-container"
+  ];
+  const animatedComp = document.querySelectorAll(selectors.join(", "));
+  
+  animatedComp.forEach(element => {
+    removeAnimation(element);
+  });
+
+  const logoContainer                     = document.querySelector('.logo-container');
+  const webNavElements                    = document.querySelectorAll('.website-list-element');
+  const resumeBtn                         = document.querySelector('.website-navigation-resume');
+  webNavElements.forEach( element => {
+      removeAnimation(element);
+  });
+  removeAnimation(logoContainer);
+  removeAnimation(resumeBtn);
+
 }
