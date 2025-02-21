@@ -15,6 +15,9 @@ async function loadProject() {
     document.querySelector(".title-text").textContent = data.title;
     document.querySelector(".title-logo").src = data.logo;
 
+    const webName = document.querySelector("#web-name");
+    webName.textContent = `Sergio Galera - ${data.title}`;
+
 
     // Selecting first screen to display
     _screensObject = data.screens[0];
@@ -66,7 +69,6 @@ Object.defineProperty(window, 'screenSelected', {
 }); 
 
 function onScreenChanged(screen) {
-    console.log("Selecting screen: ", screen);
     removeSelectedAttributed();
     loadScreenGif();
     selectScreenBtn();
