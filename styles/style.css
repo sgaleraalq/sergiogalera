@@ -62,10 +62,9 @@ p {
   height: 10%;
 }
 
-/* .intro-logo {
-  width: 10%;
-} */
-
+.intro-video.shrink {
+  animation: grow-shrink 0.2s ease-in-out forwards;
+}
 
 /* *********************** */
 /* WEBSITE NAVIGATION CONTAINER */
@@ -374,6 +373,21 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
   }
 }
 
