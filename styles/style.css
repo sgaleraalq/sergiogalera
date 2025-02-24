@@ -392,6 +392,11 @@ p {
 }
 
 @media (max-width: 768px){
+  .intro-video {
+    width: 25%;
+    height: 25%;
+  }
+
   .header-container {
     position: sticky;
   }
