@@ -181,7 +181,6 @@ function initObservers() {
 function initObserverByElement(container, isDiv = false) {
   let div
 
-  console.log(container, isDiv);
   if (!isDiv){
     div = document.querySelector(container);
   } else {
