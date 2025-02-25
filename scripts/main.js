@@ -31,6 +31,13 @@ webNavBtns.forEach((btn) => {
   });
 });
 
+const resumeBtn = document.querySelector('.website-navigation-resume');
+resumeBtn.addEventListener('click', () => {
+  // Open CV when pressing
+  const cv = '/static/Sergio_Galera_CV.pdf';
+  window.open(cv, '_blank');
+});
+
 
 // MOBILE MANAGEMENT
 const mobileMenuBtn = document.querySelector('.mobile-navigation-button');
