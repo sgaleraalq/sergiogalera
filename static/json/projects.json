@@ -67,5 +67,26 @@
         "github_url": "https://github.com/sgaleraalq/mathmania",
         "playstore_url": "",
         "explanation_url": "math_mania"
+    },
+    {
+        "id": "dragon_dex",
+        "technology": "Android",
+        "technology_url": "https://developer.android.com/",
+        "title": "DragonDex",
+        "description": "🔥 DragonDex is a modern Android development project developed with Hilt, Coroutines, Flow, Jetpack (Room, ViewModel) based on MVVM architecture.",
+        "image": "/static/images/projects/img_dragon_dex.png",
+        "gif": "/static/images/projects/img_dragon_dex.png",
+        "skills": [
+            "Jetpack Compose",
+            "MVVM",
+            "Firebase RealTime",
+            "Retrofit",
+            "Hilt",
+            "Coroutines",
+            "Flow"
+        ],
+        "github_url": "https://github.com/sgaleraalq/DragonDex",
+        "playstore_url": "",
+        "explanation_url": "dragon_dex"
     }
 ]
