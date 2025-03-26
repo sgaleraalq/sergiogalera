@@ -21,30 +21,30 @@
                 "img": "/pages/projects/dragon_dex/icons/ic_characters.svg",
                 "gif": "/pages/projects/dragon_dex/dragon_dex_2.gif",
                 "description": [
+                    "Screen of the characters response of the API",
+                    "Shows a list of characters with their respective name and image",
+                    "Clicking in one of them will navigate to the detail screen of the character",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "Technologies:",
+                    " - Retrofit to obtain the data from the API",
+                    " - Room to store the data in the local database",
+                    " - Repository pattern to manage the data",
+                    " - ViewModel to manage the UI data"
                 ]
             },
             "planets": {
                 "img": "/pages/projects/dragon_dex/icons/ic_planet.svg",
-                "gif": "/pages/projects/easy_spot/dragon_dex_3.gif",
+                "gif": "/pages/projects/dragon_dex/dragon_dex_3.gif",
                 "description": [
+                    "Screen of the planets response of the API",
+                    "Shows a list of planets with their respective name and image",
+                    "Clicking in one of them will navigate to the detail screen of the planet",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "Technologies:",
+                    " - Retrofit to obtain the data from the API",
+                    " - Room to store the data in the local database",
+                    " - Repository pattern to manage the data",
+                    " - ViewModel to manage the UI data"
                 ]
             }
         }
