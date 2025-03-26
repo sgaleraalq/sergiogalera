@@ -1,0 +1,52 @@
+{
+    "logo": "/pages/projects/dragon_dex/icons/ic_dragon_ball_logo.svg",
+    "title": "Dragon Dex",
+    "screens": [
+        {
+            "launch": {
+                "img": "/pages/projects/dragon_dex/icons/ic_launch.svg",
+                "gif": "/pages/projects/dragon_dex/dragon_dex_1.gif",
+                "description": [
+                    "Launch screen of the app",
+                    "Title of the app on the top of the screen with its corresponding logo",
+                    "Two buttons, one of the for navigating to characters screen and the other for planets screen",
+                    "Navigation is made through Jetpack Navigation Component and creation of a NavHostFragment",
+                    "In the bottom of the screen there is a custom Lottie animation that aims to represent that the app is \"flying\" in the sky",
+                    "",
+                    " - Jetpack Navigation Component",
+                    " - Lottie Animation"
+                ]
+            },
+            "characters": {
+                "img": "/pages/projects/dragon_dex/icons/ic_characters.svg",
+                "gif": "/pages/projects/dragon_dex/dragon_dex_2.gif",
+                "description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "planets": {
+                "img": "/pages/projects/dragon_dex/icons/ic_planet.svg",
+                "gif": "/pages/projects/easy_spot/dragon_dex_3.gif",
+                "description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ]
+}
